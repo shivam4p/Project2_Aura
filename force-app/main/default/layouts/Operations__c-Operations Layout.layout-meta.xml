@@ -74,12 +74,6 @@
         <style>CustomLinks</style>
     </layoutSections>
     <relatedLists>
-        <fields>VERSION.TITLE</fields>
-        <fields>VERSION.CREATED_DATE</fields>
-        <fields>VERSION.LAST_UPDATE</fields>
-        <relatedList>ContentDocumentRelatedList</relatedList>
-    </relatedLists>
-    <relatedLists>
         <fields>TASK.SUBJECT</fields>
         <fields>TASK.WHO_NAME</fields>
         <fields>ACTIVITY.TASK</fields>
