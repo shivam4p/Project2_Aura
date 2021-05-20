@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Years_Validation</fullName>
+    <active>true</active>
+    <description>Manager position should have a number between 1 and 10</description>
+    <errorConditionFormula>AND(Agrees_with_the_dangers_of_the_project__c = TRUE) &amp;&amp; (BLANKVALUE(The_Project_will_Last_years__c,0)&lt;1 || The_Project_will_Last_years__c&gt;10)</errorConditionFormula>
+    <errorDisplayField>The_Project_will_Last_years__c</errorDisplayField>
+    <errorMessage>If you agree to job dangers, you must pick years in the job from 1 to 10</errorMessage>
+</ValidationRule>

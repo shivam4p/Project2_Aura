@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Purpose__c</fullName>
+    <externalId>false</externalId>
+    <label>Purpose</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Solar Panels</fullName>
+                <default>false</default>
+                <label>Solar Panels</label>
+            </value>
+            <value>
+                <fullName>Electric Cars</fullName>
+                <default>false</default>
+                <label>Electric Cars</label>
+            </value>
+            <value>
+                <fullName>Nuclear Fusion</fullName>
+                <default>false</default>
+                <label>Nuclear Fusion</label>
+            </value>
+            <value>
+                <fullName>Weapons Manufacturing</fullName>
+                <default>false</default>
+                <label>Weapons Manufacturing</label>
+            </value>
+            <value>
+                <fullName>Medical Research</fullName>
+                <default>false</default>
+                <label>Medical Research</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

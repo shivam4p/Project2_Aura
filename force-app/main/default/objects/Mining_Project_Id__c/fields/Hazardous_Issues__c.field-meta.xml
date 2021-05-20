@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hazardous_Issues__c</fullName>
+    <externalId>false</externalId>
+    <label>Hazardous Issues</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Corrosive Environment</fullName>
+                <default>false</default>
+                <label>Corrosive Environment</label>
+            </value>
+            <value>
+                <fullName>High Radiation</fullName>
+                <default>false</default>
+                <label>High Radiation</label>
+            </value>
+            <value>
+                <fullName>Low Gravity</fullName>
+                <default>false</default>
+                <label>Low Gravity</label>
+            </value>
+            <value>
+                <fullName>Low Atmosphere Pressure</fullName>
+                <default>false</default>
+                <label>Low Atmosphere Pressure</label>
+            </value>
+            <value>
+                <fullName>High Temperatures</fullName>
+                <default>false</default>
+                <label>High Temperatures</label>
+            </value>
+            <value>
+                <fullName>Low Temperatures</fullName>
+                <default>false</default>
+                <label>Low Temperatures</label>
+            </value>
+            <value>
+                <fullName>Crashing Atmosphere Pressure</fullName>
+                <default>false</default>
+                <label>Crashing Atmosphere Pressure</label>
+            </value>
+            <value>
+                <fullName>Volcanic Activity</fullName>
+                <default>false</default>
+                <label>Volcanic Activity</label>
+            </value>
+            <value>
+                <fullName>Crashing Gravity</fullName>
+                <default>false</default>
+                <label>Crashing Gravity</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

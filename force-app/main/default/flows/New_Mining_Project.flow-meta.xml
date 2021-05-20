@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <apiVersion>51.0</apiVersion>
+    <assignments>
+        <name>Assignments</name>
+        <label>Assignments</label>
+        <locationX>466</locationX>
+        <locationY>220</locationY>
+        <assignmentItems>
+            <assignToReference>ProjectName.Name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>New_Project_Name</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ProjectName.Mining_Project_Start_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Project_Start_Date</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>ProjectName.Hazardous_Issues__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>HazardIssues</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Create_Project</targetReference>
+        </connector>
+    </assignments>
+    <dynamicChoiceSets>
+        <name>HazardIssues</name>
+        <dataType>Multipicklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Hazardous_Issues__c</picklistField>
+        <picklistObject>Mining_Project_Id__c</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>Location</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Location__c</picklistField>
+        <picklistObject>Mining_Project_Id__c</picklistObject>
+    </dynamicChoiceSets>
+    <interviewLabel>New Mining Project {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>New Mining Project</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>Create_Project</name>
+        <label>Create Project</label>
+        <locationX>700</locationX>
+        <locationY>232</locationY>
+        <connector>
+            <targetReference>Project_Created</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Fault_Screen</targetReference>
+        </faultConnector>
+        <inputReference>ProjectName</inputReference>
+    </recordCreates>
+    <screens>
+        <name>Fault_Screen</name>
+        <label>Fault Screen</label>
+        <locationX>878</locationX>
+        <locationY>118</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Fault</name>
+            <fieldText>&lt;p&gt;{!$Flow.FaultMessage}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Project_Created</name>
+        <label>Project Created</label>
+        <locationX>537</locationX>
+        <locationY>365</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>ProjectCreated</name>
+            <fieldText>&lt;p&gt;The Project name you entered,&lt;/p&gt;&lt;p&gt;{!ProjectName.Name},&lt;/p&gt;&lt;p&gt;has been created.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Project_Name</name>
+        <label>Project Name</label>
+        <locationX>238</locationX>
+        <locationY>251</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Assignments</targetReference>
+        </connector>
+        <fields>
+            <name>New_Project_Name</name>
+            <dataType>String</dataType>
+            <fieldText>New Project Name</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Project_Start_Date</name>
+            <dataType>Date</dataType>
+            <fieldText>Project Start Date</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>HazzardIssues</name>
+            <choiceReferences>HazardIssues</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>HazzardIssues</fieldText>
+            <fieldType>MultiSelectPicklist</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Project_Name</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>ProjectName</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Mining_Project_Id__c</objectType>
+    </variables>
+</Flow>
