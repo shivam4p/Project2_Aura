@@ -21,10 +21,11 @@ public class Update_Project_Mining_Subject_Test {
         //Update_Project_Mining_Subject.UpdateProjectMiningSubject(lstMiningProj);
         insert lstMiningProj;
         
-        Test.startTest();      
+       // Test.startTest();      
         //
         lstMiningProj[0].Project_Name__c = 'L: newName';
         System.debug(lstMiningProj[0]);
+        Test.startTest();  
         update lstMiningProj;
         //id testId = lstMiningProj[0];        
         Test.stopTest();

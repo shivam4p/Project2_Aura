@@ -83,19 +83,15 @@
         <name>CustomObject</name>
     </types>
     <types>
-        <members>Customer__c-en_US</members>
-        <members>Machine_and_Tools__c-en_US</members>
-        <members>Mining_Project_Id__c-en_US</members>
-        <members>Operations_Goal__c-en_US</members>
-        <members>Operations__c-en_US</members>
-        <members>Project_Name__c-en_US</members>
-        <members>Site_Manager__c-en_US</members>
-        <name>CustomObject</name>
-    </types>
-    <types>
         <members>Diego_Mining</members>
+          <members>standard__LightningService</members>
         <name>CustomApplication</name>
     </types>
+    <types>
+        <members>Operations</members>
+        <name>Profile</name>
+    </types>
+
     <types>
         <members>asteroid_miningoC9bE1Mllmx</members>
         <name>ContentAsset</name>
