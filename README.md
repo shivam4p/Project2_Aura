@@ -1,18 +1,59 @@
-# Salesforce DX Project: Next Steps
+# Lead P1
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+# How to run
 
-## How Do You Plan to Deploy Your Changes?
+1. Clone.
+`git clone https://github.com/12Apr21-Salesforce/p1_lead.git`
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+2. Checkout to `dev` branch.
+`git checkout dev`
 
-## Configure Your Salesforce DX Project
+3. Authorize your playground org.
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+4. run `sfdx force:source:deploy -x manifest/package.xml`
+You will get below errors:
+![Error1](https://imgur.com/t5Dz1l5.png)
 
-## Read All About It
+Change the username to point to an username that exists in the playground you are trying to deploy to. (your own system admin account username works)
+- Workflows/Site_Manager__c workflow
+- Workflows/Operations_Goal__c workflow
+- Queues/Site_Manager_Queues.queue-meta
+![SMQ](https://imgur.com/m8kC37u.png)
+![NOG](https://imgur.com/ynWbOBW.png)
+![PSD](https://imgur.com/HsIh3Ue.png)
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+
+Try running below command
+ `sfdx force:source:deploy -x manifest/package.xml`
+
+You will get below error:
+```
+The queue: Site_Manager_Queues has not been setup to support the object: Mining_Project_Id__c.  This must be configured in the setup UI Queues editor. (33:19)
+```
+![Error5](https://imgur.com/0tJxKPh.png)
+
+
+Deploy in order:
+1. Objects
+![Objects](https://imgur.com/eD79TxB.png)
+2. Queues
+![Queues](https://imgur.com/6s6B9GC.png)
+3. Everything else (right click on package.xml and click `SFDX: 
+![Manifest](https://imgur.com/0tJxKPh.png)Deploy Source in Manifest to Org`)
+
+
+Add the code block below to `.gitignore`
+```
+force-app/main/default/queues/Site_Manager_Queues.queue-meta.xml
+force-app/main/default/workflows/Operations_Goal__c.workflow-meta.xml
+force-app/main/default/workflows/Site_Manager__c.workflow-meta.xml
+```
+
+Copy and paste below git command in your terminal
+```
+git rm -r --cached force-app/main/default/queues/Site_Manager_Queues.queue-meta.xml force-app/main/default/workflows/Operations_Goal__c.workflow-meta.xml force-app/main/default/workflows/Site_Manager__c.workflow-meta.xml
+```
+
+Finally, checkout to your own branch.
+`git checkout -b [newbranch]`
+
