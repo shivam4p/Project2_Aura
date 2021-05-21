@@ -33,17 +33,17 @@ The queue: Site_Manager_Queues has not been setup to support the object: Mining_
 ![Error5](https://imgur.com/0tJxKPh.png)
 
 
-Deploy in order:
+Deploy in following order:
 1. Objects
 ![Objects](https://imgur.com/eD79TxB.png)
 2. Queues
 ![Queues](https://imgur.com/6s6B9GC.png)
-3. Everything else (right click on package.xml and click `SFDX: 
-![Manifest](https://imgur.com/0tJxKPh.png)Deploy Source in Manifest to Org`)
+3. Everything else by using `manifest/package.xml` 
+[![ok.png](https://i.postimg.cc/HsggfKSy/ok.png)](https://postimg.cc/c6X23DGx)
 
 
 
-## Below steps are only required on first time being pulled.
+## Below steps are only required on first time being pulled
 
 Because the files you just edited will differ for each of us, we will stop these from being tracked by git. 
 
@@ -73,4 +73,4 @@ Commit
 `git commit -m 'your commit message'`
 
 
-If you work on any of existing branch, you will need to make sure that theses 3 files are not added and committed. If they appear as being tracked when you do `git status`, run the `git rm -r --cached` code block to remove the cache and make sure they are added to `.gitignore`.
+#### If you want to work on any of existing branch, you will need to make sure that the 3 files above are not being tracked by git. If they appear as being tracked when you run `git status`, you should run the `git rm -r --cached` code block to remove the cache and make sure paths to those files are added to `.gitignore`.
