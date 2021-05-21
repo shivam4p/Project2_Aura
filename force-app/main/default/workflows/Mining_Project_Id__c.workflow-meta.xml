@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Demand_Status_to_High</fullName>
+        <field>Demand_Status__c</field>
+        <literalValue>High</literalValue>
+        <name>Demand Status to High</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Demand_Status_to_No_Demand</fullName>
+        <field>Demand_Status__c</field>
+        <literalValue>No demand</literalValue>
+        <name>Demand Status to No Demand</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Mining_Project_Start_Date_to_Today</fullName>
+        <field>Mining_Project_Start_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Mining Project Start Date to Today</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_to_Site_Manager_Queue</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Site_Manager_Queues</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Owner to Site Manager Queue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sub_Status_to_Approved</fullName>
+        <field>Sub_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Sub-Status to Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sub_Status_to_Not_Approved</fullName>
+        <field>Sub_Status__c</field>
+        <literalValue>Not Approved</literalValue>
+        <name>Sub-Status to Not Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sub_Status_to_Pending</fullName>
+        <field>Sub_Status__c</field>
+        <literalValue>Pending</literalValue>
+        <name>Sub-Status to Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

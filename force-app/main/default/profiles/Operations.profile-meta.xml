@@ -72,6 +72,21 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Finances__c.Shipping_Method__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Finances__c.Stage__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Finances__c.Trading_Price__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Machine_and_Tools__c.Approval_Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -227,6 +242,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Sales__c.Order__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Site_Manager__c.Agrees_with_the_dangers_of_the_project__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -258,8 +278,19 @@
         <enabled>false</enabled>
         <flow>New_Mining_Project</flow>
     </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>Project_Reminder</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>net_promoter_score</flow>
+    </flowAccesses>
     <layoutAssignments>
         <layout>Customer__c-Customer Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Finances__c-Finances Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Machine_and_Tools__c-Machine and Tools Layout</layout>
@@ -275,6 +306,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Project_Name__c-Project Name Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Sales__c-Sales Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Site_Manager__c-Site Manager Layout</layout>
@@ -332,6 +366,10 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>Operations__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Project_Name__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>

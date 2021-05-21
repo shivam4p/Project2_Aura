@@ -22,7 +22,22 @@
         <members>Operations_Goal__c</members>
         <members>Project_Name__c</members>
         <members>Site_Manager__c</members>
+        <members>Finances__c</members>
+        <members>Sales__c</members>
         <name>TopicsForObjects</name>
+    </types>
+    <types>
+     <members>Machine_and_Tools_c.Machines_Greater_than_Approval</members>
+   
+    <name>ApprovalProcess</name>   
+    </types>
+    <types>
+    <members>asteroid_mining</members>
+    <members>asteroid_mining1</members>
+    <members>asteroid_miningoC9bE1Mllmx</members>
+    <members>iomoon1</members>
+    <members>logo</members>
+    <name>ContentAsset</name> 
     </types>
     <types>
         <members>Customer__c</members>
@@ -31,6 +46,8 @@
         <members>Operations_Goal__c</members>
         <members>Project_Name__c</members>
         <members>Site_Manager__c</members>
+        <members>Finances__c</members>
+        <members>Sales__c</members>
         <name>SharingRules</name>
     </types>
     <types>
@@ -44,18 +61,53 @@
         <members>Operations_Goal__c-Operations Location Layout</members>
         <members>Operations__c-Operations Layout</members>
         <members>Project_Name__c-Project Name Layout</members>
+        <members>Finances__c-Finances Layout</members>
         <members>Site_Manager__c-Site Manager Layout</members>
         <members>Task-Task Layout</members>
+        <members>Sales__c-Sales Layout</members>
         <name>Layout</name>
     </types>
+      <types>
+        <members>Director_of_Operations</members>
+        <members>Sales_Rep_I</members>
+        <members>Sales_Rep_II</members>
+        <members>Site_Project_Manager</members>
+        <name>Role</name>
+    </types>
+       <types>
+        <members>Machine_and_Tools__c</members>
+        <members>Mining_Project_Id__c</members>
+        <members>Operations_Goal__c</members>
+        <members>Operations__c</members>
+        <members>Site_Manager__c</members>
+        <name>Workflow</name>
+    </types>
+     <types>
+        <members>Operations_profilePasswordPolicy1619905673367</members>
+        <members>PT1_profilePasswordPolicy1479361192949</members>      
+        <name>ProfilePasswordPolicy</name>
+    </types>
+      <types>
+        <members>Operations_profileSessionSetting1619905673433</members>
+        <members>P1_profileSessionSetting1479361192857</members>
+        <name>ProfileSessionSetting</name>
+    </types>
     <types>
-        <members>New_Mining_Project</members>
+
         <members>Manager_Wizard</members>
+        <members>Mininig_Project_Process</members>
+        <members>Project_Reminder</members>
+        <members>custom_satisfaction</members>
+        <members>net_promoter_score</members>
         <name>Flow</name>
     </types>
     <types>
-        <members>New_Mining_Project</members>
+      
         <members>Manager_Wizard</members>
+        <members>Mininig_Project_Process</members>
+        <members>Project_Reminder</members>
+        <members>custom_satisfaction</members>
+        <members>net_promoter_score</members>
         <name>FlowDefinition</name>
     </types>
     <types>
@@ -70,6 +122,7 @@
         <members>Operations_Goal__c</members>
         <members>Operations__c</members>
         <members>Site_Manager__c</members>
+        <members>Project_Name__c</members>
         <name>CustomTab</name>
     </types>
     <types>
@@ -80,6 +133,8 @@
         <members>Operations__c</members>
         <members>Project_Name__c</members>
         <members>Site_Manager__c</members>
+        <members>Finances__c</members>        
+        <members>Sales__c</members>        
         <name>CustomObject</name>
     </types>
     <types>
@@ -91,11 +146,12 @@
         <members>Operations</members>
         <name>Profile</name>
     </types>
-
-    <types>
-        <members>asteroid_miningoC9bE1Mllmx</members>
-        <name>ContentAsset</name>
+      <types>
+        <members>Site_Manager_Queues</members>
+        <name>Queue</name>
     </types>
+
+
 
     
     <version>51.0</version>
