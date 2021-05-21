@@ -60,7 +60,7 @@ git rm -r --cached force-app/main/default/queues/Site_Manager_Queues.queue-meta.
 ```
 `git rm -r --cached` command is necessary to delete the cached git files that will cause problem when trying to add an already tracked file to `.gitignore`
 
-git status to make sure these appear as `deleted`
+Run `git status` to make sure these appear as `deleted`
 ![finalgitstatus](https://imgur.com/FDVGqTF.png)
 
 Finally, checkout to your own branch.
@@ -71,3 +71,6 @@ Stage all changes,
 
 Commit
 `git commit -m 'your commit message'`
+
+
+If you work on any of existing branch, you will need to make sure that theses 3 files are not added and committed. If they appear as being tracked when you do `git status`, run the `git rm -r --cached` code block to remove the cache and make sure they are added to `.gitignore`.
