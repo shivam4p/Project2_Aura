@@ -1,6 +1,6 @@
 # Lead P1
 
-# How to run
+## How to start
 
 1. Clone.
 `git clone https://github.com/12Apr21-Salesforce/p1_lead.git`
@@ -42,6 +42,11 @@ Deploy in order:
 ![Manifest](https://imgur.com/0tJxKPh.png)Deploy Source in Manifest to Org`)
 
 
+
+## Below steps are only required on first time being pulled.
+
+Because the files you just edited will differ for each of us, we will stop these from being tracked by git. 
+
 Add the code block below to `.gitignore`
 ```
 force-app/main/default/queues/Site_Manager_Queues.queue-meta.xml
@@ -53,7 +58,16 @@ Copy and paste below git command in your terminal
 ```
 git rm -r --cached force-app/main/default/queues/Site_Manager_Queues.queue-meta.xml force-app/main/default/workflows/Operations_Goal__c.workflow-meta.xml force-app/main/default/workflows/Site_Manager__c.workflow-meta.xml
 ```
+`git rm -r --cached` command is necessary to delete the cached git files that will cause problem when trying to add an already tracked file to `.gitignore`
+
+git status to make sure these appear as `deleted`
+![finalgitstatus](https://imgur.com/FDVGqTF.png)
 
 Finally, checkout to your own branch.
 `git checkout -b [newbranch]`
 
+Stage all changes,
+`git add .`
+
+Commit
+`git commit -m 'your commit message'`
