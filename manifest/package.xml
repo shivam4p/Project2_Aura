@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Site_Manager_Queues</members>
-        <name>Queue</name>
-    </types>
-    <types>
         <members>Customer__c</members>
         <members>Machine_and_Tools__c</members>
         <members>Mining_Project_Id__c</members>
@@ -15,6 +11,10 @@
         <members>Finances__c</members>        
         <members>Sales__c</members>        
         <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Site_Manager_Queues</members>
+        <name>Queue</name>
     </types>
     <types>
         <members>newTaskHandler_Test</members>
