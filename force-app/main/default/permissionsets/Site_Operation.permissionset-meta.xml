@@ -52,6 +52,31 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Investment__c.Operations__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Investor__c.Deposited__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Investor__c.Total_Distribution__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Investor__c.Total_Investment__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Investor__c.Type__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Machine_and_Tools__c.Approval_Status__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -203,6 +228,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Operations__c.Operations_Goal__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Operations__c.Total_Investment__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

@@ -1,8 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
+
+    <types>
+        <members>Customer__c</members>
+        <members>Machine_and_Tools__c</members>
+        <members>Mining_Project_Id__c</members>
+        <members>Operations_Goal__c</members>
+        <members>Operations__c</members>
+        <members>Project_Name__c</members>
+        <members>Site_Manager__c</members>
+        <members>Finances__c</members>        
+        <members>Sales__c</members>        
+        <members>Investor__c</members>       
+        <members>Investment__c</members>       
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Site_Manager_Queues</members>
+        <name>Queue</name>
+    </types>
+
     <types>
         <members>My_Investment_Page</members>
-        <name>VisualforcePage</name>
+        <name>ApexPage</name>
     </types>
     <types>
         <members>newTaskHandler_Test</members>
@@ -138,20 +158,7 @@
         <members>Investment__c</members>
         <name>CustomTab</name>
     </types>
-    <types>
-        <members>Customer__c</members>
-        <members>Machine_and_Tools__c</members>
-        <members>Mining_Project_Id__c</members>
-        <members>Operations_Goal__c</members>
-        <members>Operations__c</members>
-        <members>Project_Name__c</members>
-        <members>Site_Manager__c</members>
-        <members>Finances__c</members>        
-        <members>Sales__c</members>        
-        <members>Investor__c</members>       
-        <members>Investment__c</members>       
-        <name>CustomObject</name>
-    </types>
+    
     <types>
         <members>Diego_Mining</members>
           <members>standard__LightningService</members>
@@ -161,11 +168,7 @@
         <members>Operations</members>
         <name>Profile</name>
     </types>
-      <types>
-        <members>Site_Manager_Queues</members>
-        <name>Queue</name>
-    </types>
-
+      
 
 
     

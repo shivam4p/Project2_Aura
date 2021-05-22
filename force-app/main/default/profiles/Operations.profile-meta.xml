@@ -87,6 +87,31 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Investment__c.Operations__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Investor__c.Deposited__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Investor__c.Total_Distribution__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Investor__c.Total_Investment__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Investor__c.Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Machine_and_Tools__c.Approval_Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -242,6 +267,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Operations__c.Total_Investment__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Sales__c.Order__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -291,6 +321,12 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Finances__c-Finances Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Investment__c-Investment Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Investor__c-Investor Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Machine_and_Tools__c-Machine and Tools Layout</layout>
@@ -352,6 +388,18 @@
         <object>Operations__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
+    <pageAccesses>
+        <apexPage>My_Investment_Page</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <tabVisibilities>
+        <tab>Investment__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Investor__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
     <tabVisibilities>
         <tab>Machine_and_Tools__c</tab>
         <visibility>DefaultOn</visibility>
@@ -536,6 +584,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ShowCompanyNameAsUserBadge</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SubmitMacrosAllowed</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
