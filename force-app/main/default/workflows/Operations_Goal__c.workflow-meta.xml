@@ -12,7 +12,7 @@
         <fields>Number_of_Digging_Sites__c</fields>
         <fields>Operation_Location__c</fields>
         <includeSessionId>true</includeSessionId>
-        <integrationUser>diego.maquill@resilient-raccoon-gsqz2y.com</integrationUser>
+        <integrationUser>wyang19a@resilient-impala-s26iuu.com</integrationUser>
         <name>new operation goal</name>
         <protected>false</protected>
         <useDeadLetterQueue>false</useDeadLetterQueue>
