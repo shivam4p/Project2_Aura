@@ -1,5 +1,4 @@
 public with sharing class Seach_Freights_MP {
-    public with sharing class SearchCourses_CC {
         /**
            *  This controller is used by the SearchCourses page.
            *  Users will select courses using the checkboxes and then click
@@ -17,11 +16,11 @@ public with sharing class Seach_Freights_MP {
                        *           -- Within the for loop, add to the mp_List property a new instance of FreightWrapper class 
                        *              which takes the iterator named course as input.
                        */
-          public List<Mining_Project_Id__cWrapper> mp_List {
-              get {
-                  if (mp_List == null) {
-                      mp_List = new List<Mining_Project_Id__cWrapper>();
-                      for (Mining_Project_Id__c projects : [SELECT Project_Name_c, Location__c, Mineral_or_Element_for_Extraction__c, Mining_Project_Start_Date__c
+    public List<Mining_Project_Id__cWrapper> mp_List {
+        get {
+            if (mp_List == null) {
+                mp_List = new List<Mining_Project_Id__cWrapper>();
+                     for (Mining_Project_Id__c projects : [SELECT Project_Name_c, Location__c, Mineral_or_Element_for_Extraction__c, Mining_Project_Start_Date__c
                                                  FROM Mining_Project_Id__c]) {
                           mp_List.add(new Mining_Project_Id__cWrapper(projects));
                       }
@@ -131,14 +130,12 @@ public with sharing class Seach_Freights_MP {
            *                  -- Assign the property checked the value of false.
            */
           public class Mining_Project_Id__cWrapper {
-              public Freight__c course {get; set;}
+              public Freight__c projects {get; set;}
               public Boolean checked {get; set;}
       
               public Mining_Project_Id__cWrapper(Mining_Project_Id__c c) {
-                  course = c;
-                  checked = false;
+                projects = c;
+                checked = false;
               }
-          }
-      }
-      
+    }
 }
