@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <content>Home_Page_Default1</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+    </actionOverrides>
     <brand>
         <headerColor>#0070D2</headerColor>
         <logo>asteroid_mining1</logo>
@@ -20,9 +28,13 @@
     <tabs>Machine_and_Tools__c</tabs>
     <tabs>Operations_Goal__c</tabs>
     <tabs>Site_Manager__c</tabs>
+    <tabs>Freight__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LightningService_UtilityBar</utilityBar>
     <workspaceConfig>
+        <mappings>
+            <tab>Freight__c</tab>
+        </mappings>
         <mappings>
             <tab>Machine_and_Tools__c</tab>
         </mappings>

@@ -1,0 +1,19 @@
+<apex:page controller="Search_Freights_MP" lightningStylesheets="true">
+    <apex:form>
+        <apex:pageBlock title="This is the currect Freight movement of material">
+            <apex:pageMessages />
+            <apex:pageBlockButtons>
+                <apex:commandButton action="{!newSearch}" value="New Search" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockTable var="freight" value="{!elementFreight}">
+                <apex:column value="{!freight.Name}" />
+                <apex:column value="{!freight.Mining_Project_Id__r.Project_Name__c}" />
+                <apex:column value="{!freight.Mining_Project_Id__r.Location__c}" />
+                <apex:column value="{!freight.Outbound_Departure_Date__c}" />
+                <apex:column value="{!freight.Outbound_Arrival_Date__c}" />
+                <apex:column value="{!freight.Inbound_Departure_Date__c}" />
+                <apex:column value="{!freight.Inbound_Arrived_Date__c}" />
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
