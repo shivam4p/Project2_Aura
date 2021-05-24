@@ -232,6 +232,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Operations__c.Customer__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Operations__c.Machine_and_Tools__c</field>
         <readable>false</readable>
     </fieldPermissions>
