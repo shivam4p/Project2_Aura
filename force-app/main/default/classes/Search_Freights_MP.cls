@@ -1,4 +1,4 @@
-public with sharing class Seach_Freights_MP {
+public with sharing class Search_Freights_MP {
       
     public List<MiningProjectIdcWrapper> mp_List {
         get {
