@@ -7,7 +7,12 @@
         <members>Update_Project_Mining_Subject</members>
         <members>ValidateStartDate_Test</members>
         <members>ValidateStartHandler</members>
+        <members>RiskLevelSearchController</members>
         <name>ApexClass</name>
+    </types>
+    <types>
+        <members>RiskLevelPage</members>
+        <name>ApexPage</name>
     </types>
     <types>
         <members>MiningTaskTrigger</members>

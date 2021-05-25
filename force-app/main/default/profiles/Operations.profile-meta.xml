@@ -11,6 +11,10 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
+        <apexClass>RiskLevelSearchController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>Update_Project_Mining_Subject</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -357,6 +361,10 @@
         <object>Operations__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
+    <pageAccesses>
+        <apexPage>RiskLevelPage</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
     <tabVisibilities>
         <tab>Machine_and_Tools__c</tab>
         <visibility>DefaultOn</visibility>
