@@ -1,0 +1,58 @@
+<apex:page sidebar="false" lightningStylesheets="true" controller="Operations_CC">
+  <apex:form>
+    <apex:pageBlock title="My Operations">
+      <apex:pageMessages />
+      <apex:pageBlockSection>
+        <apex:outputField value="{!operation.Name}" label="Operation Name"></apex:outputField>
+        <apex:outputField value="{!operation.Manager_Name__c}"></apex:outputField>
+        <apex:outputField value="{!operation.Mining_Project_Id__c}"></apex:outputField>
+        <apex:outputField value="{!operation.Machine_and_Tools__c}"></apex:outputField>
+      </apex:pageBlockSection>
+    </apex:pageBlock>
+    <apex:pageblock title="Operations Goal">
+        <apex:pageBlockTable var="g" value="{!goalList}">
+          <apex:column value="{!g.Name}"></apex:column>
+					<apex:column width="25px" headerValue="Actions">
+          <apex:commandLink value="Select" action="{!displayDetail}">
+            <apex:param name="goalId" value="{!g.Id}" assignTo="{!goalId}" />
+          </apex:commandLink>
+        </apex:column>
+        </apex:pageBlockTable>
+    </apex:pageblock>
+    <apex:pageBlock id="out" rendered="{!NOT(ISNULL(goalId))}" mode="inlineEdit" title="Goal Detail">
+      <apex:pageBlockSection>
+      <apex:outputField value="{!goal.Name}" Label="Goal Number"></apex:outputField>
+        <apex:outputField value="{!goal.Operation_Location__c}" Label="Location">
+          <apex:inlineEditSupport showOnEdit="saveButton, cancelButton" 
+                        event="ondblclick" 
+                        changedStyleClass="myBoldClass" resetFunction="resetInlineEdit"/>
+        </apex:outputField>
+        <apex:outputField value="{!goal.Number_of_Digging_Sites__c}" Label="# of Digging sites">
+          <apex:inlineEditSupport showOnEdit="saveButton, cancelButton" 
+                        event="ondblclick" 
+                        changedStyleClass="myBoldClass" resetFunction="resetInlineEdit"/>
+        </apex:outputField>
+        <apex:outputField value="{!goal.Extraction_Techique__c}" Label="Extraction Type">
+          <apex:inlineEditSupport showOnEdit="saveButton, cancelButton" 
+                        event="ondblclick" 
+                        changedStyleClass="myBoldClass" resetFunction="resetInlineEdit"/>
+        </apex:outputField>
+        <apex:outputField value="{!goal.Cost_of_Operation__c}" Label="Cost of Operation">
+          <apex:inlineEditSupport showOnEdit="saveButton, cancelButton" 
+                        event="ondblclick" 
+                        changedStyleClass="myBoldClass" resetFunction="resetInlineEdit"/>
+        </apex:outputField>
+        <apex:outputField value="{!goal.Stage__c}" Label="Operation Stage">
+          <apex:inlineEditSupport showOnEdit="saveButton, cancelButton" 
+                        event="ondblclick" 
+                        changedStyleClass="myBoldClass" resetFunction="resetInlineEdit"/>
+        </apex:outputField>
+      </apex:pageBlockSection>
+      <apex:pageBlockButtons >
+                <!-- <apex:commandButton action="{!edit}" id="editButton" value="Edit"/> -->
+                <apex:commandButton action="{!save}" id="saveButton" value="Save"/>
+                <apex:commandButton onclick="resetInlineEdit()" id="cancelButton" value="Cancel"/>
+            </apex:pageBlockButtons>
+    </apex:pageBlock>
+ 	</apex:form>
+</apex:page>
