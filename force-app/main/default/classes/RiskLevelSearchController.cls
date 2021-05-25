@@ -1,8 +1,9 @@
 public  with sharing class RiskLevelSearchController {
     
-    // The User's input
     public String projectName { get; set; }
-
+    
+    public String[] selectedPickValues {get; set;}
+    
     public List<Mining_Project_Id__c> projectSearchResult { get; set; }
 
     public void projectQuery() {
@@ -15,6 +16,9 @@ public  with sharing class RiskLevelSearchController {
              WHERE Project_Name__c = :projectName
              LIMIT 1
         ];
-    }
-
+        	for(Mining_Project_Id__c proj : projectSearchResult){
+            	selectedPickValues = proj.Hazardous_Issues__c.split(';');
+        	}
+        	
+        }
 }
