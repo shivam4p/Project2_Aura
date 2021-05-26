@@ -92,6 +92,7 @@ public class Operations_CC {
 
     public PageReference saveNew() {
         try {
+            newGoal.Operations__c = operationId;
             insert(newGoal);
             editMode = false;
         } catch(System.DMLException e) {
@@ -113,6 +114,10 @@ public class Operations_CC {
         // return (redirectSuccess);
         return null;
     }
+    public PageReference cancelCreate() {
+        editMode = false;
+        return null;
+    }
 
     public PageReference displayDetail() {
         goal = [SELECT Name, Operation_Location__c, Number_of_Digging_Sites__c,Extraction_Techique__c,Cost_of_Operation__c,Stage__c
@@ -126,6 +131,8 @@ public class Operations_CC {
         try {
             Operations_Goal__c og = new Operations_Goal__c(Id = goalId);
             delete og;
+            editMode = false;
+            goalId = null;
             // WORK HERE!!!!!!!!!!!!!
             // Attempt to de-reference a null object
             //Error is in expression '{!deleteGoal}' in page singleoperationpage: Class.Operations_CC.deleteGoal: line 96, column 1
