@@ -43,11 +43,7 @@
         <members>Sales__c</members>
         <name>TopicsForObjects</name>
     </types>
-    <types>
-     <members>Machine_and_Tools_c.Machines_Greater_than_Approval</members>
    
-    <name>ApprovalProcess</name>   
-    </types>
     <types>
     <members>asteroid_mining</members>
     <members>asteroid_mining1</members>
