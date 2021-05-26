@@ -7,6 +7,7 @@
         <members>Update_Project_Mining_Subject</members>
         <members>ValidateStartDate_Test</members>
         <members>ValidateStartHandler</members>
+        <members>Search_Freights_MP</members>
         <name>ApexClass</name>
     </types>
     <types>
@@ -117,6 +118,11 @@
         <members>Home_Page</members>
         <members>Operations_Record_Page</members>
         <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>Display_MP_Freight_Info</members>
+        <members>Search_MP_Freight_Info</members>
+        <name>ApexPage</name>
     </types>
     <types>
         <members>Machine_and_Tools__c</members>
