@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
+        <members>Customer__c</members>
+        <members>Machine_and_Tools__c</members>
+        <members>Mining_Project_Id__c</members>
+        <members>Operations_Goal__c</members>
+        <members>Operations__c</members>
+        <members>Project_Name__c</members>
+        <members>Site_Manager__c</members>
+        <members>Finances__c</members>        
+        <members>Sales__c</members>        
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Site_Manager_Queues</members>
+        <name>Queue</name>
+    </types>
+    <types>
         <members>newTaskHandler_Test</members>
         <members>newTaskHandler</members>
         <members>Update_Project_Mining_Subject_Test</members>
@@ -133,18 +149,6 @@
         <name>CustomTab</name>
     </types>
     <types>
-        <members>Customer__c</members>
-        <members>Machine_and_Tools__c</members>
-        <members>Mining_Project_Id__c</members>
-        <members>Operations_Goal__c</members>
-        <members>Operations__c</members>
-        <members>Project_Name__c</members>
-        <members>Site_Manager__c</members>
-        <members>Finances__c</members>        
-        <members>Sales__c</members>        
-        <name>CustomObject</name>
-    </types>
-    <types>
         <members>Diego_Mining</members>
           <members>standard__LightningService</members>
         <name>CustomApplication</name>
@@ -153,6 +157,7 @@
         <members>Operations</members>
         <name>Profile</name>
     </types>
+
       <types>
         <members>Site_Manager_Queues</members>
         <name>Queue</name>
