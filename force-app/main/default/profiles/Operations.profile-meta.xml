@@ -13,7 +13,7 @@
     <classAccesses>
         <apexClass>Search_Freights_MP</apexClass>
         <enabled>false</enabled>
-    </classAccesses
+    </classAccesses>
     <classAccesses>
         <apexClass>Operations_CC</apexClass>
         <enabled>false</enabled>

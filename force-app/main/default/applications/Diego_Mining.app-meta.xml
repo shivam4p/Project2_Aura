@@ -45,7 +45,6 @@
     <tabs>standard-Dashboard</tabs>
     <tabs>standard-report</tabs>
     <tabs>Freight__c</tabs>
-    <tabs>Engineering_Machine__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Diego_Mining_Company_UtilityBar</utilityBar>
 </CustomApplication>

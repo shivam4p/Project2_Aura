@@ -145,7 +145,7 @@
     </types>
     <types>
         <members>Diego_Mining</members>
-          <members>standard__LightningService</members>
+          <!--<members>standard__LightningService</members>-->
         <name>CustomApplication</name>
     </types>
     <types>
