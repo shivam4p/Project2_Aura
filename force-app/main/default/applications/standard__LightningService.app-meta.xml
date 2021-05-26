@@ -29,11 +29,13 @@
     <tabs>Operations_Goal__c</tabs>
     <tabs>Site_Manager__c</tabs>
     <tabs>Freight__c</tabs>
+    <tabs>Engineering_Machine__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LightningService_UtilityBar</utilityBar>
     <workspaceConfig>
         <mappings>
             <tab>Freight__c</tab>
+            <tab>Engineering_Machine__c</tab>
         </mappings>
         <mappings>
             <tab>Machine_and_Tools__c</tab>

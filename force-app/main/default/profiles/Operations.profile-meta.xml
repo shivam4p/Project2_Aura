@@ -11,6 +11,11 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
+        <apexClass>Operations_CC</apexClass>
+        <apexClass>RiskLevelSearchController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>Update_Project_Mining_Subject</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -68,6 +73,31 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Customer__c.State_Run_Company__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Engineering_Machine__c.Machine_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Engineering_Machine__c.Mining_Project_Id__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Engineering_Machine__c.available_status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Engineering_Machine__c.model__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Engineering_Machine__c.value__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -172,6 +202,12 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <editable>false</editable>
+        <field>Mining_Project_Id__c.Hazard_Count__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Mining_Project_Id__c.Hazardous_Issues__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -247,18 +283,23 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Operations_Goal__c.Name_of_Project__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Operations_Goal__c.Number_of_Digging_Sites__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Operations_Goal__c.Operation_Location__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Operations_Goal__c.Operations__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Operations_Goal__c.Stage__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -283,11 +324,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Operations__c.Operation_Status__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Operations__c.Operations_Goal__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -331,10 +367,6 @@
     <flowAccesses>
         <enabled>false</enabled>
         <flow>Project_Reminder</flow>
-    </flowAccesses>
-    <flowAccesses>
-        <enabled>false</enabled>
-        <flow>net_promoter_score</flow>
     </flowAccesses>
     <layoutAssignments>
         <layout>Customer__c-Customer Layout</layout>
@@ -402,6 +434,24 @@
         <object>Operations__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
+    <pageAccesses>
+        <apexPage>OperationsPage</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SingleOperationPage</apexPage>
+        <apexPage>engineeringmachine</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>individualengineeringmachine</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>testhomepage</apexPage>
+        <apexPage>RiskLevelPage</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
     <tabVisibilities>
         <tab>Machine_and_Tools__c</tab>
         <visibility>DefaultOn</visibility>

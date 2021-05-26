@@ -1,0 +1,8 @@
+<apex:page label="individual engineering machine  with save fuction" standardController="Engineering_Machine__c" >
+    <apex:pageBlock title="engineering machine detail">
+       <apex:pageBlockSection >
+           name: {!Engineering_Machine__c.Machine_Name__c } <br/>
+           status:{!Engineering_Machine__c.available_status__c }  <br/>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>
