@@ -22,13 +22,10 @@
         <members>Update_Project_Mining_Subject</members>
         <members>ValidateStartDate_Test</members>
         <members>ValidateStartHandler</members>
+        <members>Search_Freights_MP</members>
         <members>Operations_CC</members>
         <members>RiskLevelSearchController</members>
         <name>ApexClass</name>
-    </types>
-    <types>
-        <members>RiskLevelPage</members>
-        <name>ApexPage</name>
     </types>
     <types>
         <members>MiningTaskTrigger</members>
@@ -162,6 +159,9 @@
         <members>testhomepage</members>
         <members>OperationsPage</members>
         <members>SingleOperationPage</members>
+        <members>Display_MP_Freight_Info</members>
+        <members>Search_MP_Freight_Info</members>
+        <members>RiskLevelPage</members>
         <name>ApexPage</name>
     </types>
     

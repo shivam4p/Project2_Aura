@@ -11,6 +11,10 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
+        <apexClass>Search_Freights_MP</apexClass>
+        <enabled>false</enabled>
+    </classAccesses
+    <classAccesses>
         <apexClass>Operations_CC</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -416,6 +420,14 @@
         <object>Operations__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
+    <pageAccesses>
+        <apexPage>Display_MP_Freight_Info</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>Search_MP_Freight_Info</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
     <pageAccesses>
         <apexPage>OperationsPage</apexPage>
         <enabled>false</enabled>
