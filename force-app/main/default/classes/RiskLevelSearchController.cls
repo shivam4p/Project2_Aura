@@ -6,7 +6,7 @@ public  with sharing class RiskLevelSearchController {
     
     public List<Mining_Project_Id__c> projectSearchResult { get; set; }
 
-    public List<Mining_Project_Id__c> projectQuery() {
+    public void projectQuery() {
 
         projectName = projectName.trim();
 
