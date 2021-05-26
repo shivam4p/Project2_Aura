@@ -16,14 +16,6 @@
         <name>CustomObject</name>
     </types>
     <types>
-        <members>Site_Manager_Queues</members>
-        <name>Queue</name>
-    </types>
-    <types>
-        <members>Machine_and_Tools_c.Machines_Greater_than_Approval</members>
-        <name>ApprovalProcess</name>   
-    </types>
-    <types>
         <members>newTaskHandler_Test</members>
         <members>newTaskHandler</members>
         <members>Update_Project_Mining_Subject_Test</members>
@@ -173,10 +165,6 @@
     </types>
     
 
-      <types>
-        <members>Site_Manager_Queues</members>
-        <name>Queue</name>
-    </types>
     <types>
     <members>RiskSigns</members>
     <name>StaticResource</name>
