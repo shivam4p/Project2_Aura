@@ -1,0 +1,54 @@
+<apex:page controller="RiskLevelSearchController" lightningStylesheets="true">
+    <apex:form style="padding:2em">
+        <apex:pageBlock >
+            <apex:pageBlockSection columns="1">
+                <apex:outputText value="Enter Project Name"/>
+                <apex:inputText value="{!projectName}"/>
+                <apex:commandButton value="Search" action="{!projectQuery}" />
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        <apex:pageBlock rendered="{!NOT(ISNULL(projectName))}" >
+            <apex:pageBlockTable value="{!projectSearchResult}" var="proj">
+                <apex:column value="{!proj.Name}"/>
+                <apex:column headerValue="Project Name">
+                  <apex:outputLink target="_blank" value="/{!proj.id}">{!proj.Project_Name__c}</apex:outputLink>
+                </apex:column>
+                <apex:column value="{!proj.Hazardous_Issues__c}"/>
+                  <apex:column headervalue="Risk Level">
+                     
+                       <!-- Low Risk Level  -->
+                      <apex:image alt="Low Risk Sign" url="{!URLFOR($Resource.RiskSigns, 'RiskSigns/risk_sign_green.png')}"
+                                   height="46px" width="72px" rendered="{!proj.Hazard_Count__c <= 2}"/>
+                       <!-- Medium Risk Level  -->
+                      <apex:image alt="Medium Risk Sign" url="{!URLFOR($Resource.RiskSigns, 'RiskSigns/risk_sign_yellow.png')}" 
+                                   height="46px" width="72px" rendered="{!proj.Hazard_Count__c > 2 && proj.Hazard_Count__c < 5}"/>
+                       <!-- High Risk Level  -->
+                      <apex:image alt="High Risk Sign" url="{!URLFOR($Resource.RiskSigns, 'RiskSigns/risk_sign_red.png')}"
+                                   height="46px" width="72px" rendered="{!proj.Hazard_Count__c >= 5}"/>
+                 </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        <apex:pageBlock title="Safety Precaution Links" >
+               <apex:repeat value="{!SelectedPickValues}" var="pick" id="theRepeat">
+ 				<apex:outputLink tabindex="1" target="_blank" value="https://www.brandeis.edu/ehs/labs/corrosives.html"
+                                 rendered="{!pick == 'Corrosive Environment'}">{!pick}<br/></apex:outputLink>
+                <apex:outputLink target="_blank" value="https://www.epa.gov/radiation/protecting-yourself-radiation"
+                                 rendered="{!pick == 'High Radiation'}" >{!pick}<br/></apex:outputLink>
+                <apex:outputLink target="_blank" value="https://davidson.weizmann.ac.il/en/online/sciencepanorama/dangers-zero-gravity"
+                                 rendered="{!pick == 'Low Gravity'}">{!pick}<br/></apex:outputLink>
+                <apex:outputLink target="_blank" value="https://www.narfa.com/cold-weather-safety-tips/"
+                                 rendered="{!pick == 'Low Temperatures'}">{!pick}<br/></apex:outputLink>
+                <apex:outputLink target="_blank" value="https://www.safetyandhealthmagazine.com/articles/how-to-maintain-steady-barometric-pressure-in-a-mine-2"
+                                 rendered="{!pick == 'Low Atmosphere Pressure'}">{!pick}<br/></apex:outputLink>
+                <apex:outputLink target="_blank" value="https://www.cdc.gov/nceh/features/extremeheat/index.html"
+                                 rendered="{!pick == 'High Temperatures'}">{!pick}<br/></apex:outputLink>
+                <apex:outputLink target="_blank" value="https://www.bothellwa.gov/DocumentCenter/View/500/Volcano-Safety-Tips-PDF?bidId="
+                                 rendered="{!pick == 'Volcanic Activity'}">{!pick}<br/></apex:outputLink>
+                <apex:outputLink target="_blank" value="https://www.safetyandhealthmagazine.com/articles/how-to-maintain-steady-barometric-pressure-in-a-mine-2"
+                                 rendered="{!pick == 'Crashing Atmosphere Pressure'}">{!pick}<br/></apex:outputLink>
+                <apex:outputLink target="_blank" value="https://www.pinnacol.com/knowledge-center/safety-talk-gravity-always-wins"
+                                 rendered="{!pick == 'Crashing Gravity'}">{!pick}<br/></apex:outputLink>
+            </apex:repeat>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
