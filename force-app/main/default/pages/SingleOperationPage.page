@@ -59,6 +59,8 @@
         <apex:commandButton onclick="resetInlineEdit();" id="cancelButton" value="Cancel" />
       </apex:pageBlockButtons>
       </apex:pageBlock>
+      </apex:form>
+      <apex:form id="newForm">
       <apex:pageBlock rendered="{!editMode}" title="New Goal">
         <apex:pageBlockButtons>
           <apex:commandButton action="{!saveNew}" id="saveNewButton" value="Save" />

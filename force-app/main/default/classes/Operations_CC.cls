@@ -13,6 +13,9 @@ public class Operations_CC {
         // if (goalId != null) {
         //     goal = new Operations_Goal__c();
         // }
+        if (newGoal == null || newGoal.Id != null) {
+            newGoal = new Operations_Goal__c();
+        }
         editMode = !editMode;
         // if (editMode == false) {
         //     goalId = null;
@@ -90,6 +93,7 @@ public class Operations_CC {
     public PageReference saveNew() {
         try {
             insert(newGoal);
+            editMode = false;
         } catch(System.DMLException e) {
             ApexPages.addMessages(e);
             return null;
