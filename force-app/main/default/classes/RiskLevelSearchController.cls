@@ -1,12 +1,12 @@
 public  with sharing class RiskLevelSearchController {
     
-    public String projectName { get; set; }
+    public String projectName { get; set;}
     
     public String[] selectedPickValues {get; set;}
     
     public List<Mining_Project_Id__c> projectSearchResult { get; set; }
 
-    public void projectQuery() {
+    public List<Mining_Project_Id__c> projectQuery(String projectName) {
 
         projectName = projectName.trim();
 
@@ -19,5 +19,6 @@ public  with sharing class RiskLevelSearchController {
         	for(Mining_Project_Id__c proj : projectSearchResult){
             	selectedPickValues = proj.Hazardous_Issues__c.split(';');
         	}
+            return projectSearchResult;
         }
 }
