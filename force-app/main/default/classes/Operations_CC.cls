@@ -84,12 +84,15 @@ public class Operations_CC {
             editMode = false;
             ApexPages.addMessage(new ApexPages.message(ApexPages.severity.CONFIRM,
                                 'Successfully created new goal!'));
+            PageReference pr = Page.SingleOperationPage;
+            pr.getParameters().put('operationId', operationId);
+            return pr;
         } catch(System.DMLException e) {
             ApexPages.addMessage(new ApexPages.message(ApexPages.severity.ERROR,
                                 'Uh oh, something went wrong..'));
             return null;
         }
-        return null;
+        // return null;
     }
 
     public PageReference save() {

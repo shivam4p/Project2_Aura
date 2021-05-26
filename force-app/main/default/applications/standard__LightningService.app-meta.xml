@@ -20,17 +20,9 @@
     <tabs>Machine_and_Tools__c</tabs>
     <tabs>Operations_Goal__c</tabs>
     <tabs>Site_Manager__c</tabs>
-    <tabs>Investment__c</tabs>
-    <tabs>Investor__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LightningService_UtilityBar</utilityBar>
     <workspaceConfig>
-        <mappings>
-            <tab>Investment__c</tab>
-        </mappings>
-        <mappings>
-            <tab>Investor__c</tab>
-        </mappings>
         <mappings>
             <tab>Machine_and_Tools__c</tab>
         </mappings>

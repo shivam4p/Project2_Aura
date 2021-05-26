@@ -44,8 +44,6 @@
     <tabs>Site_Manager__c</tabs>
     <tabs>standard-Dashboard</tabs>
     <tabs>standard-report</tabs>
-    <tabs>Investment__c</tabs>
-    <tabs>Investor__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Diego_Mining_Company_UtilityBar</utilityBar>
 </CustomApplication>

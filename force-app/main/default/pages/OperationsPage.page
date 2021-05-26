@@ -1,5 +1,5 @@
 <apex:page sidebar="false" lightningStylesheets="true" controller="Operations_CC">
-  <apex:form>
+  <apex:form >
 		<apex:pageBlock title="My Operations">
 			<apex:pageMessages escape="true" />
 				<apex:pageBlockTable var="o" columnsWidth="60%,20%,20%" value="{!operationList}">

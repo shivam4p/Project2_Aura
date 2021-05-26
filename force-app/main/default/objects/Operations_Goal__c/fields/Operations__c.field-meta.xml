@@ -5,8 +5,8 @@
     <externalId>false</externalId>
     <label>Operations</label>
     <referenceTo>Operations__c</referenceTo>
-    <relationshipLabel>Investments</relationshipLabel>
-    <relationshipName>Investments</relationshipName>
+    <relationshipLabel>Operations Goals</relationshipLabel>
+    <relationshipName>Operations_Goals</relationshipName>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

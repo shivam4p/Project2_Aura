@@ -8,31 +8,38 @@
   <apex:form id="theForm">
     <apex:pageBlock title="My Operations">
       <apex:pageMessages />
-      <apex:pageBlockSection>
+      <apex:pageBlockSection >
         <apex:outputField value="{!operation.Name}" label="Operation Name"></apex:outputField>
         <apex:outputField value="{!operation.Manager_Name__c}"></apex:outputField>
         <apex:outputField value="{!operation.Mining_Project_Id__c}"></apex:outputField>
         <apex:outputField value="{!operation.Machine_and_Tools__c}"></apex:outputField>
       </apex:pageBlockSection>
     </apex:pageBlock>
-    <apex:pageblock title="Operations Goal" id="og">
-      <apex:pageBlockButtons>
+    <apex:pageblock title="Operations Goal">
+      <apex:pageBlockButtons >
         <apex:commandLink value="Create" action="{!toggleEditMode}"></apex:commandLink>
       </apex:pageBlockButtons>
-        <apex:pageBlockTable var="g" value="{!goalList}">
-          <apex:column value="{!g.Name}"></apex:column>
-					<apex:column width="25px" headerValue="Actions">
-            <div class="btn-set">
-            <apex:commandLink value="Select" action="{!displayDetail}">
-              <apex:param name="goalId" value="{!g.Id}" assignTo="{!goalId}" />
-              <apex:param name="editMode" value="false" assignTo="{!editMode}" />
-            </apex:commandLink>
-            <apex:commandLink value="Delete" action="{!deleteGoal}" reRender="theForm">
-              <apex:param name="goalId" value="{!g.Id}" assignTo="{!goalId}" />
-            </apex:commandLink>
-          </div>
-        </apex:column>
-        </apex:pageBlockTable>
+      <apex:pageBlockTable id="ogtable" var="g" value="{!goalList}">
+        <apex:column value="{!g.Name}"></apex:column>
+        <apex:column width="25px" headerValue="Actions">
+          <div class="btn-set">
+          <apex:commandLink value="Select" action="{!displayDetail}">
+            <apex:param name="goalId" value="{!g.Id}" assignTo="{!goalId}" />
+            <apex:param name="editMode" value="false" assignTo="{!editMode}" />
+          </apex:commandLink>
+          <!-- <apex:outputText value="Delete">
+            <apex:param name="goalId" value="{!g.Id}" assignTo="{!goalId}" />
+          </apex:outputText>
+          
+          <apex:actionSupport event="onclick" 
+                              action="{!deleteGoal}" 
+                              rerender="theForm"/> -->
+          <apex:commandLink value="Delete" action="{!deleteGoal}" reRender="ogtable">
+            <apex:param name="goalId" value="{!g.Id}" assignTo="{!goalId}" />
+          </apex:commandLink>
+        </div>
+      </apex:column>
+      </apex:pageBlockTable>
     </apex:pageblock>
     <apex:pageBlock rendered="{! NOT(ISNULL(goalId)) && EditMode == false}" mode="inlineEdit" title="Goal Detail">
       <apex:pageBlockSection columns="1">
@@ -53,16 +60,18 @@
           <apex:inlineEditSupport showOnEdit="saveButton, cancelButton" event="ondblclick" resetFunction="resetInlineEdit"/>
         </apex:outputField>
       </apex:pageBlockSection>
-      <apex:pageBlockButtons>
+      <apex:pageBlockButtons >
         <!-- <apex:commandButton action="{!edit}" id="editButton" value="Edit"/> -->
         <apex:commandButton action="{!save}" id="saveButton" value="Save" />
         <apex:commandButton onclick="resetInlineEdit();" id="cancelButton" value="Cancel" />
       </apex:pageBlockButtons>
       </apex:pageBlock>
       </apex:form>
+
+      
       <apex:form id="newForm">
       <apex:pageBlock rendered="{!editMode}" title="New Goal">
-        <apex:pageBlockButtons>
+        <apex:pageBlockButtons >
           <apex:commandButton action="{!saveNew}" id="saveNewButton" value="Save" />
           <apex:commandButton action="{!cancelCreate}" id="cancelCreateButton" value="Cancel" />
         </apex:pageBlockButtons>

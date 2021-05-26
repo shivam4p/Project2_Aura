@@ -11,8 +11,6 @@
         <members>Site_Manager__c</members>
         <members>Finances__c</members>        
         <members>Sales__c</members>        
-        <members>Investor__c</members>       
-        <members>Investment__c</members>       
         <name>CustomObject</name>
     </types>
     <types>
@@ -21,7 +19,8 @@
     </types>
 
     <types>
-        <members>My_Investment_Page</members>
+        <members>OperationsPage</members>
+        <members>SingleOperationPage</members>
         <name>ApexPage</name>
     </types>
     <types>
@@ -31,6 +30,7 @@
         <members>Update_Project_Mining_Subject</members>
         <members>ValidateStartDate_Test</members>
         <members>ValidateStartHandler</members>
+        <members>Operations_CC</members>
         <name>ApexClass</name>
     </types>
     <types>
@@ -48,8 +48,6 @@
         <members>Site_Manager__c</members>
         <members>Finances__c</members>
         <members>Sales__c</members>
-        <members>Investment__c</members>
-        <members>Investor__c</members>
         <name>TopicsForObjects</name>
     </types>
     <types>
@@ -74,7 +72,6 @@
         <members>Site_Manager__c</members>
         <members>Finances__c</members>
         <members>Sales__c</members>
-        <members>Investor__c</members>
         <name>SharingRules</name>
     </types>
     <types>
@@ -92,8 +89,6 @@
         <members>Site_Manager__c-Site Manager Layout</members>
         <members>Task-Task Layout</members>
         <members>Sales__c-Sales Layout</members>
-        <members>Investor__c-Investor Layout</members>
-        <members>Investment__c-Investment Layout</members>
         <name>Layout</name>
     </types>
       <types>
@@ -154,8 +149,6 @@
         <members>Operations__c</members>
         <members>Site_Manager__c</members>
         <members>Project_Name__c</members>
-        <members>Investor__c</members>
-        <members>Investment__c</members>
         <name>CustomTab</name>
     </types>
     
