@@ -192,17 +192,22 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Operations_Goal__c.Name_of_Project__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Operations_Goal__c.Number_of_Digging_Sites__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>Operations_Goal__c.Operation_Location__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Operations_Goal__c.Operations__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Operations_Goal__c.Stage__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -228,11 +233,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Operations__c.Operation_Status__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Operations__c.Operations_Goal__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

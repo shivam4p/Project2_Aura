@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
+
     <types>
         <members>Customer__c</members>
         <members>Machine_and_Tools__c</members>
@@ -10,7 +11,7 @@
         <members>Site_Manager__c</members>
         <members>Finances__c</members>        
         <members>Sales__c</members>  
-        <members>Engineering_Machine__c</members>      
+        <members>Engineering_Machine__c</members>    
         <name>CustomObject</name>
     </types>
     <types>
@@ -24,6 +25,7 @@
         <members>Update_Project_Mining_Subject</members>
         <members>ValidateStartDate_Test</members>
         <members>ValidateStartHandler</members>
+        <members>Operations_CC</members>
         <members>RiskLevelSearchController</members>
         <name>ApexClass</name>
     </types>
@@ -154,10 +156,13 @@
         <members>Operations</members>
         <name>Profile</name>
     </types>
+                  
     <types>
         <members>individualengineeringmachine</members>
         <members>engineeringmachine</members>
         <members>testhomepage</members>
+        <members>OperationsPage</members>
+        <members>SingleOperationPage</members>
         <name>ApexPage</name>
     </types>
     
@@ -170,7 +175,6 @@
     <members>RiskSigns</members>
     <name>StaticResource</name>
 </types>
-
 
 
     
