@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hazard_Count__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(INCLUDES(Hazardous_Issues__c, &apos;Corrosive Environment&apos;), 1, 0) 
++ IF(INCLUDES(Hazardous_Issues__c, &apos;High Radiation&apos;), 1, 0) 
++ IF(INCLUDES(Hazardous_Issues__c, &apos;Low Gravity&apos;), 1, 0)
++ IF(INCLUDES(Hazardous_Issues__c, &apos;Low Atmosphere Pressure&apos;), 1, 0)
++ IF(INCLUDES(Hazardous_Issues__c, &apos;High Temperatures&apos;), 1, 0)
++ IF(INCLUDES(Hazardous_Issues__c, &apos;Low Temperatures&apos;), 1, 0)
++ IF(INCLUDES(Hazardous_Issues__c, &apos;Crashing Atmosphere Pressure&apos;), 1, 0)
++ IF(INCLUDES(Hazardous_Issues__c, &apos;Volcanic Activity&apos;), 1, 0)
++ IF(INCLUDES(Hazardous_Issues__c, &apos;Crashing Gravity&apos;), 1, 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Hazard Count</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

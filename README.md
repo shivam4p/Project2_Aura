@@ -2,13 +2,13 @@
 
 ## Getting Started
 
-1. Clone.
+1. Clone. 
 `git clone https://github.com/12Apr21-Salesforce/p1_lead.git`
 
 2. Authorize your playground org.
 
 3. run `sfdx force:source:deploy -x manifest/package.xml`
-You will get below errors:
+You will get below errors: 
 ![Error1](https://imgur.com/t5Dz1l5.png)
 
 4. Change the username to point to an username that exists in the playground you are trying to deploy to. (your own system admin account username works)
@@ -20,5 +20,12 @@ You will get below errors:
 ![PSD](https://imgur.com/HsIh3Ue.png)
 
 
-Deploy source in `manifest/package.xml` to Org
+5. Deploy source in `manifest/package.xml` to Org 
+
 [![ok.png](https://i.postimg.cc/HsggfKSy/ok.png)](https://postimg.cc/c6X23DGx)
+
+### Useful Links/References
+- [GA tutorial - Unix CLI Command Tutorial](docs/Unix.md)
+- [GA tutorial - GitBasics](docs/GitBasics.md)
+- [GA tutorial - GitHub](docs/GitHub.md)
+- [GA tutorial - Git CommandReference](docs/CommandReference.md)
