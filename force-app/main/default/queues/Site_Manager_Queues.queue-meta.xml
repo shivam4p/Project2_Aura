@@ -3,7 +3,7 @@
     <doesSendEmailToMembers>true</doesSendEmailToMembers>
     <name>Site Manager Queues</name>
     <queueMembers>
-        <users>
+        <users
             <user>wyang19a@creative-otter-lapoul.com</user>
         </users>
     </queueMembers>
