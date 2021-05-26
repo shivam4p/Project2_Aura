@@ -142,6 +142,7 @@
         <members>Operations__c</members>
         <members>Site_Manager__c</members>
         <members>Project_Name__c</members>
+        <members>Freight__c</members>        
         <members>Engineering_Machine__c</members>
         <name>CustomTab</name>
     </types>
