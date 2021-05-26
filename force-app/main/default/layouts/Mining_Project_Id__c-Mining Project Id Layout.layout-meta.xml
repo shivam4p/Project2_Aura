@@ -122,6 +122,7 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
+        <relatedList>Freight__c.Mining_Project_Id__c</relatedList>
         <relatedList>Engineering_Machine__c.Mining_Project_Id__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>

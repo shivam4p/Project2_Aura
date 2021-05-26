@@ -11,6 +11,11 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
+        <apexClass>Operations_CC</apexClass>
+        <apexClass>RiskLevelSearchController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>Update_Project_Mining_Subject</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -112,6 +117,51 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Freight__c.Container_Capacity__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Freight__c.Freight_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Freight__c.Freight_log__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Freight__c.Inbound_Arrived_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Freight__c.Inbound_Departure_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Freight__c.Number_of_Containers__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Freight__c.Outbound_Arrival_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Freight__c.Outbound_Departure_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Freight__c.Total_Freight_Load__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Machine_and_Tools__c.Approval_Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -146,9 +196,15 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Mining_Project_Id__c.Freight__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <editable>false</editable>
         <field>Mining_Project_Id__c.Hazardous_Issues__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -222,18 +278,23 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Operations_Goal__c.Name_of_Project__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Operations_Goal__c.Number_of_Digging_Sites__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Operations_Goal__c.Operation_Location__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Operations_Goal__c.Operations__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Operations_Goal__c.Stage__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -258,11 +319,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Operations__c.Operation_Status__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Operations__c.Operations_Goal__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -374,6 +430,11 @@
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <pageAccesses>
+        <apexPage>OperationsPage</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>SingleOperationPage</apexPage>
         <apexPage>engineeringmachine</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
