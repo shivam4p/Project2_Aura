@@ -24,10 +24,10 @@ public class Operations_CC {
 
     public List<Operations__c> operationList {
         get {
+            List<Operations__c> sourceRecords = [SELECT Name, Machine_and_Tools__c FROM Operations__c];
             if (operationList == null) {
                 operationList = new List<Operations__c>();
-                for (Operations__c operation : [SELECT Name, Machine_and_Tools__c
-                                           FROM Operations__c]) {
+                for (Operations__c operation : [SELECT Name, Machine_and_Tools__c FROM Operations__c]) {
                     operationList.add(operation);
                 }
             }
@@ -52,10 +52,9 @@ public class Operations_CC {
         get {
             if (operationGoal == null) {
                 operationGoal = new Operations_Goal__c();
-                operationGoal = [SELECT Name, Cost_of_Operation__c, Extraction_Techique__c, Number_of_Digging_Sites__c, Operation_Location__c , Stage__c
-                FROM Operations_Goal__c 
-                WHERE Operations__c = :operationId 
-                LIMIT 1];
+                String whereClause = 'WHERE Operations__c = :operationId LIMIT 1';
+                List<String> fieldsToSanitize = new List<String>{'Name', 'Cost_of_Operation__c', 'Extraction_Techique__c', 'Number_of_Digging_Sites__c', 'Operation_Location__c' , 'Stage__c'};
+                operationGoal = sanitizeQuery(fieldsToSanitize, 'Operations_Goal__c', whereClause)[0];
             }
             return operationGoal;
         }
@@ -189,4 +188,77 @@ public class Operations_CC {
     //         selected = false;
     //     }
     // }
+    public static List<Operations_Goal__c> sanitizeQuery(List<String> strList, String sObjectName) {
+        String queryString = 'SELECT ';
+        List<String> fieldsToCheck = new List<String>();
+        for (String str : strList) {
+            fieldsToCheck.add(str);
+        }
+        
+        Map<String, List<String>> entitiesToCheck = new Map<String, List<String>>();
+        entitiesToCheck.put(sObjectName, fieldsToCheck);
+        
+        Set<String> accessibleFields = checkAccessibility(entitiesToCheck);
+        
+        if(accessibleFields.size() == 0) {
+            return null;
+        } else {
+            // if(Schema.SObjectType.Account.isAccessible() && accessibleFields.contains('AccountId')) {
+            //     accessibleFields.remove('AccountId');
+            //     accessibleFields.add('Account.Name');
+            // }
+            
+            queryString += accessibleFields.toString().substring(1, accessibleFields.toString().length() - 1) + ' FROM ' + sObjectName;
+            return Database.query(queryString);
+        }
+
+    }
+    public static List<Operations_Goal__c> sanitizeQuery(List<String> strList, String sObjectName, String whereClauseStr) {
+        String queryString = 'SELECT ';
+        List<String> fieldsToCheck = new List<String>();
+        for (String str : strList) {
+            fieldsToCheck.add(str);
+        }
+        
+        Map<String, List<String>> entitiesToCheck = new Map<String, List<String>>();
+        entitiesToCheck.put(sObjectName, fieldsToCheck);
+        
+        Set<String> accessibleFields = checkAccessibility(entitiesToCheck);
+        
+        if(accessibleFields.size() == 0) {
+            return null;
+        } else {
+            // if(Schema.SObjectType.Account.isAccessible() && accessibleFields.contains('AccountId')) {
+            //     accessibleFields.remove('AccountId');
+            //     accessibleFields.add('Account.Name');
+            // }
+            
+            queryString += accessibleFields.toString().substring(1, accessibleFields.toString().length() - 1) + ' FROM ' + sObjectName + ' ' + whereClauseStr;
+            return Database.query(queryString);
+        }
+
+    }
+
+    public static Set<String> checkAccessibility(Map<String, List<String>> entitiesToCheck) {
+        List<String> objectNames = new List<String>();
+        for(String objectName : entitiesToCheck.keySet()) {
+            objectNames.add(objectName);
+        }
+        
+        List<Schema.DescribeSObjectResult> describedObjects = Schema.describeSObjects(objectNames);
+        
+        Set<String> accessibleFields = new Set<String>();
+        
+        for(Schema.DescribeSObjectResult dsor : describedObjects) {
+            if(dsor.isAccessible()) {
+                for(String field : entitiesToCheck.get(dsor.getName())) {
+                    if(dsor.fields.getMap().get(field).getDescribe().isAccessible()) {
+                        accessibleFields.add(field);
+                    }
+                }
+            }
+        }
+        
+        return accessibleFields;
+    } 
 }

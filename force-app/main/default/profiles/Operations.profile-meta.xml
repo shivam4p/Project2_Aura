@@ -12,7 +12,6 @@
     </applicationVisibilities>
     <classAccesses>
         <apexClass>Operations_CC</apexClass>
-        <apexClass>RiskLevelSearchController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -73,31 +72,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Customer__c.State_Run_Company__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Engineering_Machine__c.Machine_Name__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Engineering_Machine__c.Mining_Project_Id__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Engineering_Machine__c.available_status__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Engineering_Machine__c.model__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Engineering_Machine__c.value__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -362,6 +336,10 @@
     <flowAccesses>
         <enabled>false</enabled>
         <flow>Project_Reminder</flow>
+    </flowAccesses>
+    <flowAccesses>
+        <enabled>false</enabled>
+        <flow>net_promoter_score</flow>
     </flowAccesses>
     <layoutAssignments>
         <layout>Customer__c-Customer Layout</layout>
