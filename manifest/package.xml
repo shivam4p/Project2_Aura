@@ -160,6 +160,10 @@
         <members>Site_Manager_Queues</members>
         <name>Queue</name>
     </types>
+      <types>
+        <members>images</members>
+        <name>StaticResource</name>
+    </types>
 
 
 
