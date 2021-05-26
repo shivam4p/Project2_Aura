@@ -9,8 +9,7 @@
         <members>Project_Name__c</members>
         <members>Site_Manager__c</members>
         <members>Finances__c</members>        
-        <members>Sales__c</members>  
-        <members>Engineering_Machine__c</members>      
+        <members>Sales__c</members>        
         <name>CustomObject</name>
     </types>
     <types>
@@ -43,7 +42,11 @@
         <members>Sales__c</members>
         <name>TopicsForObjects</name>
     </types>
+    <types>
+     <members>Machine_and_Tools_c.Machines_Greater_than_Approval</members>
    
+    <name>ApprovalProcess</name>   
+    </types>
     <types>
     <members>asteroid_mining</members>
     <members>asteroid_mining1</members>
@@ -149,13 +152,6 @@
         <members>Operations</members>
         <name>Profile</name>
     </types>
-    <types>
-        <members>individualengineeringmachine</members>
-        <members>engineeringmachine</members>
-        <members>testhomepage</members>
-        <name>ApexPage</name>
-    </types>
-    
 
 
 
