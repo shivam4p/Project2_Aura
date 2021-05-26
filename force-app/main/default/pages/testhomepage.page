@@ -1,8 +1,0 @@
-<apex:page label="test button page">
-    <h1>button test page</h1>
-    <apex:pageBlock title="test if link works">
-        <apex:pageBlockSection title="test if both link and button works">
-            <apex:outputLink value="https://playful-goat-lncwf5-dev-ed--c.visualforce.com/apex/engineeringmachine?core.apexpages.request.devconsole=1">link</apex:outputLink>
-        </apex:pageBlockSection>
-    </apex:pageBlock>
-</apex:page>
