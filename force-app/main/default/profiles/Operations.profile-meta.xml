@@ -5,17 +5,16 @@
         <default>false</default>
         <visible>false</visible>
     </applicationVisibilities>
-    <applicationVisibilities>
-        <application>standard__LightningService</application>
-        <default>false</default>
-        <visible>true</visible>
-    </applicationVisibilities>
     <classAccesses>
-        <apexClass>Search_Freights_MP</apexClass>
+        <apexClass>Operations_CC</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>Operations_CC</apexClass>
+        <apexClass>RiskLevelSearchController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>Search_Freights_MP</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -77,6 +76,31 @@
         <editable>true</editable>
         <field>Customer__c.State_Run_Company__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Engineering_Machine__c.Machine_Name__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Engineering_Machine__c.Mining_Project_Id__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Engineering_Machine__c.available_status__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Engineering_Machine__c.model__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Engineering_Machine__c.value__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -189,6 +213,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Mining_Project_Id__c.Hazard_Count__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Mining_Project_Id__c.Hazardous_Issues__c</field>
         <readable>true</readable>
@@ -265,6 +294,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Operations_Goal__c.Name_of_Project__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Operations_Goal__c.Number_of_Digging_Sites__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -307,6 +341,11 @@
         <editable>true</editable>
         <field>Operations__c.Operation_Status__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Operations__c.Operations_Goal__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -425,11 +464,15 @@
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>
-        <apexPage>Search_MP_Freight_Info</apexPage>
+        <apexPage>OperationsPage</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>
-        <apexPage>OperationsPage</apexPage>
+        <apexPage>RiskLevelPage</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>Search_MP_Freight_Info</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>

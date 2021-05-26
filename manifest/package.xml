@@ -93,7 +93,6 @@
         <members>Mining_Project_Id__c</members>
         <members>Operations_Goal__c</members>
         <members>Operations__c</members>
-        <members>Site_Manager__c</members>
         <name>Workflow</name>
     </types>
      <types>

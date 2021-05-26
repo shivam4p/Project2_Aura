@@ -37,6 +37,31 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Engineering_Machine__c.Machine_Name__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Engineering_Machine__c.Mining_Project_Id__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Engineering_Machine__c.available_status__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Engineering_Machine__c.model__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Engineering_Machine__c.value__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Finances__c.Shipping_Method__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -227,6 +252,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Operations_Goal__c.Name_of_Project__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Operations_Goal__c.Number_of_Digging_Sites__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -268,6 +298,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Operations__c.Operation_Status__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Operations__c.Operations_Goal__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
