@@ -1,0 +1,28 @@
+<apex:page controller="Search_Freights_MP" lightningStylesheets="true">
+    <apex:form >
+        <apex:pageBlock title="This is the currect Freight movement of material">
+            <apex:pageMessages />
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!newSearch}" value="New Search" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockTable var="freight" value="{!trips}">
+                <apex:column value="{!freight.Name}" />
+                <apex:column value="{!freight.Mining_Project_Id__r.Project_Name__c}" />
+                <apex:column value="{!freight.Mining_Project_Id__r.Location__c}" />
+                <apex:column value="{!freight.Outbound_Departure_Date__c}" />
+                <apex:column value="{!freight.Outbound_Arrival_Date__c}" />
+                <apex:column headerValue="ITT" >
+                    {!freight.Outboune_Travel_Time__c}
+                    <apex:image url="{!IF(freight.Outboune_Travel_Time__c < 25, URLFOR($Resource.images, 'images/on-time-delivery.jpg'), URLFOR($Resource.images, 'images/delayed.jpg'))}" width="36px" height="36px"/>    
+                </apex:column>        
+                <apex:column value="{!freight.Inbound_Departure_Date__c}" />
+                <apex:column value="{!freight.Inbound_Arrived_Date__c}" />
+                <apex:column headerValue="IB days">
+                     <apex:image url="{!IF(freight.Inbound_Travel_Time__c < 25, URLFOR($Resource.images, 'images/on-time-delivery.jpg'), URLFOR($Resource.images, 'images/delayed.jpg'))}" width="36px" height="36px"/>  
+                    {!freight.Inbound_Travel_Time__c}
+                       </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+   
+    </apex:form>
+</apex:page>
