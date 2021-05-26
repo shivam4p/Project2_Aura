@@ -19,6 +19,6 @@ public  with sharing class RiskLevelSearchController {
         	for(Mining_Project_Id__c proj : projectSearchResult){
             	selectedPickValues = proj.Hazardous_Issues__c.split(';');
         	}
-            return projectSearchResult;
+            
         }
 }
