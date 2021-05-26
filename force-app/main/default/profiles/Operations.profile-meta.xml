@@ -72,6 +72,31 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Engineering_Machine__c.Machine_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Engineering_Machine__c.Mining_Project_Id__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Engineering_Machine__c.available_status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Engineering_Machine__c.model__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Engineering_Machine__c.value__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Finances__c.Shipping_Method__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -282,10 +307,6 @@
         <enabled>false</enabled>
         <flow>Project_Reminder</flow>
     </flowAccesses>
-    <flowAccesses>
-        <enabled>false</enabled>
-        <flow>net_promoter_score</flow>
-    </flowAccesses>
     <layoutAssignments>
         <layout>Customer__c-Customer Layout</layout>
     </layoutAssignments>
@@ -352,6 +373,18 @@
         <object>Operations__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
+    <pageAccesses>
+        <apexPage>engineeringmachine</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>individualengineeringmachine</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>testhomepage</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
     <tabVisibilities>
         <tab>Machine_and_Tools__c</tab>
         <visibility>DefaultOn</visibility>
@@ -536,6 +569,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ShowCompanyNameAsUserBadge</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SubmitMacrosAllowed</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>

@@ -9,7 +9,8 @@
         <members>Project_Name__c</members>
         <members>Site_Manager__c</members>
         <members>Finances__c</members>        
-        <members>Sales__c</members>        
+        <members>Sales__c</members>  
+        <members>Engineering_Machine__c</members>      
         <name>CustomObject</name>
     </types>
     <types>
@@ -152,6 +153,13 @@
         <members>Operations</members>
         <name>Profile</name>
     </types>
+    <types>
+        <members>individualengineeringmachine</members>
+        <members>engineeringmachine</members>
+        <members>testhomepage</members>
+        <name>ApexPage</name>
+    </types>
+    
 
 
 
