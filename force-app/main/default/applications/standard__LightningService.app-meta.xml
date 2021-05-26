@@ -35,6 +35,8 @@
     <workspaceConfig>
         <mappings>
             <tab>Freight__c</tab>
+        </mappings>
+        <mappings>
             <tab>Engineering_Machine__c</tab>
         </mappings>
         <mappings>

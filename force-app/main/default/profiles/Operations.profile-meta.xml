@@ -176,7 +176,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <editable>false</editable>
         <field>Mining_Project_Id__c.Hazardous_Issues__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -413,6 +412,9 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>SingleOperationPage</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>engineeringmachine</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
