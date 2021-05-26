@@ -76,27 +76,17 @@ public class Operations_CC {
         set;
     }
 
-    
-    // public Operations_Goal__c goal {
-    //     get {
-    //         if (goal == null) {
-    //             System.debug(goalId);
-    //             goal = [SELECT Name, Operation_Location__c, Number_of_Digging_Sites__c,Extraction_Techique__c,Cost_of_Operation__c,Stage__c
-    //             FROM Operations_Goal__c WHERE Id = :goalId LIMIT 1];
-    //             goalId
-    //         }
-    //         return null;
-    //     }
-    //     set;
-    // }
 
     public PageReference saveNew() {
         try {
             newGoal.Operations__c = operationId;
             insert(newGoal);
             editMode = false;
+            ApexPages.addMessage(new ApexPages.message(ApexPages.severity.CONFIRM,
+                                'Successfully created new goal!'));
         } catch(System.DMLException e) {
-            ApexPages.addMessages(e);
+            ApexPages.addMessage(new ApexPages.message(ApexPages.severity.ERROR,
+                                'Uh oh, something went wrong..'));
             return null;
         }
         return null;
@@ -105,8 +95,11 @@ public class Operations_CC {
     public PageReference save() {
         try {
             upsert(goal);
+            ApexPages.addMessage(new ApexPages.message(ApexPages.severity.CONFIRM,
+                                'Successfully edited the goal!'));
         } catch(System.DMLException e) {
-            ApexPages.addMessages(e);
+            ApexPages.addMessage(new ApexPages.message(ApexPages.severity.ERROR,
+                                'Uh oh, something went wrong..'));
             return null;
         }
         //  After successful Save, navigate to the default view page
@@ -133,11 +126,14 @@ public class Operations_CC {
             delete og;
             editMode = false;
             goalId = null;
+            ApexPages.addMessage(new ApexPages.message(ApexPages.severity.CONFIRM,
+                                'Successfully deleted the goal!'));
             // WORK HERE!!!!!!!!!!!!!
             // Attempt to de-reference a null object
             //Error is in expression '{!deleteGoal}' in page singleoperationpage: Class.Operations_CC.deleteGoal: line 96, column 1
         } catch(System.DMLException e) {
-            ApexPages.addMessages(e);
+            ApexPages.addMessage(new ApexPages.message(ApexPages.severity.ERROR,
+                                'Uh oh, something went wrong..'));
             return null;
         }
         //  After successful Save, navigate to the default view page
