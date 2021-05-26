@@ -1,5 +1,11 @@
 <apex:page sidebar="false" lightningStylesheets="true" controller="Operations_CC">
-  <apex:form>
+  <style>
+    .btn-set {
+      display: flex;
+      gap: 1em;
+    }
+  </style>
+  <apex:form id="theForm">
     <apex:pageBlock title="My Operations">
       <apex:pageMessages />
       <apex:pageBlockSection>
@@ -9,50 +15,61 @@
         <apex:outputField value="{!operation.Machine_and_Tools__c}"></apex:outputField>
       </apex:pageBlockSection>
     </apex:pageBlock>
-    <apex:pageblock title="Operations Goal">
+    <apex:pageblock title="Operations Goal" id="og">
+      <apex:pageBlockButtons>
+        <apex:commandLink value="Create" action="{!toggleEditMode}"></apex:commandLink>
+      </apex:pageBlockButtons>
         <apex:pageBlockTable var="g" value="{!goalList}">
           <apex:column value="{!g.Name}"></apex:column>
 					<apex:column width="25px" headerValue="Actions">
-          <apex:commandLink value="Select" action="{!displayDetail}">
-            <apex:param name="goalId" value="{!g.Id}" assignTo="{!goalId}" />
-          </apex:commandLink>
+            <div class="btn-set">
+            <apex:commandLink value="Select" action="{!displayDetail}">
+              <apex:param name="goalId" value="{!g.Id}" assignTo="{!goalId}" />
+              <apex:param name="editMode" value="false" assignTo="{!editMode}" />
+            </apex:commandLink>
+            <apex:commandLink value="Delete" action="{!deleteGoal}" reRender="theForm">
+              <apex:param name="goalId" value="{!g.Id}" assignTo="{!goalId}" />
+            </apex:commandLink>
+          </div>
         </apex:column>
         </apex:pageBlockTable>
     </apex:pageblock>
-    <apex:pageBlock id="out" rendered="{!NOT(ISNULL(goalId))}" mode="inlineEdit" title="Goal Detail">
-      <apex:pageBlockSection>
+    <apex:pageBlock rendered="{! NOT(ISNULL(goalId)) && EditMode == false}" mode="inlineEdit" title="Goal Detail">
+      <apex:pageBlockSection columns="1">
       <apex:outputField value="{!goal.Name}" Label="Goal Number"></apex:outputField>
         <apex:outputField value="{!goal.Operation_Location__c}" Label="Location">
-          <apex:inlineEditSupport showOnEdit="saveButton, cancelButton" 
-                        event="ondblclick" 
-                        changedStyleClass="myBoldClass" resetFunction="resetInlineEdit"/>
+          <apex:inlineEditSupport showOnEdit="saveButton, cancelButton" event="ondblclick" resetFunction="resetInlineEdit"/>
         </apex:outputField>
         <apex:outputField value="{!goal.Number_of_Digging_Sites__c}" Label="# of Digging sites">
-          <apex:inlineEditSupport showOnEdit="saveButton, cancelButton" 
-                        event="ondblclick" 
-                        changedStyleClass="myBoldClass" resetFunction="resetInlineEdit"/>
+          <apex:inlineEditSupport showOnEdit="saveButton, cancelButton" event="ondblclick" resetFunction="resetInlineEdit"/>
         </apex:outputField>
         <apex:outputField value="{!goal.Extraction_Techique__c}" Label="Extraction Type">
-          <apex:inlineEditSupport showOnEdit="saveButton, cancelButton" 
-                        event="ondblclick" 
-                        changedStyleClass="myBoldClass" resetFunction="resetInlineEdit"/>
+          <apex:inlineEditSupport showOnEdit="saveButton, cancelButton" event="ondblclick" resetFunction="resetInlineEdit"/>
         </apex:outputField>
         <apex:outputField value="{!goal.Cost_of_Operation__c}" Label="Cost of Operation">
-          <apex:inlineEditSupport showOnEdit="saveButton, cancelButton" 
-                        event="ondblclick" 
-                        changedStyleClass="myBoldClass" resetFunction="resetInlineEdit"/>
+          <apex:inlineEditSupport showOnEdit="saveButton, cancelButton" event="ondblclick" resetFunction="resetInlineEdit"/>
         </apex:outputField>
         <apex:outputField value="{!goal.Stage__c}" Label="Operation Stage">
-          <apex:inlineEditSupport showOnEdit="saveButton, cancelButton" 
-                        event="ondblclick" 
-                        changedStyleClass="myBoldClass" resetFunction="resetInlineEdit"/>
+          <apex:inlineEditSupport showOnEdit="saveButton, cancelButton" event="ondblclick" resetFunction="resetInlineEdit"/>
         </apex:outputField>
       </apex:pageBlockSection>
-      <apex:pageBlockButtons >
-                <!-- <apex:commandButton action="{!edit}" id="editButton" value="Edit"/> -->
-                <apex:commandButton action="{!save}" id="saveButton" value="Save"/>
-                <apex:commandButton onclick="resetInlineEdit()" id="cancelButton" value="Cancel"/>
-            </apex:pageBlockButtons>
+      <apex:pageBlockButtons>
+        <!-- <apex:commandButton action="{!edit}" id="editButton" value="Edit"/> -->
+        <apex:commandButton action="{!save}" id="saveButton" value="Save" />
+        <apex:commandButton onclick="resetInlineEdit();" id="cancelButton" value="Cancel" />
+      </apex:pageBlockButtons>
+      </apex:pageBlock>
+      <apex:pageBlock rendered="{!editMode}" title="New Goal">
+        <apex:pageBlockButtons>
+          <apex:commandButton action="{!saveNew}" id="saveNewButton" value="Save" />
+        </apex:pageBlockButtons>
+      <apex:pageBlockSection columns="1">
+      <apex:inputField value="{!newGoal.Operation_Location__c}" />
+      <apex:inputField value="{!newGoal.Number_of_Digging_Sites__c}" />
+      <apex:inputField value="{!newGoal.Extraction_Techique__c}" />
+      <apex:inputField value="{!newGoal.Cost_of_Operation__c}" />
+      <apex:inputField value="{!newGoal.Stage__c}" />
+    </apex:pageBlockSection>
     </apex:pageBlock>
- 	</apex:form>
+  </apex:form>
 </apex:page>

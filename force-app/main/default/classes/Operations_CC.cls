@@ -2,6 +2,22 @@ public class Operations_CC {
     public Id operationId {get; set;}
     public Id goalId {get; set;}
     public Operations_Goal__c goal {get; set;}
+    public Boolean editMode {get; set;}
+    public Operations_Goal__c newGoal {get; set;}
+
+    public Operations_CC() {
+        // goalId = null;
+        editMode = false;
+    }
+    public void toggleEditMode() {
+        // if (goalId != null) {
+        //     goal = new Operations_Goal__c();
+        // }
+        editMode = !editMode;
+        // if (editMode == false) {
+        //     goalId = null;
+        // }
+    }
 
     public List<Operations__c> operationList {
         get {
@@ -42,6 +58,7 @@ public class Operations_CC {
         }
         set;
     }
+
     public List<Operations_Goal__c> goalList {
         get {
             if (goalList == null) {
@@ -69,6 +86,30 @@ public class Operations_CC {
     //     }
     //     set;
     // }
+
+    public PageReference saveNew() {
+        try {
+            insert(newGoal);
+        } catch(System.DMLException e) {
+            ApexPages.addMessages(e);
+            return null;
+        }
+        return null;
+    }
+
+    public PageReference save() {
+        try {
+            upsert(goal);
+        } catch(System.DMLException e) {
+            ApexPages.addMessages(e);
+            return null;
+        }
+        //  After successful Save, navigate to the default view page
+        // PageReference redirectSuccess = new ApexPages.StandardController(Operations_Goal__c).view();
+        // return (redirectSuccess);
+        return null;
+    }
+
     public PageReference displayDetail() {
         goal = [SELECT Name, Operation_Location__c, Number_of_Digging_Sites__c,Extraction_Techique__c,Cost_of_Operation__c,Stage__c
         FROM Operations_Goal__c WHERE Id = :goalId LIMIT 1];
@@ -77,9 +118,13 @@ public class Operations_CC {
         return null;
     }
 
-    public PageReference save() {
+    public PageReference deleteGoal() {
         try {
-            upsert(goal);
+            Operations_Goal__c og = new Operations_Goal__c(Id = goalId);
+            delete og;
+            // WORK HERE!!!!!!!!!!!!!
+            // Attempt to de-reference a null object
+            //Error is in expression '{!deleteGoal}' in page singleoperationpage: Class.Operations_CC.deleteGoal: line 96, column 1
         } catch(System.DMLException e) {
             ApexPages.addMessages(e);
             return null;
@@ -125,13 +170,13 @@ public class Operations_CC {
     //     private set;
     // }
 
-    public class GoalWrapper {
-        public Operations_Goal__c goal {get; set;}
-        public Boolean selected {get; set;}
+    // public class GoalWrapper {
+    //     public Operations_Goal__c goal {get; set;}
+    //     public Boolean selected {get; set;}
 
-        public GoalWrapper(Operations_Goal__c og) {
-            goal = og;
-            selected = false;
-        }
-    }
+    //     public GoalWrapper(Operations_Goal__c og) {
+    //         goal = og;
+    //         selected = false;
+    //     }
+    // }
 }

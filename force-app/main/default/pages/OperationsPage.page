@@ -1,7 +1,7 @@
 <apex:page sidebar="false" lightningStylesheets="true" controller="Operations_CC">
   <apex:form>
 		<apex:pageBlock title="My Operations">
-			<apex:pageMessages />
+			<apex:pageMessages escape="true" />
 				<apex:pageBlockTable var="o" columnsWidth="60%,20%,20%" value="{!operationList}">
 					<apex:column value="{!o.Name}" />
 					<apex:column value="{!o.Machine_and_Tools__c}" />
