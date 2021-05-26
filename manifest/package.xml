@@ -11,7 +11,8 @@
         <members>Site_Manager__c</members>
         <members>Finances__c</members>        
         <members>Sales__c</members>  
-        <members>Engineering_Machine__c</members>    
+        <members>Engineering_Machine__c</members>          
+        <members>Freight__c</members>   
         <name>CustomObject</name>
     </types>
     <types>
