@@ -12,6 +12,7 @@
     </applicationVisibilities>
     <classAccesses>
         <apexClass>Operations_CC</apexClass>
+        <apexClass>RiskLevelSearchController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -148,6 +149,11 @@
         <editable>true</editable>
         <field>Mining_Project_Id__c.Does_it_need_refinement__c</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mining_Project_Id__c.Hazard_Count__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -392,6 +398,7 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>testhomepage</apexPage>
+        <apexPage>RiskLevelPage</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
     <tabVisibilities>
