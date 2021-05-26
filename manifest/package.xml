@@ -11,12 +11,17 @@
         <members>Site_Manager__c</members>
         <members>Finances__c</members>        
         <members>Sales__c</members>  
-        <members>Engineering_Machine__c</members>    
+        <members>Engineering_Machine__c</members>          
+        <members>Freight__c</members>   
         <name>CustomObject</name>
     </types>
     <types>
         <members>Site_Manager_Queues</members>
         <name>Queue</name>
+    </types>
+    <types>
+        <members>Machine_and_Tools_c.Machines_Greater_than_Approval</members>
+        <name>ApprovalProcess</name>   
     </types>
     <types>
         <members>newTaskHandler_Test</members>
@@ -145,6 +150,7 @@
         <members>Operations__c</members>
         <members>Site_Manager__c</members>
         <members>Project_Name__c</members>
+        <members>Engineering_Machine__c</members>
         <name>CustomTab</name>
     </types>
     <types>
