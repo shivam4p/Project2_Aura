@@ -1,0 +1,21 @@
+<apex:page standardController="Engineering_Machine__c" recordSetVar="Engineering_Machines"    label="engineering machine record page">
+    <h1>
+        test engineering machine records
+    </h1>
+    <apex:pageBlock title="Engineering machine list">
+        <!-- engineering machine list -->
+        <apex:pageBlockSection >
+            <apex:pageBlockTable value="{!Engineering_Machines}" var="em">
+                <apex:column >
+                 <apex:outputLink value="/{!em.Id}">
+                    <apex:outputText value="{!em.Machine_Name__c}" />
+                </apex:outputLink>
+                </apex:column>
+                <apex:column value="{!em.Machine_Name__c}" />
+                <apex:column value="{!em.available_status__c}" />
+                <apex:column value="{!em.model__c}" />
+                <apex:column value="{!em.Mining_Project_Id__c}" />
+            </apex:pageBlockTable>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>
