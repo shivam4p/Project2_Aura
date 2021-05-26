@@ -203,11 +203,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <editable>false</editable>
-        <field>Mining_Project_Id__c.Hazard_Count__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Mining_Project_Id__c.Hazardous_Issues__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -449,7 +444,6 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>testhomepage</apexPage>
-        <apexPage>RiskLevelPage</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
     <tabVisibilities>
