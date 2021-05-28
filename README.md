@@ -48,7 +48,7 @@ Metadata pointing to username that doesn't exist in org.
 
 ## Contributors
 **[Miguel McCrary](https://github.com/Migizal)**  
-**[Frank Yi](https://github.com/frank1433)**  
+**[Frank Zhang](https://github.com/frank1433)**  
 **[Diego Maquill](https://github.com/diego-maquill)**  
 **[Wootae Yang](https://github.com/wyang19a)**
 
