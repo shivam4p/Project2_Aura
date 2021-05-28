@@ -1,8 +1,8 @@
 # Alchemy Mining Company
+![wall](https://imgur.com/ns3khvp.png)
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo totam neque corporis enim, voluptas repellat commodi ipsam. Ratione, id esse!
 Usage of the project
-
 ##  Getting Started / Installation 
 #### Requirments 
 [Git](https://git-scm.com/downloads)
@@ -30,13 +30,18 @@ Metadata pointing to username that doesn't exist in org.
 
 ## Technologies Used 
 - Salesforce CRM
+- Workflow Rules, Process Builders, Approval Processes, Flow Builders
+- Visualforce pages
+- Apex Triggers
 - GitHub
-- SCRUM
+- Scrumban
+- CSS, Flexbox
+- JavaScript
 -
 -
 -
--
--
+
+100% test covered
 
 List of features implemented
 
@@ -48,5 +53,4 @@ List of features implemented
 
 
 ## License
-
-
+MIT
