@@ -1,6 +1,6 @@
 <apex:page Controller="EMController" lightningStylesheets="true" label="engineering machine record page">
 
-    <body style="background-color:transparent !important">
+    <body style="background-color:transparent !important" style="font-size:20px;">
         <apex:form>
             <apex:pageBlock title="Engineering Machine List" id="em_list">
                 <!-- engineering machine list -->

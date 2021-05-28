@@ -1,8 +1,8 @@
 <apex:page label="individual engineering machine with save & edit fuction" lightningStylesheets="true" Controller="EMEntryPageController">
 
-    <body style="background-color:transparent !important" style="20px;">
+    <body style="background-color:transparent !important" style="font-size:20px;">
         <apex:form>
-            <apex:pageBlock title="engineering machine detail" style="font-size: 30px;">
+            <apex:pageBlock title="engineering machine detail">
                 <apex:pageMessages />
                 <!-- Display Save and Cancel Button -->
                 <apex:pageBlockButtons>
