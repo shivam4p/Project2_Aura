@@ -1,11 +1,11 @@
 # Alchemy Mining Company
 ![wall](https://imgur.com/ns3khvp.png)
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo totam neque corporis enim, voluptas repellat commodi ipsam. Ratione, id esse!
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo totam neque corporis enim, voluptas repellat commodi ipsam. Ratione, id esse!  
 Usage of the project
 
 ##  Getting Started / Installation 
 #### Requirments 
-[Git](https://git-scm.com/downloads) 
+[Git](https://git-scm.com/downloads)  
 [Salesforce Extension Pack for VS Code](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode)
 
 
@@ -41,15 +41,15 @@ List of features implemented
 ![Error1](https://imgur.com/t5Dz1l5.png)
 Metadata pointing to username that doesn't exist in org.
 1. Open your org, navigate to `Users` in setup menu, copy username of your users.
-2. Press `Ctrl`/`Command` + `Shift` + `F` and search for the username specified in your error.
+2. Press `Ctrl`/`Command` + `Shift` + `F` and search for the username specified in your error throughout entire project.
 3. Replace all occurrences of the usernames
 
 ## Related Links
 
 ## Contributors
-**[Miguel McCrary](https://github.com/Migizal)** 
-**[Frank Yi](https://github.com/frank1433)** 
-**[Diego Maquill](https://github.com/diego-maquill)** 
+**[Miguel McCrary](https://github.com/Migizal)**  
+**[Frank Yi](https://github.com/frank1433)**  
+**[Diego Maquill](https://github.com/diego-maquill)**  
 **[Wootae Yang](https://github.com/wyang19a)**
 
 ## License
