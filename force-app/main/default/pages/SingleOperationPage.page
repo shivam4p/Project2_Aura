@@ -63,7 +63,7 @@
       </apex:pageBlockButtons>
       </apex:pageBlock>
       <apex:pageBlock rendered="{!editMode}" title="New Goal">
-        <apex:pageBlockButtons >
+        <apex:pageBlockButtons>
           <apex:commandButton action="{!saveNew}" id="saveNewButton" value="Save" />
           <apex:commandButton action="{!cancelCreate}" id="cancelCreateButton" value="Cancel" />
         </apex:pageBlockButtons>

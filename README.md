@@ -1,31 +1,54 @@
-# Lead P1
+# Alchemy Mining Company
+![wall](https://imgur.com/ns3khvp.png)
+Tasked with creating a compelling experience from a business previously explored, associates work together in an agile environment to create unique individual features leveraging visualforce based on that business. These are then surfaced through the use of experience cloud to create a customer or partner experience site that allows for the use of these new features.
 
-## Getting Started
+Usage of the project
 
-1. Clone. 
-`git clone https://github.com/12Apr21-Salesforce/p1_lead.git`
+##  Getting Started / Installation
+[Git](https://git-scm.com/downloads)  
+[Salesforce Extension Pack for VS Code](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode)
 
-2. Authorize your playground org.
+1. Open GitBash(terminal) or Visual Studio Code terminal.
+2. Navigate to directory where you want project cloned.
+3. Clone the project by running `git clone https://github.com/12Apr21-Salesforce/p1_lead.git`
+4. Navigate into project directory by running `cd p1_Lead`
+5. If you are using GitBash or terminal, open project in VS code by running `code .`
+6. From VS Code, open command pallete, authorize your org.
+7. Deploy by running `sfdx force:source:deploy -x manifest/package.xml` or by right clicking on manifest/package.xml and choosing `Deploy Source in Manifest to Org`
 
-3. run `sfdx force:source:deploy -x manifest/package.xml`
-You will get below errors: 
+
+## Technologies Used 
+- Salesforce CRM
+- Workflow Rules, Process Builders, Approval Processes, Flow Builders
+- Visualforce pages
+- Apex Triggers
+- GitHub
+- Scrumban
+- CSS, Flexbox
+- JavaScript
+-
+-
+-
+
+100% test covered
+
+List of features implemented
+
+## Troubleshooting
+##### Username related deployment errors
 ![Error1](https://imgur.com/t5Dz1l5.png)
+Metadata pointing to username that doesn't exist in org.
+1. Open your org, navigate to `Users` in setup menu, copy username of your users.
+2. Press `Ctrl`/`Command` + `Shift` + `F` and search for the username specified in your error throughout entire project.
+3. Replace all occurrences of the usernames
 
-4. Change the username to point to an username that exists in the playground you are trying to deploy to. (your own system admin account username works)
-- Workflows/Site_Manager__c workflow
-- Workflows/Operations_Goal__c workflow
-- Queues/Site_Manager_Queues.queue-meta
-![SMQ](https://imgur.com/m8kC37u.png)
-![NOG](https://imgur.com/ynWbOBW.png)
-![PSD](https://imgur.com/HsIh3Ue.png)
+## Related Links
 
+## Contributors
+**[Miguel McCrary](https://github.com/Migizal)**  
+**[Frank Zhang](https://github.com/frank1433)**  
+**[Diego Maquill](https://github.com/diego-maquill)**  
+**[Wootae Yang](https://github.com/wyang19a)**
 
-5. Deploy source in `manifest/package.xml` to Org 
-
-[![ok.png](https://i.postimg.cc/HsggfKSy/ok.png)](https://postimg.cc/c6X23DGx)
-
-### Useful Links/References
-- [GA tutorial - Unix CLI Command Tutorial](docs/Unix.md)
-- [GA tutorial - GitBasics](docs/GitBasics.md)
-- [GA tutorial - GitHub](docs/GitHub.md)
-- [GA tutorial - Git CommandReference](docs/CommandReference.md)
+## License
+MIT
