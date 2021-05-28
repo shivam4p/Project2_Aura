@@ -1,11 +1,11 @@
 # Alchemy Mining Company
 ![wall](https://imgur.com/ns3khvp.png)
-
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo totam neque corporis enim, voluptas repellat commodi ipsam. Ratione, id esse!
 Usage of the project
+
 ##  Getting Started / Installation 
 #### Requirments 
-[Git](https://git-scm.com/downloads)
+[Git](https://git-scm.com/downloads) 
 [Salesforce Extension Pack for VS Code](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode)
 
 
@@ -17,15 +17,6 @@ Usage of the project
 5. If you are using GitBash or terminal, open project in VS code by running `code .`
 6. From VS Code, open command pallete, authorize your org.
 7. Deploy by running `sfdx force:source:deploy -x manifest/package.xml` or by right clicking on manifest/package.xml and choosing `Deploy Source in Manifest to Org`
-
-
-#### Troubleshooting
-##### Username related deployment errors
-![Error1](https://imgur.com/t5Dz1l5.png)
-Metadata pointing to username that doesn't exist in org.
-1. Open your org, navigate to `Users` in setup menu, copy username of your users.
-2. Press `Ctrl`/`Command` + `Shift` + `F` and search for the username specified in your error.
-3. Replace all occurrences of the usernames
 
 
 ## Technologies Used 
@@ -45,12 +36,21 @@ Metadata pointing to username that doesn't exist in org.
 
 List of features implemented
 
-## Contributors
-**[Miguel McCrary](https://github.com/Migizal)**
-**[Frank Yi](https://github.com/frank1433)**
-**[Diego Maquill](https://github.com/diego-maquill)**
-**[Wootae Yang](https://github.com/wyang19a)**
+#### Troubleshooting
+##### Username related deployment errors
+![Error1](https://imgur.com/t5Dz1l5.png)
+Metadata pointing to username that doesn't exist in org.
+1. Open your org, navigate to `Users` in setup menu, copy username of your users.
+2. Press `Ctrl`/`Command` + `Shift` + `F` and search for the username specified in your error.
+3. Replace all occurrences of the usernames
 
+## Related Links
+
+## Contributors
+**[Miguel McCrary](https://github.com/Migizal)** 
+**[Frank Yi](https://github.com/frank1433)** 
+**[Diego Maquill](https://github.com/diego-maquill)** 
+**[Wootae Yang](https://github.com/wyang19a)**
 
 ## License
 MIT
