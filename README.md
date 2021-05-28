@@ -1,6 +1,7 @@
 # Alchemy Mining Company
 ![wall](https://imgur.com/ns3khvp.png)
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo totam neque corporis enim, voluptas repellat commodi ipsam. Ratione, id esse!  
+Tasked with creating a compelling experience from a business previously explored, associates work together in an agile environment to create unique individual features leveraging visualforce based on that business. These are then surfaced through the use of experience cloud to create a customer or partner experience site that allows for the use of these new features.
+
 Usage of the project
 
 ##  Getting Started / Installation
@@ -33,7 +34,7 @@ Usage of the project
 
 List of features implemented
 
-#### Troubleshooting
+## Troubleshooting
 ##### Username related deployment errors
 ![Error1](https://imgur.com/t5Dz1l5.png)
 Metadata pointing to username that doesn't exist in org.
