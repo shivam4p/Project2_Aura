@@ -8,8 +8,6 @@ Usage of the project
 [Git](https://git-scm.com/downloads)  
 [Salesforce Extension Pack for VS Code](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode)
 
-
-#### Steps
 1. Open GitBash(terminal) or Visual Studio Code terminal.
 2. Navigate to directory where you want project cloned.
 3. Clone the project by running `git clone https://github.com/12Apr21-Salesforce/p1_lead.git`
