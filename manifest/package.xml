@@ -27,6 +27,8 @@
         <members>RiskLevelSearchController</members>
         <members>MiningProjectTestFactory</members>
         <members>Search_Freight_MP_Test</members>
+        <members>EMController</members>
+        <members>EMEntryPageController</members>
         <name>ApexClass</name>
     </types>
     <types>
