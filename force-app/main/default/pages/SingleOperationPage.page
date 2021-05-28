@@ -5,7 +5,9 @@
       gap: 1em;
     }
   </style>
-  <apex:form id="theForm">
+  <apex:form>
+
+
     <apex:pageBlock title="My Operations">
       <apex:pageMessages />
       <apex:pageBlockSection >
@@ -15,11 +17,13 @@
         <apex:outputField value="{!operation.Machine_and_Tools__c}"></apex:outputField>
       </apex:pageBlockSection>
     </apex:pageBlock>
-    <apex:pageblock title="Operations Goal">
+
+
+    <apex:pageblock id="theForm" title="Operations Goal">
       <apex:pageBlockButtons >
         <apex:commandLink value="Create" action="{!toggleEditMode}"></apex:commandLink>
       </apex:pageBlockButtons>
-      <apex:pageBlockTable id="ogtable" var="g" value="{!goalList}">
+      <apex:pageBlockTable var="g" value="{!goalList}">
         <apex:column value="{!g.Name}"></apex:column>
         <apex:column width="25px" headerValue="Actions">
           <div class="btn-set">
@@ -27,20 +31,15 @@
             <apex:param name="goalId" value="{!g.Id}" assignTo="{!goalId}" />
             <apex:param name="editMode" value="false" assignTo="{!editMode}" />
           </apex:commandLink>
-          <!-- <apex:outputText value="Delete">
-            <apex:param name="goalId" value="{!g.Id}" assignTo="{!goalId}" />
-          </apex:outputText>
-          
-          <apex:actionSupport event="onclick" 
-                              action="{!deleteGoal}" 
-                              rerender="theForm"/> -->
-          <apex:commandLink value="Delete" action="{!deleteGoal}" reRender="ogtable">
+          <apex:commandLink value="Delete" action="{!deleteGoal}" reRender="theForm">
             <apex:param name="goalId" value="{!g.Id}" assignTo="{!goalId}" />
           </apex:commandLink>
         </div>
       </apex:column>
       </apex:pageBlockTable>
     </apex:pageblock>
+
+
     <apex:pageBlock rendered="{! NOT(ISNULL(goalId)) && EditMode == false}" mode="inlineEdit" title="Goal Detail">
       <apex:pageBlockSection columns="1">
       <apex:outputField value="{!goal.Name}" Label="Goal Number"></apex:outputField>
@@ -61,17 +60,12 @@
         </apex:outputField>
       </apex:pageBlockSection>
       <apex:pageBlockButtons >
-        <!-- <apex:commandButton action="{!edit}" id="editButton" value="Edit"/> -->
         <apex:commandButton action="{!save}" id="saveButton" value="Save" />
         <apex:commandButton onclick="resetInlineEdit();" id="cancelButton" value="Cancel" />
       </apex:pageBlockButtons>
       </apex:pageBlock>
-      </apex:form>
-
-      
-      <apex:form id="newForm">
       <apex:pageBlock rendered="{!editMode}" title="New Goal">
-        <apex:pageBlockButtons >
+        <apex:pageBlockButtons>
           <apex:commandButton action="{!saveNew}" id="saveNewButton" value="Save" />
           <apex:commandButton action="{!cancelCreate}" id="cancelCreateButton" value="Cancel" />
         </apex:pageBlockButtons>
@@ -84,4 +78,7 @@
     </apex:pageBlockSection>
     </apex:pageBlock>
   </apex:form>
+
+
+
 </apex:page>

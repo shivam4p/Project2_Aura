@@ -109,9 +109,6 @@
     </layoutSections>
     <quickActionList>
         <quickActionListItems>
-            <quickActionName>Task.EditDescription_2</quickActionName>
-        </quickActionListItems>
-        <quickActionListItems>
             <quickActionName>Task.Defer_2</quickActionName>
         </quickActionListItems>
         <quickActionListItems>
