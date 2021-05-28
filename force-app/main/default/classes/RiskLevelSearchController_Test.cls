@@ -24,6 +24,7 @@ private class RiskLevelSearchController_Test {
       
         testCont.projectQuery();
 
+        test.stopTest();
     }
 
 }
