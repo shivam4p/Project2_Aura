@@ -5,6 +5,6 @@
     <label>Site Manager Queues</label>
     <queue>Site_Manager_Queues</queue>
     <sharedTo>
-        <allInternalUsers/>
+        <allInternalUsers></allInternalUsers>
     </sharedTo>
 </ListView>

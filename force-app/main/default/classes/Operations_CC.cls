@@ -6,25 +6,17 @@ public class Operations_CC {
     public Operations_Goal__c newGoal {get; set;}
 
     public Operations_CC() {
-        // goalId = null;
         editMode = false;
     }
     public void toggleEditMode() {
-        // if (goalId != null) {
-        //     goal = new Operations_Goal__c();
-        // }
         if (newGoal == null || newGoal.Id != null) {
             newGoal = new Operations_Goal__c();
         }
         editMode = !editMode;
-        // if (editMode == false) {
-        //     goalId = null;
-        // }
     }
 
     public List<Operations__c> operationList {
         get {
-            List<Operations__c> sourceRecords = [SELECT Name, Machine_and_Tools__c FROM Operations__c];
             if (operationList == null) {
                 operationList = new List<Operations__c>();
                 for (Operations__c operation : [SELECT Name, Machine_and_Tools__c FROM Operations__c]) {
@@ -92,7 +84,6 @@ public class Operations_CC {
                                 'Uh oh, something went wrong..'));
             return null;
         }
-        // return null;
     }
 
     public PageReference save() {
@@ -159,11 +150,6 @@ public class Operations_CC {
         if(accessibleFields.size() == 0) {
             return null;
         } else {
-            // if(Schema.SObjectType.Account.isAccessible() && accessibleFields.contains('AccountId')) {
-            //     accessibleFields.remove('AccountId');
-            //     accessibleFields.add('Account.Name');
-            // }
-            
             queryString += accessibleFields.toString().substring(1, accessibleFields.toString().length() - 1) + ' FROM ' + sObjectName;
             return Database.query(queryString);
         }
@@ -184,11 +170,6 @@ public class Operations_CC {
         if(accessibleFields.size() == 0) {
             return null;
         } else {
-            // if(Schema.SObjectType.Account.isAccessible() && accessibleFields.contains('AccountId')) {
-            //     accessibleFields.remove('AccountId');
-            //     accessibleFields.add('Account.Name');
-            // }
-            
             queryString += accessibleFields.toString().substring(1, accessibleFields.toString().length() - 1) + ' FROM ' + sObjectName + ' ' + whereClauseStr;
             return Database.query(queryString);
         }
@@ -214,7 +195,6 @@ public class Operations_CC {
                 }
             }
         }
-        
         return accessibleFields;
     } 
 }
