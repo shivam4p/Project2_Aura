@@ -1,4 +1,5 @@
 <apex:page controller="RiskLevelSearchController" lightningStylesheets="true">
+    <body style="background-color:transparent !important">
     <apex:form style="padding:2em">
         <apex:pageBlock >
             <apex:pageBlockSection columns="1">
@@ -51,4 +52,5 @@
             </apex:repeat>
         </apex:pageBlock>
     </apex:form>
+</body>
 </apex:page>

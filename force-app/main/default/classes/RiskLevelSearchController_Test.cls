@@ -14,10 +14,13 @@ private class RiskLevelSearchController_Test {
     }
     @istest static void testSOQL(){
         Test.startTest();
+
         RiskLevelSearchController testCont = new RiskLevelSearchController();
-        List<Mining_Project_Id__c> listProj = new List<Mining_Project_Id__c>();
-        testCont.projectSearchResult = listProj;
-        
+        List<Mining_Project_Id__c> lstProj = new List<Mining_Project_Id__c>();
+
+        testCont.projectSearchResult = lstProj;
+        testCont.projectQuery();
+ 
         test.stopTest();
 
 
