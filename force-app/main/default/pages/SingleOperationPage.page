@@ -5,6 +5,11 @@
       gap: 1em;
     }
   </style>
+  <script type="text/javascript">
+    function confirmDelete() {
+      return confirm('Are you sure you want to delete?');
+    }
+  </script>
   <apex:form>
 
 
@@ -31,7 +36,7 @@
             <apex:param name="goalId" value="{!g.Id}" assignTo="{!goalId}" />
             <apex:param name="editMode" value="false" assignTo="{!editMode}" />
           </apex:commandLink>
-          <apex:commandLink value="Delete" action="{!deleteGoal}" reRender="theForm">
+          <apex:commandLink value="Delete" action="{!deleteGoal}" onclick="if(!confirmDelete()) return false;" reRender="theForm">
             <apex:param name="goalId" value="{!g.Id}" assignTo="{!goalId}" />
           </apex:commandLink>
         </div>
