@@ -1,7 +1,7 @@
 @istest
 private class RiskLevelSearchController_Test {
 
-    @istest static void testSOQL(){
+    @istest static void testRiskSOQL(){
 
         test.startTest();
 
