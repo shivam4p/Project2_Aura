@@ -169,12 +169,25 @@
     </types>
 
     <types>
+        <members>p1testpartner</members>
+        <name>Network</name>
+    </types>
+
+    <types>
+        <members>p1testpartner</members>
+        <name>CustomSite</name>
+    </types>
+
+    <types>
+        <members>p1testpartner1</members>
+        <name>ExperienceBundle</name>
+    </types>
+
+    <types>
         <members>images</members>
         <members>RiskSigns</members>
         <name>StaticResource</name>
     </types>
 
-
-    
     <version>51.0</version>
 </Package>

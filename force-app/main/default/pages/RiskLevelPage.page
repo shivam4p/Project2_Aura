@@ -1,4 +1,5 @@
 <apex:page controller="RiskLevelSearchController" lightningStylesheets="true">
+    <body style="background-color:transparent !important; font-size: 20px">
     <apex:form style="padding:2em">
         <apex:pageBlock >
             <apex:pageBlockSection columns="1">
@@ -30,7 +31,7 @@
         </apex:pageBlock>
         <apex:pageBlock title="Safety Precaution Links" >
                <apex:repeat value="{!SelectedPickValues}" var="pick" id="theRepeat">
- 				<apex:outputLink tabindex="1" target="_blank" value="https://www.brandeis.edu/ehs/labs/corrosives.html"
+                <apex:outputLink tabindex="1" target="_blank" value="https://www.brandeis.edu/ehs/labs/corrosives.html"
                                  rendered="{!pick == 'Corrosive Environment'}">{!pick}<br/></apex:outputLink>
                 <apex:outputLink target="_blank" value="https://www.epa.gov/radiation/protecting-yourself-radiation"
                                  rendered="{!pick == 'High Radiation'}" >{!pick}<br/></apex:outputLink>
@@ -51,4 +52,5 @@
             </apex:repeat>
         </apex:pageBlock>
     </apex:form>
+</body>
 </apex:page>

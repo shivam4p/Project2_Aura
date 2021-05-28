@@ -1,5 +1,5 @@
-<apex:page sidebar="false" lightningStylesheets="true" controller="Operations_CC">
-	<body style="background-color:transparent !important">
+<apex:page sidebar="false" lightningStylesheets="true" controller="Operations_CC
+	<body style="background-color:transparent !important; font-size: 20px;">
   <apex:form >
 		<apex:pageBlock title="My Operations">
 			<apex:pageMessages escape="true" />

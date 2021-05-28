@@ -17,7 +17,6 @@ public class Operations_CC {
 
     public List<Operations__c> operationList {
         get {
-            List<Operations__c> sourceRecords = [SELECT Name, Machine_and_Tools__c FROM Operations__c];
             if (operationList == null) {
                 operationList = new List<Operations__c>();
                 for (Operations__c operation : [SELECT Name, Machine_and_Tools__c FROM Operations__c]) {

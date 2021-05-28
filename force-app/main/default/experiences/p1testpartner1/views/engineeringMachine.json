@@ -1,0 +1,53 @@
+{
+  "appPageId" : "deaed114-8de1-4d4e-887d-cc9c34e14868",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "id" : "f8644e7d-e03c-431b-b828-84d269b09f6b",
+  "label" : "Engineering Machine",
+  "regions" : [ {
+    "id" : "b85661a8-d38f-4dc7-b96b-595c8dab7665",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "id" : "de9507f7-e5d7-4a2b-a442-9d48a377b169",
+    "regionName" : "sidebar",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "height" : "300",
+        "pageName" : "engineeringmachine",
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:visualforcePage",
+      "id" : "bde99035-6c0a-4df0-a19a-bf7c9efef9e9",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "dfc17741-91de-42a9-8d49-e4e18da6eb0e",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "6ddb5639-3771-45ba-8df8-9af43ae5ac8a",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "description" : "",
+        "metaTags" : "",
+        "title" : "Engineering Machine"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "2795eb38-80f7-41c7-a635-aad43df24f03",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "df7ed46f-f2a3-4d00-9cbc-0f3dc292920c",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-engineering-machine"
+}
