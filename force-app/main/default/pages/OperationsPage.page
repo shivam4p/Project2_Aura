@@ -1,4 +1,5 @@
 <apex:page sidebar="false" lightningStylesheets="true" controller="Operations_CC">
+	<body style="background-color:transparent !important">
   <apex:form >
 		<apex:pageBlock title="My Operations">
 			<apex:pageMessages escape="true" />
@@ -13,4 +14,5 @@
 				</apex:pageBlockTable>
 		</apex:pageBlock>
  	</apex:form>
+	</body>
 </apex:page>

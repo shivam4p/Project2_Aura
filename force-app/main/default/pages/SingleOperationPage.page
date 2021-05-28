@@ -1,18 +1,11 @@
 <apex:page sidebar="false" lightningStylesheets="true" controller="Operations_CC">
-  <style>
-    .btn-set {
-      display: flex;
-      gap: 1em;
-    }
-  </style>
   <script type="text/javascript">
     function confirmDelete() {
       return confirm('Are you sure you want to delete?');
     }
   </script>
+  <body style="background-color:transparent !important">
   <apex:form>
-
-
     <apex:pageBlock title="My Operations">
       <apex:pageMessages />
       <apex:pageBlockSection >
@@ -85,5 +78,5 @@
   </apex:form>
 
 
-
+</body>
 </apex:page>
