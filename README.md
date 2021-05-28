@@ -3,8 +3,7 @@
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo totam neque corporis enim, voluptas repellat commodi ipsam. Ratione, id esse!  
 Usage of the project
 
-##  Getting Started / Installation 
-#### Requirments 
+##  Getting Started / Installation
 [Git](https://git-scm.com/downloads)  
 [Salesforce Extension Pack for VS Code](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode)
 
