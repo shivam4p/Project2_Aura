@@ -1,28 +1,28 @@
 @istest
 private class RiskLevelSearchController_Test {
 
-    @istest static void initVariables(){
-        Test.startTest();
+    @istest static void testSOQL(){
+
+        test.startTest();
+
+        List<Mining_Project_Id__c> lstProj = new List<Mining_Project_Id__c>();
+
+        for (Integer count = 0; count < 50; count++) {
+            lstProj.add(new Mining_Project_Id__c (Project_Name__c = 'HailMary '+ count));
+        }
+
         RiskLevelSearchController testCont = new RiskLevelSearchController();
 
         List<String> stringList = new List<String>{'Corrosive Environment'};
-        String stringTest = 'Leda I';
-
-        testCont.projectName = stringTest;
         testCont.selectedPickValues = stringList;
-        Test.stopTest();
-    }
-    @istest static void testSOQL(){
-        Test.startTest();
 
-        RiskLevelSearchController testCont = new RiskLevelSearchController();
-        List<Mining_Project_Id__c> lstProj = new List<Mining_Project_Id__c>();
-
-        testCont.projectSearchResult = lstProj;
+        testCont.projectName = 'Leda I';
+        testCont.projectSearchResult = [SELECT Name, Project_Name__c, Hazardous_Issues__c, Hazard_Count__c
+        FROM Mining_Project_Id__c
+       WHERE Project_Name__c = :testCont.projectName
+       LIMIT 1];
+      
         testCont.projectQuery();
- 
-        test.stopTest();
-
 
     }
 
