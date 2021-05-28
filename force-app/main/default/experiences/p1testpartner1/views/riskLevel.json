@@ -1,0 +1,132 @@
+{
+  "appPageId" : "deaed114-8de1-4d4e-887d-cc9c34e14868",
+  "componentName" : "siteforce:sldsTwoCol84Layout",
+  "id" : "784bfd02-f019-4958-a017-8cb3bec00762",
+  "label" : "Risk Level",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<p>&nbsp;</p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "e5041230-7e27-4228-8eba-889e495768ba",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "db09a0b3-1c6f-49cc-af05-6676355963b9",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "enableInlineEdit" : true,
+        "filterName" : "00B5e000004jSINEA2",
+        "layout" : "STANDARD",
+        "pageSize" : 10,
+        "scope" : "Mining_Project_Id__c",
+        "showActionBar" : true,
+        "showChartsPanel" : true,
+        "showDisplay" : "showall",
+        "showFilterPanel" : true,
+        "showImageIcon" : true,
+        "showManualRefreshButton" : true,
+        "showObjectName" : true,
+        "showPinnedList" : true,
+        "showSearchBar" : true
+      },
+      "componentName" : "forceCommunity:objectHome",
+      "id" : "b7ddae9f-9bd4-4b09-a924-c984f5b6a0b5",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e7295c01-c9bd-40e2-9d7d-e357df408d10",
+    "regionName" : "sidebar",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "height" : "400",
+        "pageName" : "RiskLevelPage",
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:visualforcePage",
+      "id" : "7ca8f94a-e796-47f5-8751-e0f9bbcff337",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "370a34f6-2503-40c0-9931-9efb7868e9c8",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "title" : "Popular Now"
+      },
+      "componentName" : "forceChatter:recommendationsBig",
+      "id" : "0aaf264f-6787-4fec-aa42-0dcf8a68a9b6",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "bannerBackgroundColor" : "",
+        "bannerPosition" : "top",
+        "bannerSizePercent" : 35,
+        "borderRadius" : 20,
+        "boxShadow" : true,
+        "haveBanner" : false,
+        "iconBackgroundColor" : "rgb(255,255,255)",
+        "iconSize" : "medium",
+        "noImageColor" : "rgb(212, 212, 212)",
+        "overlay" : "rgba(0,0,0,0.01)",
+        "templateType" : "default",
+        "titleColor" : "",
+        "titleFontSize" : "medium",
+        "titleHorizontalAlign" : "center"
+      },
+      "componentName" : "community_navigation:tileMenu",
+      "id" : "1002cd90-e8cd-4b3f-95a4-0fdfa2504ffc",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "316bb9bf-28f7-41bb-871a-9b154a94c03a",
+    "regionName" : "sidebarAlt",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "headerLabel" : "Recent Messages"
+      },
+      "componentName" : "forceChatter:newMessageNotification",
+      "id" : "25eb1e12-e8f1-44ea-b225-ce8e8a8d30c3",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a760658a-5170-497a-8c37-334a2bc1eedf",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "description" : "",
+        "metaTags" : "",
+        "title" : "Risk Level"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "a22d6bc1-c783-4802-97eb-c824005de60d",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "05a17056-b8d0-4a8b-8ceb-7aab0a94c607",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-risk-level"
+}

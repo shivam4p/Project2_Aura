@@ -1,4 +1,5 @@
 <apex:page sidebar="false" lightningStylesheets="true" controller="Operations_CC">
+	<body style="background-color:transparent !important">
   <apex:form >
 		<apex:pageBlock title="My Operations">
 			<apex:pageMessages escape="true" />
@@ -11,20 +12,7 @@
 							</apex:commandLink>
 					</apex:column>
 				</apex:pageBlockTable>
-			
 		</apex:pageBlock>
- 	 	<!-- <apex:commandButton value="Test" action="{!test}" rerender="out" status="status"/> -->
  	</apex:form>
- 	<!-- <apex:outputPanel id="out">
- 	 	<apex:actionstatus id="status" startText="testing...">
- 	 	 	<apex:facet name="stop">
- 	 	 	 	<apex:outputPanel>
- 	 	 	 	 	<p>You have selected:</p>
-            <apex:dataList value="{!operations}" var="op">
-              <apex:outputText value="{!op.Name}"/>
-          </apex:dataList>
- 	 	 	 	</apex:outputPanel>
- 	 	 	</apex:facet>
- 	 	</apex:actionstatus>
- 	</apex:outputPanel> -->
+	</body>
 </apex:page>

@@ -31,7 +31,7 @@
         </apex:pageBlock>
         <apex:pageBlock title="Safety Precaution Links" >
                <apex:repeat value="{!SelectedPickValues}" var="pick" id="theRepeat">
- 				<apex:outputLink tabindex="1" target="_blank" value="https://www.brandeis.edu/ehs/labs/corrosives.html"
+                <apex:outputLink tabindex="1" target="_blank" value="https://www.brandeis.edu/ehs/labs/corrosives.html"
                                  rendered="{!pick == 'Corrosive Environment'}">{!pick}<br/></apex:outputLink>
                 <apex:outputLink target="_blank" value="https://www.epa.gov/radiation/protecting-yourself-radiation"
                                  rendered="{!pick == 'High Radiation'}" >{!pick}<br/></apex:outputLink>

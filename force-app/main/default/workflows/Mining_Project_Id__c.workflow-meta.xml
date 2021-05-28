@@ -31,6 +31,17 @@
         <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>Owner_to_Site_Manager_Queue</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Site_Manager_Queues</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Owner to Site Manager Queue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>Sub_Status_to_Approved</fullName>
         <field>Sub_Status__c</field>
         <literalValue>Approved</literalValue>

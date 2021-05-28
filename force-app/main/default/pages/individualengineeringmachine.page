@@ -1,8 +1,26 @@
-<apex:page label="individual engineering machine  with save fuction" standardController="Engineering_Machine__c" >
-    <apex:pageBlock title="engineering machine detail">
-       <apex:pageBlockSection >
-           name: {!Engineering_Machine__c.Machine_Name__c } <br/>
-           status:{!Engineering_Machine__c.available_status__c }  <br/>
-        </apex:pageBlockSection>
-    </apex:pageBlock>
+<apex:page label="individual engineering machine with save & edit fuction" Controller="EMEntryPageController" >
+    <apex:form >
+        <apex:pageBlock title="engineering machine detail">
+             <apex:pageMessages />
+         <!-- Display Save and Cancel Button -->
+         <apex:pageBlockButtons >
+            <apex:commandButton value="Save" id="saveButton" action="{!savingEMRecord}"/>
+             <apex:commandButton value="Cancel" id="Cancel" action="{!CancelEMRecord}"/>
+         </apex:pageBlockButtons>
+            <apex:pageBlockSection title="detail" columns="2" >
+                <apex:outputField value="{!EMObj.Machine_Name__c}">
+                    <apex:inlineEditSupport showOnEdit="saveButton" event="ondblclick"/>    
+                </apex:outputField>
+                <apex:outputField value="{!EMObj.available_status__c}">
+                    <apex:inlineEditSupport showOnEdit="saveButton" event="ondblclick"/>    
+                </apex:outputField>
+                <apex:outputField value="{!EMObj.model__c}">
+                    <apex:inlineEditSupport showOnEdit="saveButton" event="ondblclick"/>    
+                </apex:outputField>
+                <apex:outputField value="{!EMObj.Mining_Project_Id__c}">
+                    <apex:inlineEditSupport showOnEdit="saveButton" event="ondblclick"/>    
+                </apex:outputField>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
 </apex:page>

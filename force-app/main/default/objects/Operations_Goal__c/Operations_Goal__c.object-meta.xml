@@ -162,7 +162,7 @@
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Operations Goals</pluralLabel>
-    <searchLayouts></searchLayouts>
-    <sharingModel>Private</sharingModel>
+    <searchLayouts/>
+    <sharingModel>Read</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>
