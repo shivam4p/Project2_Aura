@@ -25,6 +25,8 @@
         <members>ValidateStartDate_Test</members>
         <members>ValidateStartHandler</members>
         <members>RiskLevelSearchController</members>
+        <members>EMController</members>
+        <members>EMEntryPageController</members>
         <name>ApexClass</name>
     </types>
     <types>
