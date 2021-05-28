@@ -62,15 +62,6 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Operations_Goal__c</fieldItem>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
                     <value>required</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Mining_Project_Id__c</fieldItem>
@@ -87,15 +78,6 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Machine_and_Tools__c</fieldItem>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Customer__c</fieldItem>
             </fieldInstance>
         </itemInstances>
         <name>Facet-a54674b9-c03e-4b57-bc45-3828a2caf6b3</name>
