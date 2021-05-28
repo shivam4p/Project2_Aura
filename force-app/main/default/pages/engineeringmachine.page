@@ -1,33 +1,33 @@
-<apex:page Controller="EMController"   label="engineering machine record page">
+<apex:page Controller="EMController" lightningStylesheets="true" label="engineering machine record page">
 
-    <apex:form > 
-    <apex:pageBlock title="Engineering Machine List" id="em_list">
-        <!-- engineering machine list -->
-          
-            <apex:pageBlockTable value="{!EMs}" var="em">
-                <apex:column >
-                 <apex:outputLink value="/apex/individualengineeringmachine?&id={!em.Id}">
-                    <apex:outputText value="{!em.Name}" />
-                </apex:outputLink>
-                </apex:column>
-                <apex:column value="{!em.Machine_Name__c}" />
-                <apex:column value="{!em.available_status__c}" >
-                     <apex:facet name="header">
-                        <apex:commandLink action="{! sortByStatus }"
-                                          reRender="em_list">Status
-                        </apex:commandLink>
-                    </apex:facet>
-                </apex:column>
-                <apex:column value="{!em.model__c}" >
-                    <apex:facet name="header">
-                        <apex:commandLink action="{! sortByModel }"
-                                          reRender="em_list">Model
-                        </apex:commandLink>
-                    </apex:facet>
-                </apex:column>
-                <apex:column value="{!em.Mining_Project_Id__c}" >
-                </apex:column>
-            </apex:pageBlockTable>
-    </apex:pageBlock>
-    </apex:form>
+    <body style="background-color:transparent !important" style="font-size:20px;">
+        <apex:form>
+            <apex:pageBlock title="Engineering Machine List" id="em_list">
+                <!-- engineering machine list -->
+
+                <apex:pageBlockTable value="{!EMs}" var="em">
+                    <apex:column>
+                        <apex:outputLink value="/apex/individualengineeringmachine?&id={!em.Id}">
+                            <apex:outputText value="{!em.Name}" />
+                        </apex:outputLink>
+                    </apex:column>
+                    <apex:column value="{!em.Machine_Name__c}" />
+                    <apex:column value="{!em.available_status__c}">
+                        <apex:facet name="header">
+                            <apex:commandLink action="{! sortByStatus }" reRender="em_list">Status
+                            </apex:commandLink>
+                        </apex:facet>
+                    </apex:column>
+                    <apex:column value="{!em.model__c}">
+                        <apex:facet name="header">
+                            <apex:commandLink action="{! sortByModel }" reRender="em_list">Model
+                            </apex:commandLink>
+                        </apex:facet>
+                    </apex:column>
+                    <apex:column value="{!em.Mining_Project_Id__c}">
+                    </apex:column>
+                </apex:pageBlockTable>
+            </apex:pageBlock>
+        </apex:form>
+    </body>
 </apex:page>
