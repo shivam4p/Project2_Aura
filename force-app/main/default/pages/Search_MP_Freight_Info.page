@@ -1,10 +1,10 @@
 <apex:page controller="Search_Freights_MP" tabStyle="Mining_Project_Id__c" lightningStylesheets="true">
 
     <body style="background-color:transparent !important">
-        <apex:form>
+        <apex:form >
             <apex:pageBlock title="Freight Movement Search">
                 <apex:pageMessages />
-                <apex:pageBlockButtons>
+                <apex:pageBlockButtons >
                     <apex:commandButton action="{!listFreightMovement}" value="See ongoing freight Movement" />
                 </apex:pageBlockButtons>
                 <apex:pageBlockTable var="mp" value="{!mp_List}">

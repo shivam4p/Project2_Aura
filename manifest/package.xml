@@ -95,7 +95,6 @@
        <types>
         <members>Machine_and_Tools__c</members>
         <members>Mining_Project_Id__c</members>
-        <members>Operations_Goal__c</members>
         <members>Operations__c</members>
         <name>Workflow</name>
     </types>
@@ -106,26 +105,17 @@
     </types>
       <types>
         <members>Operations_profileSessionSetting1619905673433</members>
-        <members>P1_profileSessionSetting1479361192857</members>
         <name>ProfileSessionSetting</name>
     </types>
     <types>
 
         <members>Manager_Wizard</members>
-        <members>Mininig_Project_Process</members>
-        <members>Project_Reminder</members>
-        <members>custom_satisfaction</members>
-        <members>net_promoter_score</members>
         <members>New_Mining_Project</members>
         <name>Flow</name>
     </types>
     <types>
       
         <members>Manager_Wizard</members>
-        <members>Mininig_Project_Process</members>
-        <members>Project_Reminder</members>
-        <members>custom_satisfaction</members>
-        <members>net_promoter_score</members>
         <members>New_Mining_Project</members>
         <name>FlowDefinition</name>
     </types>
@@ -166,21 +156,6 @@
         <members>Search_MP_Freight_Info</members>
         <members>RiskLevelPage</members>
         <name>ApexPage</name>
-    </types>
-
-    <types>
-        <members>p1testpartner</members>
-        <name>Network</name>
-    </types>
-
-    <types>
-        <members>p1testpartner</members>
-        <name>CustomSite</name>
-    </types>
-
-    <types>
-        <members>p1testpartner1</members>
-        <name>ExperienceBundle</name>
     </types>
 
     <types>

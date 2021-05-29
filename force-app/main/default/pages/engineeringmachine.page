@@ -1,12 +1,12 @@
 <apex:page Controller="EMController" lightningStylesheets="true" label="engineering machine record page">
 
-    <body style="background-color:transparent !important" style="font-size:20px;">
-        <apex:form>
+    <body style="background-color:transparent !important; font-size:20px;">
+        <apex:form >
             <apex:pageBlock title="Engineering Machine List" id="em_list">
                 <!-- engineering machine list -->
 
                 <apex:pageBlockTable value="{!EMs}" var="em">
-                    <apex:column>
+                    <apex:column >
                         <apex:outputLink value="/apex/individualengineeringmachine?&id={!em.Id}">
                             <apex:outputText value="{!em.Name}" />
                         </apex:outputLink>

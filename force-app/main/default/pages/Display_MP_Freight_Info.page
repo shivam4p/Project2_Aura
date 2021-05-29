@@ -1,10 +1,10 @@
 <apex:page controller="Search_Freights_MP" lightningStylesheets="true">
 
     <body style="background-color:transparent !important">
-        <apex:form>
+        <apex:form >
             <apex:pageBlock title="This is the currect Freight movement of material">
                 <apex:pageMessages />
-                <apex:pageBlockButtons>
+                <apex:pageBlockButtons >
                     <apex:commandButton action="{!newSearch}" value="New Search" />
                 </apex:pageBlockButtons>
                 <apex:pageBlockTable var="freight" value="{!trips}">
