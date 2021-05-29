@@ -163,6 +163,6 @@
     </nameField>
     <pluralLabel>Operations Goals</pluralLabel>
     <searchLayouts></searchLayouts>
-    <sharingModel>Private</sharingModel>
+    <sharingModel>Read</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

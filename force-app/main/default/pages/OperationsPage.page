@@ -1,0 +1,18 @@
+<apex:page sidebar="false" lightningStylesheets="true" controller="Operations_CC">
+	<body style="background-color:transparent !important; font-size: 20px;">
+  <apex:form >
+		<apex:pageBlock title="My Operations">
+			<apex:pageMessages escape="true" />
+				<apex:pageBlockTable var="o" columnsWidth="60%,20%,20%" value="{!operationList}">
+					<apex:column value="{!o.Name}" />
+					<apex:column value="{!o.Machine_and_Tools__c}" />
+					<apex:column headerValue="Actions">
+							<apex:commandLink value="Select" action="{!showOperation}">
+								<apex:param name="operationId" value="{!o.Id}" assignTo="{!operationId}" />
+							</apex:commandLink>
+					</apex:column>
+				</apex:pageBlockTable>
+		</apex:pageBlock>
+ 	</apex:form>
+	</body>
+</apex:page>

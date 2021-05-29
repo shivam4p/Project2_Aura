@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
+
+    <types>
+        <members>Customer__c</members>
+        <members>Machine_and_Tools__c</members>
+        <members>Mining_Project_Id__c</members>
+        <members>Operations_Goal__c</members>
+        <members>Operations__c</members>
+        <members>Project_Name__c</members>
+        <members>Site_Manager__c</members>
+        <members>Finances__c</members>        
+        <members>Sales__c</members>  
+        <members>Engineering_Machine__c</members>          
+        <members>Freight__c</members>   
+        <name>CustomObject</name>
+    </types>
     <types>
         <members>newTaskHandler_Test</members>
         <members>newTaskHandler</members>
@@ -7,6 +22,13 @@
         <members>Update_Project_Mining_Subject</members>
         <members>ValidateStartDate_Test</members>
         <members>ValidateStartHandler</members>
+        <members>Search_Freights_MP</members>
+        <members>Operations_CC</members>
+        <members>RiskLevelSearchController</members>
+        <members>MiningProjectTestFactory</members>
+        <members>Search_Freight_MP_Test</members>
+        <members>EMController</members>
+        <members>EMEntryPageController</members>
         <name>ApexClass</name>
     </types>
     <types>
@@ -77,9 +99,7 @@
        <types>
         <members>Machine_and_Tools__c</members>
         <members>Mining_Project_Id__c</members>
-        <members>Operations_Goal__c</members>
         <members>Operations__c</members>
-        <members>Site_Manager__c</members>
         <name>Workflow</name>
     </types>
      <types>
@@ -89,25 +109,18 @@
     </types>
       <types>
         <members>Operations_profileSessionSetting1619905673433</members>
-        <members>P1_profileSessionSetting1479361192857</members>
         <name>ProfileSessionSetting</name>
     </types>
     <types>
 
         <members>Manager_Wizard</members>
-        <members>Mininig_Project_Process</members>
-        <members>Project_Reminder</members>
-        <members>custom_satisfaction</members>
-        <members>net_promoter_score</members>
+        <members>New_Mining_Project</members>
         <name>Flow</name>
     </types>
     <types>
       
         <members>Manager_Wizard</members>
-        <members>Mininig_Project_Process</members>
-        <members>Project_Reminder</members>
-        <members>custom_satisfaction</members>
-        <members>net_promoter_score</members>
+        <members>New_Mining_Project</members>
         <name>FlowDefinition</name>
     </types>
     <types>
@@ -123,6 +136,8 @@
         <members>Operations__c</members>
         <members>Site_Manager__c</members>
         <members>Project_Name__c</members>
+        <members>Freight__c</members>        
+        <members>Engineering_Machine__c</members>
         <name>CustomTab</name>
     </types>
     <types>
@@ -139,20 +154,31 @@
     </types>
     <types>
         <members>Diego_Mining</members>
-          <members>standard__LightningService</members>
+          <!--<members>standard__LightningService</members>-->
         <name>CustomApplication</name>
     </types>
     <types>
         <members>Operations</members>
         <name>Profile</name>
     </types>
-      <types>
-        <members>Site_Manager_Queues</members>
-        <name>Queue</name>
+                  
+    <types>
+        <members>individualengineeringmachine</members>
+        <members>engineeringmachine</members>
+        <members>testhomepage</members>
+        <members>OperationsPage</members>
+        <members>SingleOperationPage</members>
+        <members>Display_MP_Freight_Info</members>
+        <members>Search_MP_Freight_Info</members>
+        <members>RiskLevelPage</members>
+        <name>ApexPage</name>
     </types>
 
+    <types>
+        <members>images</members>
+        <members>RiskSigns</members>
+        <name>StaticResource</name>
+    </types>
 
-
-    
     <version>51.0</version>
 </Package>

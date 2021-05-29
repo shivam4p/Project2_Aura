@@ -1,0 +1,22 @@
+<apex:page controller="Search_Freights_MP" tabStyle="Mining_Project_Id__c" lightningStylesheets="true">
+
+    <body style="background-color:transparent !important">
+        <apex:form >
+            <apex:pageBlock title="Freight Movement Search">
+                <apex:pageMessages />
+                <apex:pageBlockButtons >
+                    <apex:commandButton action="{!listFreightMovement}" value="See ongoing freight Movement" />
+                </apex:pageBlockButtons>
+                <apex:pageBlockTable var="mp" value="{!mp_List}">
+                    <apex:column width="25px" headerValue="Select">
+                        <apex:inputCheckbox value="{!mp.checked}" />
+                    </apex:column>
+                    <apex:column value="{!mp.projects.Project_Name__c}" />
+                    <apex:column value="{!mp.projects.Location__c}" />
+                    <apex:column value="{!mp.projects.Mineral_or_Element_for_Extraction__c}" />
+                    <apex:column value="{!mp.projects.Mining_Project_Start_Date__c}" />
+                </apex:pageBlockTable>
+            </apex:pageBlock>
+        </apex:form>
+    </body>
+</apex:page>
