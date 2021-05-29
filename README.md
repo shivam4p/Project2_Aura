@@ -2,8 +2,6 @@
 ![wall](https://imgur.com/ns3khvp.png)
 Tasked with creating a compelling experience from a business previously explored, associates work together in an agile environment to create unique individual features leveraging visualforce based on that business. These are then surfaced through the use of experience cloud to create a customer or partner experience site that allows for the use of these new features.
 
-Usage of the project
-
 ##  Getting Started / Installations
 [Git](https://git-scm.com/downloads)  
 [Salesforce Extension Pack for VS Code](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode)
@@ -18,18 +16,19 @@ Usage of the project
 8. Once authorization is successful, deploy by running `sfdx force:source:deploy -x manifest/package.xml` or by right clicking on manifest/package.xml and choosing `Deploy Source in Manifest to Org`
 
 ## Technologies Used 
-- Salesforce CRM
+- Salesforce CRM: Lightning/Classic
 - Workflow Rules, Process Builders, Approval Processes, Flow Builders
+- Experience Cloud
 - Visualforce pages
 - Apex Triggers
-- GitHub
-- Scrumban
-- CSS, Flexbox
+- Apex Custom Controllers, Test Classes
+- SOQL, SOSL
+- HTML/CSS, Flexbox
 - JavaScript
--
--
--
-
+- Scrumban
+- SFDX
+- GitHub
+- Visual Studio Code/Developer Console
 
 ## Troubleshooting
 ##### Username related deployment errors
