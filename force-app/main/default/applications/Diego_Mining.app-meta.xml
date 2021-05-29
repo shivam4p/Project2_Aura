@@ -52,11 +52,9 @@
     <tabs>Site_Manager__c</tabs>
     <tabs>standard-Dashboard</tabs>
     <tabs>standard-report</tabs>
-<<<<<<< HEAD
-=======
     <tabs>Freight__c</tabs>
-    <tabs>Engineering_Machine__c</tabs>
->>>>>>> dev
+    <!-- <tabs>Engineering_Machine__c</tabs> -->
+    
     <uiType>Lightning</uiType>
     <utilityBar>Diego_Mining_Company_UtilityBar</utilityBar>
 </CustomApplication>
