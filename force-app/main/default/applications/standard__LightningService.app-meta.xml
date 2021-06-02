@@ -28,24 +28,18 @@
     <tabs>Machine_and_Tools__c</tabs>
     <tabs>Operations_Goal__c</tabs>
     <tabs>Site_Manager__c</tabs>
-<<<<<<< HEAD
-=======
     <tabs>Freight__c</tabs>
     <tabs>Engineering_Machine__c</tabs>
->>>>>>> dev
     <uiType>Lightning</uiType>
     <utilityBar>LightningService_UtilityBar</utilityBar>
     <workspaceConfig>
         <mappings>
-<<<<<<< HEAD
-=======
             <tab>Freight__c</tab>
         </mappings>
         <mappings>
             <tab>Engineering_Machine__c</tab>
         </mappings>
         <mappings>
->>>>>>> dev
             <tab>Machine_and_Tools__c</tab>
         </mappings>
         <mappings>

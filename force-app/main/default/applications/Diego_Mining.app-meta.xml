@@ -37,14 +37,6 @@
         <type>Flexipage</type>
         <profile>Operations</profile>
     </profileActionOverrides>
-    <!--<profileActionOverrides>
-        <actionName>Tab</actionName>
-        <content>Home_Page</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>standard-home</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Custom-Operations</profile>
-    </profileActionOverrides>-->
     <tabs>Mining_Project_Id__c</tabs>
     <tabs>Operations__c</tabs>
     <tabs>Operations_Goal__c</tabs>
@@ -53,8 +45,7 @@
     <tabs>standard-Dashboard</tabs>
     <tabs>standard-report</tabs>
     <tabs>Freight__c</tabs>
-    <!-- <tabs>Engineering_Machine__c</tabs> -->
-    
+    <tabs>Engineering_Machine__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Diego_Mining_Company_UtilityBar</utilityBar>
 </CustomApplication>
