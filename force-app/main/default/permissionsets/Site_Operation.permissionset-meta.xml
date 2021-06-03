@@ -297,6 +297,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Operations__c.Mining_Project_Id__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Operations__c.Operation_Status__c</field>
         <readable>false</readable>
     </fieldPermissions>

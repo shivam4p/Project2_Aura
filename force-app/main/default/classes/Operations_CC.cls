@@ -19,7 +19,7 @@ public class Operations_CC {
         get {
             if (operationList == null) {
                 operationList = new List<Operations__c>();
-                for (Operations__c operation : [SELECT Name, Machine_and_Tools__c FROM Operations__c]) {
+                for (Operations__c operation : [SELECT Name, Mining_Project_Id__r.Project_Name__c FROM Operations__c]) {
                     operationList.add(operation);
                 }
             }
@@ -44,7 +44,8 @@ public class Operations_CC {
         get {
             if (operationGoal == null) {
                 operationGoal = new Operations_Goal__c();
-                String whereClause = 'WHERE Operations__c = :operationId LIMIT 1';
+                String theId = (String)operationId;
+                String whereClause = 'WHERE Operations__c = \'' + theId + '\' LIMIT 1';
                 List<String> fieldsToSanitize = new List<String>{'Name', 'Cost_of_Operation__c', 'Extraction_Techique__c', 'Number_of_Digging_Sites__c', 'Operation_Location__c' , 'Stage__c'};
                 operationGoal = sanitizeQuery(fieldsToSanitize, 'Operations_Goal__c', whereClause)[0];
             }
@@ -76,9 +77,8 @@ public class Operations_CC {
             editMode = false;
             ApexPages.addMessage(new ApexPages.message(ApexPages.severity.CONFIRM,
                                 'Successfully created new goal!'));
-            PageReference pr = Page.SingleOperationPage;
-            pr.getParameters().put('operationId', operationId);
-            return pr;
+            goalId = null;
+            return null;
         } catch(System.DMLException e) {
             ApexPages.addMessage(new ApexPages.message(ApexPages.severity.ERROR,
                                 'Uh oh, something went wrong..'));
@@ -112,20 +112,21 @@ public class Operations_CC {
     }
 
     public PageReference deleteGoal() {
+        ApexPages.addMessage(new ApexPages.message(ApexPages.severity.CONFIRM,
+                            'Successfully deleted the goal!'));
         try {
             Operations_Goal__c og = new Operations_Goal__c(Id = goalId);
             delete og;
-            editMode = false;
+            editMode = true;
             goalId = null;
-            ApexPages.addMessage(new ApexPages.message(ApexPages.severity.CONFIRM,
-                                'Successfully deleted the goal!'));
-        } catch(System.DMLException e) {
+        } catch(Exception e) {
             ApexPages.addMessage(new ApexPages.message(ApexPages.severity.ERROR,
                                 'Uh oh, something went wrong..'));
             return null;
         }
         return null;
     }
+
     public PageReference showOperation() {
         PageReference pr = Page.SingleOperationPage;
         System.debug(operationId);
@@ -134,27 +135,6 @@ public class Operations_CC {
         
     }
     
-    
-    public static List<Operations_Goal__c> sanitizeQuery(List<String> strList, String sObjectName) {
-        String queryString = 'SELECT ';
-        List<String> fieldsToCheck = new List<String>();
-        for (String str : strList) {
-            fieldsToCheck.add(str);
-        }
-        
-        Map<String, List<String>> entitiesToCheck = new Map<String, List<String>>();
-        entitiesToCheck.put(sObjectName, fieldsToCheck);
-        
-        Set<String> accessibleFields = checkAccessibility(entitiesToCheck);
-        
-        if(accessibleFields.size() == 0) {
-            return null;
-        } else {
-            queryString += accessibleFields.toString().substring(1, accessibleFields.toString().length() - 1) + ' FROM ' + sObjectName;
-            return Database.query(queryString);
-        }
-
-    }
     public static List<Operations_Goal__c> sanitizeQuery(List<String> strList, String sObjectName, String whereClauseStr) {
         String queryString = 'SELECT ';
         List<String> fieldsToCheck = new List<String>();
@@ -167,12 +147,8 @@ public class Operations_CC {
         
         Set<String> accessibleFields = checkAccessibility(entitiesToCheck);
         
-        if(accessibleFields.size() == 0) {
-            return null;
-        } else {
-            queryString += accessibleFields.toString().substring(1, accessibleFields.toString().length() - 1) + ' FROM ' + sObjectName + ' ' + whereClauseStr;
-            return Database.query(queryString);
-        }
+        queryString += accessibleFields.toString().substring(1, accessibleFields.toString().length() - 1) + ' FROM ' + sObjectName + ' ' + whereClauseStr;
+        return Database.query(queryString);
 
     }
 

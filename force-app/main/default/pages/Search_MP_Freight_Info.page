@@ -1,6 +1,6 @@
 <apex:page controller="Search_Freights_MP" tabStyle="Mining_Project_Id__c" lightningStylesheets="true">
 
-    <body style="background-color:transparent !important">
+    <body style="background-color:transparent !important; font-size:20px;">
         <apex:form >
             <apex:pageBlock title="Freight Movement Search">
                 <apex:pageMessages />

@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "eb9519be-98ed-4ae5-938a-0c89d4ada06e",
+  "appPageId" : "deaed114-8de1-4d4e-887d-cc9c34e14868",
+  "configurationTags" : [ ],
+  "id" : "e148a337-eb68-4f84-8816-2a9fd0c04967",
+  "label" : "Operations",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-operations",
+  "type" : "route",
+  "urlPrefix" : "operations"
+}

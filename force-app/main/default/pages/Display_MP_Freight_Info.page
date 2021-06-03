@@ -1,6 +1,6 @@
 <apex:page controller="Search_Freights_MP" lightningStylesheets="true">
 
-    <body style="background-color:transparent !important">
+    <body style="background-color:transparent !important; font-size: 20px;">
         <apex:form >
             <apex:pageBlock title="This is the currect Freight movement of material">
                 <apex:pageMessages />

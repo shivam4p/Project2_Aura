@@ -29,6 +29,10 @@
         <members>Search_Freight_MP_Test</members>
         <members>EMController</members>
         <members>EMEntryPageController</members>
+        <members>CommunitiesLandingController</members>
+        <members>CommunitiesLoginController</members>
+        <members>CommunitiesSelfRegController</members>
+        <members>CommunitiesSelfRegConfirmController</members>
         <name>ApexClass</name>
     </types>
     <types>
@@ -48,19 +52,14 @@
         <members>Sales__c</members>
         <name>TopicsForObjects</name>
     </types>
-    <types>
-     <members>Machine_and_Tools_c.Machines_Greater_than_Approval</members>
-   
-    <name>ApprovalProcess</name>   
-    </types>
-    <types>
+    <!--<types>
     <members>asteroid_mining</members>
     <members>asteroid_mining1</members>
     <members>asteroid_miningoC9bE1Mllmx</members>
     <members>iomoon1</members>
     <members>logo</members>
     <name>ContentAsset</name> 
-    </types>
+    </types>-->
     <types>
         <members>Customer__c</members>
         <members>Machine_and_Tools__c</members>
@@ -101,6 +100,10 @@
         <members>Mining_Project_Id__c</members>
         <members>Operations__c</members>
         <name>Workflow</name>
+    </types>
+    <types>
+        <members>Operations</members>
+        <name>Profile</name>
     </types>
      <types>
         <members>Operations_profilePasswordPolicy1619905673367</members>
@@ -157,10 +160,6 @@
           <!--<members>standard__LightningService</members>-->
         <name>CustomApplication</name>
     </types>
-    <types>
-        <members>Operations</members>
-        <name>Profile</name>
-    </types>
                   
     <types>
         <members>individualengineeringmachine</members>
@@ -171,6 +170,11 @@
         <members>Display_MP_Freight_Info</members>
         <members>Search_MP_Freight_Info</members>
         <members>RiskLevelPage</members>
+        <members>CommunitiesLanding</members>
+        <members>CommunitiesLogin</members>
+        <members>CommunitiesSelfReg</members>
+        <members>CommunitiesSelfRegConfirm</members>
+        <members>CommunitiesTemplate</members>
         <name>ApexPage</name>
     </types>
 
@@ -178,7 +182,58 @@
         <members>images</members>
         <members>RiskSigns</members>
         <name>StaticResource</name>
-    </types>
+    </types> 
+    <types>
+        <members>p1testpartner.Customer_Members</members>
+        <members>p1testpartner.Members_without_contribution</members>
+        <members>p1testpartner.Partner_and_Customer_members</members>
+        <name>UserCriteria</name>
+    </types> 
 
+    <types>
+        <members>p1testpartner.Banned</members>
+        <name>KeywordList</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ContentAsset</name>
+    </types>
+    <types>
+        <members>Experiences_Shared_Document_Folder</members>
+        <name>Document</name>
+    </types>
+    <types>
+        <members>p1testpartner</members>
+        <name>ManagedTopics</name>
+    </types>
+    <types>
+        <members>p1testpartner.Block_banned_keywords</members>
+        <members>p1testpartner.Flag_banned</members>
+        <members>p1testpartner.Freeze_for_frequent_posting</members>
+        <members>p1testpartner.Replace_banned</members>
+        <members>p1testpartner.Review_the_first_post</members>
+        <name>ModerationRule</name>
+    </types>
+    <types>
+        <members>p1testpartner</members>
+        <name>CustomSite</name>
+    </types>
+    <types>
+        <members>p1testpartner</members>
+        <name>Network</name>
+    </types>
+    <types>
+        <members>cbp1testpartner</members>
+        <name>NetworkBranding</name>
+    </types>
+    <types>
+        <members>Default_Navigation1</members>
+        <members>Default_User_Profile_Menu</members>
+        <name>NavigationMenu</name>
+    </types>
+    <types>
+        <members>p1testpartner1</members>
+        <name>ExperienceBundle</name>
+    </types>
     <version>51.0</version>
 </Package>
