@@ -17,14 +17,15 @@ Tasked with creating a compelling experience from a business previously explored
 8. Check `Enable Digital Experiences` and give it a random domain name, click `Save`.  
 ![instruction1](https://imgur.com/50ixCpu.png)
 9. Navigate back to `Setup` > `Lightning Experience Transition Assistant` > `Feature Settings` > `Digital Experiences` > `Settings`.
+![instruction1](https://imgur.com/TEsFHES.png)
 10. Check `Enable Experience Workspaces`.  
 11. Go back to Visual Studio, search entire project with `Ctrl`/`Command` + `Shift` + `F`.  
-![instruction1](https://imgur.com/TEsFHES.png)
+![instruction1](https://imgur.com/OZUMX07.png)
 12. Copy `wyang19a@brave-narwhal-cs90qn.com` and paste it in.
 11. Go back to browser, navigate to `Setup` > `Users` > `Users`.
 12. Copy your own system admin username.   
 ![instruction1](https://imgur.com/ILgD8yh.png)
-13. Go back to Visual Studio Code, click the arrow on the left side of search textbox.  
+13. Go back to Visual Studio Code, click the arrow on the left side of search textbox, paste in your username.  
 ![instruction1](https://imgur.com/pYcbvcF.png)
 
 14. Replace all instances by clicking the `Replace all` button on the right side.
