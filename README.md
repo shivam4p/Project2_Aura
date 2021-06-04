@@ -13,7 +13,26 @@ Tasked with creating a compelling experience from a business previously explored
 5. If you are using GitBash or terminal, open project in VS code by running `code .`
 6. From VS Code, open command pallete with `Command`/`Ctrl` + `Shift` + `P`, and choose `SFDX: Authorize an org`.
 7. Browser window will open, and you will be prompted to login to the org you wish to connect.
-8. Once authorization is successful, deploy by running `sfdx force:source:deploy -x manifest/package.xml` or by right clicking on manifest/package.xml and choosing `Deploy Source in Manifest to Org`
+7. From your org on your browser, navigate to `Setup` > `Lightning Experience Transition Assistant` > `Feature Settings` > `Digital Experiences` > `Settings`  
+8. Check `Enable Digital Experiences` and give it a random domain name, click `Save`.  
+![instruction1](https://imgur.com/50ixCpu.png)
+9. Navigate back to `Setup` > `Lightning Experience Transition Assistant` > `Feature Settings` > `Digital Experiences` > `Settings`.
+10. Check `Enable Experience Workspaces`.  
+11. Go back to Visual Studio, search entire project with `Ctrl`/`Command` + `Shift` + `F`.  
+![instruction1](https://imgur.com/TEsFHES.png)
+12. Copy `wyang19a@brave-narwhal-cs90qn.com` and paste it in.
+11. Go back to browser, navigate to `Setup` > `Users` > `Users`.
+12. Copy your own system admin username.   
+![instruction1](https://imgur.com/ILgD8yh.png)
+13. Go back to Visual Studio Code, click the arrow on the left side of search textbox.  
+![instruction1](https://imgur.com/pYcbvcF.png)
+
+14. Replace all instances by clicking the `Replace all` button on the right side.
+15. Once authorization is successful, deploy by running `sfdx force:source:deploy -x manifest/package.xml` or by right clicking on manifest/package.xml and choosing `Deploy Source in Manifest to Org`
+16. Navigate to `Setup` > `Lightning Experience Transition Assistant` > `Feature Settings` > `Digital Experiences` > `All Sites`.  
+![instruction1](https://imgur.com/sQtx9ia.png)
+17. Click Builder, and publish the experience cloud site.
+
 
 ## Technologies Used 
 - Salesforce CRM: Lightning/Classic
