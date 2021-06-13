@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 
-    <types>
+<types>
         <members>Customer__c</members>
         <members>Machine_and_Tools__c</members>
         <members>Mining_Project_Id__c</members>
@@ -33,6 +33,8 @@
         <members>CommunitiesLoginController</members>
         <members>CommunitiesSelfRegController</members>
         <members>CommunitiesSelfRegConfirmController</members>
+		<members>DemandStatusPageController</members>
+		<members>RiskLevelPageSearchController</members>
         <name>ApexClass</name>
     </types>
     <types>
@@ -181,6 +183,9 @@
     <types>
         <members>images</members>
         <members>RiskSigns</members>
+		<members>RiskSignGreen</members>
+		<members>RiskSignRed</members>
+		<members>RiskSignYellow</members>
         <name>StaticResource</name>
     </types> 
     <types>
@@ -235,5 +240,14 @@
         <members>p1testpartner1</members>
         <name>ExperienceBundle</name>
     </types>
-    <version>51.0</version>
+
+	<types>
+		<members>DemandStatusPage</members>
+		<members>DemandStatusPageHarness</members>
+		<members>RiskLevelPage</members>
+		<members>RiskLevelPageHarness</members>
+		<name>AuraDefinitionBundle</name>
+	</types>
+
+	<version>51.0</version>
 </Package>

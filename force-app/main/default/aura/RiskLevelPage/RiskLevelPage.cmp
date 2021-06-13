@@ -1,0 +1,146 @@
+<aura:component controller="RiskLevelPageSearchController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">   
+     
+    <aura:attribute name="searchResult" type="List" description="use for store and display account list return from server"/>
+    <aura:attribute name="searchKeyword" type="String" description="use for store user search input"/>
+    <aura:attribute name="Message" type="boolean" default="false" description="use for display no record found message"/>
+
+    <lightning:spinner variant="brand" size="large" aura:id="Id_spinner" class="slds-hide" />
+    
+    <div class="slds-m-around_medium">
+       
+        <lightning:layout>
+            
+            <lightning:layoutItem size="3" padding="around-small">
+                <lightning:input value="{!v.searchKeyword}"
+                                 required="true"
+                                 placeholder="Search Projects..."
+                                 aura:id="searchField"
+                                 label="Enter Project Name"/>
+            </lightning:layoutItem>
+ 
+            <div>
+            <lightning:layoutItem size="3" padding="around-small">
+                <lightning:button onclick="{!c.Search}"
+                                  variant="brand"
+                                  label="Search"
+                                  iconName="utility:search"/> 
+            </lightning:layoutItem>
+            </div>
+        </lightning:layout>
+        
+        <!-- ERROR MESSAGE IF NO RECORDS FOUND--> 
+        <aura:if isTrue="{!v.Message}">
+            <div class="slds-notify_container slds-is-relative">
+                <div class="slds-notify slds-notify_toast slds-theme_error" role="alert">
+                    <div class="slds-notify__content">
+                        <h2 class="slds-text-heading_small">No Records Found</h2>
+                    </div>
+                </div>
+            </div>
+        </aura:if>
+       
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+            <thead>
+                <tr class="slds-text-title_caps">
+                    <th scope="col">
+                        <div class="slds-truncate" title="Mining Project Id">Mining Project Id</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Project Name">Project Name</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Hazardous Issues">Hazardous Issues</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Risk Level">Risk Level</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody> 
+     
+                <aura:iteration items="{!v.searchResult}" var="min">
+                    <tr>
+                        <td>
+                            <div class="slds-truncate">{!min.Name}</div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate">{!min.Project_Name__c}</div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate">{!min.Hazardous_Issues__c}</div>   
+                        </td>
+                        <td>
+                            <aura:if isTrue="{!lessthanorequal(min.Hazard_Count__c,2)}">
+           					 <img src="{!$Resource.RiskSignGreen}"/>
+       						</aura:if> 
+                            <aura:if isTrue="{!and(greaterthan(min.Hazard_Count__c,2), lessthan(min.Hazard_Count__c,5))}">
+           					 <img src="{!$Resource.RiskSignYellow}"/>
+       						</aura:if> 
+                            <aura:if isTrue="{!greaterthanorequal(min.Hazard_Count__c,5)}">
+           					 <img src="{!$Resource.RiskSignRed}" />
+       						</aura:if> 
+                        </td>
+                    </tr>
+                </aura:iteration>
+            </tbody>
+        </table>
+        
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+            <thead>
+            	<tr class="slds-text-title_caps">
+                    <th scope="col">
+                        <div class="slds-truncate" title="Saftey Precaution Links">Safety Precaution Links</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            	<tr>
+                	<td>
+                    	 <lightning:formattedUrl value="https://www.brandeis.edu/ehs/labs/corrosives.html" label="Corrosive Environment" target="_blank"/>
+                    </td>
+                </tr>
+                <tr>
+                	<td>
+                    	 <lightning:formattedUrl value="https://www.epa.gov/radiation/protecting-yourself-radiation" label="High Radiation" target="_blank"/>
+                    </td>
+                </tr>
+                <tr>
+                	<td>
+                    	 <lightning:formattedUrl value="https://davidson.weizmann.ac.il/en/online/sciencepanorama/dangers-zero-gravity" label="Low Gravity" target="_blank"/>
+                    </td>
+                </tr>
+                <tr>
+                	<td>
+                    	 <lightning:formattedUrl value="https://www.narfa.com/cold-weather-safety-tips/" label="Low Temperature" target="_blank"/>
+                    </td>
+                </tr>
+                <tr>
+                	<td>
+                    	 <lightning:formattedUrl value="https://www.safetyandhealthmagazine.com/articles/how-to-maintain-steady-barometric-pressure-in-a-mine-2" label="Low Atmosphere Pressure" target="_blank"/>
+                    </td>
+                </tr>
+                <tr>
+                	<td>
+                    	 <lightning:formattedUrl value="https://www.cdc.gov/nceh/features/extremeheat/index.html" label="High Temperature" target="_blank"/>
+                    </td>
+                </tr>
+                <tr>
+                	<td>
+                    	 <lightning:formattedUrl value="https://www.bothellwa.gov/DocumentCenter/View/500/Volcano-Safety-Tips-PDF?bidId=" label="Volcanic Activity" target="_blank"/>
+                    </td>
+                </tr>
+                <tr>
+                	<td>
+                    	 <lightning:formattedUrl value="https://www.safetyandhealthmagazine.com/articles/how-to-maintain-steady-barometric-pressure-in-a-mine-2" label="Crashing Atmosphere Pressure" target="_blank"/>
+                    </td>
+                </tr>
+                <tr>
+                	<td>
+                    	 <lightning:formattedUrl value="https://www.pinnacol.com/knowledge-center/safety-talk-gravity-always-wins" label="Crashing Gravity" target="_blank"/>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</aura:component>

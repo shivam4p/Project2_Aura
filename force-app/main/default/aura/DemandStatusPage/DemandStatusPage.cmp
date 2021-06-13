@@ -1,0 +1,28 @@
+<aura:component controller="DemandStatusPageController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    <aura:attribute name="pickName" type="List" />
+    <aura:attribute name="picksel" type="String" />
+    <aura:attribute name="mydata" type="Object"/>
+    <aura:attribute name="mycolumns" type="List"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}"/>
+    
+    <div class = "slds-container--center slds-container--small">
+        <lightning:select aura:id="PicklistId" label="Select Demand Status" name="status" value="{!v.picksel}" onchange="{!c.onControllerFieldChange}">
+            <option value="" text="- None -" /> 
+            <aura:iteration items="{!v.pickName}" var="per">
+                <option value="{!per}" text="{!per}" />  
+            </aura:iteration>
+        </lightning:select>
+        <br/><br/>
+    </div>
+    <br/><br/>
+    
+    <div class="slds-p-left_large slds-p-right_medium">
+        
+        <lightning:datatable data="{! v.mydata }" 
+                             columns="{! v.mycolumns }" 
+                             keyField="Id" 
+                             hideCheckboxColumn="true"/>
+    </div>
+</aura:component>
