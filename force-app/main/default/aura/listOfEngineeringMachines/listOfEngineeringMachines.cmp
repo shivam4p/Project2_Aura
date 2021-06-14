@@ -1,0 +1,58 @@
+<aura:component controller="fetchEngineeringMachines" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >	
+    
+    <aura:registerEvent name="cmpEvent" type="c:engineeringMachineIdEvent"/>
+    
+    <!-- Attributes for list population -->    
+	<aura:attribute name="data" type="Engineering_Machine__c[]" />
+    <aura:attribute name="columns" type="List"/>
+	<!-- Attributes for sort control -->
+	<aura:attribute name="sortDirection" type="String" default="asc" />
+    <aura:attribute name="defaultSortDirection" type="String" default="asc" />
+    <aura:attribute name="sortedBy" type="String" />
+
+      
+    <aura:handler name="init" value="{!this}" action="{!c.fetchAcc}"/>
+     
+ 
+    <div class="slds-p-around_medium">
+        <h1 class="slds-text-heading_large">Engineering Machine List</h1>
+    </div>
+
+    <div style="height: 300px">
+        <lightning:datatable
+			
+            columns="{! v.columns }"
+            data="{! v.data }"
+            keyField="id"
+            errors="{! v.errors }"
+			defaultSortDirection="{!v.defaultSortDirection}"
+        sortedDirection="{!v.sortDirection}"
+        sortedBy="{!v.sortedBy}"
+        onsort="{!c.handleSort}"
+        onrowaction="{! c.handleRowAction }"
+        hideCheckboxColumn="true"/>
+    </div>
+    
+
+	<!--<aura:attribute name="contactList" type="contact[]" />
+    
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />   
+	<aura:iteration items="{!v.engineeringMachinesList}" var="item">
+		
+        <c:eachEngineeringMachine id="{!item.Name}" machineName="{!item.Machine_Name__c}" modelName="{!item.model__c}" status="{!item.available_status__c}" project="{!item.Mining_Project_Id__c}"  />
+		
+        <br/>
+    </aura:iteration> -->
+    
+    <!--<lightning:ListView aura:id="listEngineeringMachines" 
+		objectApiName="Engineering_Machine__c"
+    listName="Machine_List"
+    rows="10"
+    showSearchBar="false"
+    showActionBar="false"
+    enableInlineEdit="true"
+    showRowLevelActions="true"
+	/>-->
+
+    
+</aura:component>

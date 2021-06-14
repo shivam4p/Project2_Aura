@@ -1,0 +1,20 @@
+<aura:component >
+    <aura:registerEvent name="cmpReturnEvent" type="c:returnMainMachineEvent"/>
+    
+	<aura:attribute name="childMachineId" type ="String" default=""/>
+    
+    <aura:handler name="cmpTransferMachine" event="c:transferMachineDown" action="{!c.handleCaptureEvent}" phase="capture" includeFacets="true" />
+    
+    <lightning:recordEditForm recordId="{!v.childMachineId}" objectApiName="Engineering_Machine__c" onsuccess="{! c.handleClick }">
+        <lightning:messages />
+        <lightning:outputField fieldName="Name" />
+        <lightning:inputField fieldName="Machine_Name__c" />
+        <lightning:inputField fieldName="available_status__c" />
+		<lightning:inputField fieldName="model__c" />
+        <lightning:inputField fieldName="Mining_Project_Id__c" />
+        <lightning:button class="slds-m-top_small" variant="brand" type="submit" name="update" label="Update" />
+        <lightning:button class="slds-m-top_small" variant="brand" label="Cancel" title="Cancel action" onclick="{! c.handleClick }" />
+    </lightning:recordEditForm>
+    
+    
+</aura:component>

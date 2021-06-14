@@ -1,0 +1,168 @@
+<aura:component controller="planetaryGuideApexController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="totalProjectsCount" type="Integer" />
+    <aura:attribute name="miningProjectsList" type="Mining_Project_Id__c[]" />
+    <aura:attribute name="totalCountsList" type="Integer[]" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    
+    <lightning:button onclick="{! c.handleSetActiveSectionA }" label="Terra"/>
+    <lightning:button onclick="{! c.handleSetActiveSectionB }" label="Luna"/>
+    <lightning:button onclick="{! c.handleSetActiveSectionC }" label="Venus"/>
+    <lightning:button onclick="{! c.handleSetActiveSectionD }" label="Mars"/>
+    <lightning:button onclick="{! c.handleSetActiveSectionE }" label="Jupiter"/>
+    <lightning:button onclick="{! c.handleSetActiveSectionF }" label="Saturn"/>   
+    <lightning:button onclick="{! c.handleSetActiveSectionG }" label="Titan"/>
+    <lightning:button onclick="{! c.handleSetActiveSectionH }" label="Io"/>
+    <lightning:button onclick="{! c.handleSetActiveSectionI }" label="Europa"/>
+    <lightning:button onclick="{! c.handleSetActiveSectionJ }" label="Enceledus"/>
+    <lightning:button onclick="{! c.handleSetActiveSectionK }" label="Ceres"/>
+    <lightning:button onclick="{! c.handleSetActiveSectionZ }" label="Asteroid Belt"/>
+    
+    <header >
+        <h1 style="font-size:32px;">Total Operations: {! v.totalProjectsCount}</h1>
+        
+    </header>
+    
+    
+    <lightning:accordion aura:id="accordion" activeSectionName="B">
+        <lightning:accordionSection name="A" label="Terra">
+            <p>Terra; Earth, the third planet from the sun</p>
+            <br/>    
+            <p>No Operations are currently allowed to be conducted on Earth</p>
+        </lightning:accordionSection>
+        <lightning:accordionSection name="B" label="Luna">
+            <p>Luna; The Moon, the single natural satellite of Earth</p>
+			<br/>
+            <p>Total Operations on The Moon: {!v.totalCountsList[9]}</p>
+            <br/>
+			<p style="font-size:18px;">Potential Hazards</p>
+			<ul>
+              <li>Low Gravity</li>
+			</ul>
+        </lightning:accordionSection>
+        <lightning:accordionSection name="C" label="Venus">
+            <p>Venus is the second planet from the Sun.</p>
+			<br/>
+            <p>Total Operations on Venus: {!v.totalCountsList[10]}</p>
+            <br/>
+			<p style="font-size:18px;">Potential Hazards</p>
+			<ul>
+              <li>High Radiation</li>
+              <li>Hazardous Atmosphere</li>
+			</ul>
+        </lightning:accordionSection>
+        <lightning:accordionSection name="D" label="Mars">
+            <p>Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System.</p>
+			<br/>
+            <p>Total Operations on Mars: {!v.totalCountsList[8]}</p>
+            <br/>
+			<p style="font-size:18px;">Potential Hazards</p>
+			<ul>
+				<li>Low Atmospheric Pressure</li>
+			</ul>
+        </lightning:accordionSection>
+        <lightning:accordionSection name="E" label="Jupiter">
+            <p>Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass (more than) two and a half times that of all the other planets in the Solar System combined, but (a little) less than one-thousandth the mass of the Sun.</p>
+            <br/>
+            <p>Total Operations on Jupiter: {!v.totalCountsList[7]}</p>
+            <br/>
+			<p style="font-size:18px;">Potential Hazards</p>
+			<ul>
+              <li>Gas Giant</li>
+              <li>Crushing Atmospheric Pressure</li>
+			</ul>
+        </lightning:accordionSection>
+        <lightning:accordionSection name="F" label="Saturn">
+            <p>Saturn is the sixth planet from the Sun and the second-largest in the Solar System, after Jupiter. It is a gas giant with an average radius of about nine and a half times that of Earth.</p>
+            <br/>
+			<p>Total Operations on Saturn: {!v.totalCountsList[6]}</p>
+            <br/>
+			<p style="font-size:18px;">Potential Hazards</p>
+			<ul>
+              <li>Gas Giant</li>
+              <li>Crushing Atmospheric Pressure</li>
+			</ul>
+        </lightning:accordionSection>
+        <lightning:accordionSection name="G" label="Titan">
+            <p>Titan is the largest moon of Saturn and the second-largest natural satellite in the Solar System. It is the only moon known to have a dense atmosphere, and the only known body in space, other than Earth, where clear evidence of stable bodies of surface liquid has been found.</p>
+            <br/>
+            <p>Total Operations on Titan: {!v.totalCountsList[2]}</p>
+            <br/>
+			<p style="font-size:18px;">Potential Hazards</p>
+			<ul>
+              <li>Low Temperatures</li>
+			</ul>
+        </lightning:accordionSection>
+        <lightning:accordionSection name="H" label="Io">
+            <p>Io is the innermost and third-largest of the four Galilean moons of the planet Jupiter. Slightly larger than the Moon, Io is the fourth-largest moon in the Solar System, has the highest density of all of them, and has the lowest amount of water (by atomic ratio) of any known astronomical object in the Solar System.</p>
+            <br/>
+            <p>Total Operations on Io: {!v.totalCountsList[5]}</p>
+            <br/>
+			<p style="font-size:18px;">Potential Hazards</p>
+			<ul>
+              <li>Low Gravity</li>
+              <li>Low Temperatures</li>
+              <li>High Radiation</li>
+              <li>Hazardous Atmosphere</li>
+			</ul>
+        </lightning:accordionSection>
+        <lightning:accordionSection name="I" label="Europa">
+            <p> is the smallest of the four Galilean moons orbiting Jupiter, and the sixth-closest to the planet of all the 79 known moons of Jupiter. </p>
+            <br/>
+            <p>Total Operations on Europa: {!v.totalCountsList[3]}</p>
+            <br/>
+			<p style="font-size:18px;">Potential Hazards</p>
+			<ul>
+              <li>Low Gravity</li>
+              <li>Low Temperatures</li>
+              <li>Low Atmospheric Pressure</li>
+			</ul>
+        </lightning:accordionSection>
+        <lightning:accordionSection name="J" label="Enceledus">
+            <p> is the sixth-largest moon of Saturn. It is about 500 kilometers (310 mi) in diameter.</p>
+            <br/>
+            <p>Total Operations on Enceledus: {!v.totalCountsList[4]}</p>
+            <br/>
+			<p style="font-size:18px;">Potential Hazards</p>
+			<ul>
+              <li>Low Gravity</li>
+              <li>Extremely Low Temperatures</li>
+              <li>Cryovolcanism</li>
+			</ul>
+        </lightning:accordionSection>
+        <lightning:accordionSection name="K" label="Ceres">
+            <p>Ceres is the largest object in the main asteroid belt between the orbits of Mars and Jupiter. It comprises a quarter of the mass of the belt and, at 940 km (580 mi) in diameter, is the only asteroid large enough to be rounded by its own gravity, although Vesta and perhaps other asteroids were so in the past. This makes Ceres both the smallest recognized dwarf planet and the only one inside Neptune's orbit.</p>
+            <br/>
+            <p>Total Operations on Ceres: {!v.totalCountsList[1]}</p>
+			<br/>
+			<p style="font-size:18px;">Potential Hazards</p>
+			<ul>
+              <li>Low Gravity</li>
+              <li>Low Temperatures</li>
+              <li>High Radiation</li>
+              <li>Low Atmospheric Pressure</li>
+			</ul>            
+        </lightning:accordionSection>
+        <lightning:accordionSection name="Z" label="Asteroid Belt">
+            <p>The asteroid belt is a torus-shaped region in the Solar System, located roughly between the orbits of the planets Jupiter and Mars. It contains a great many solid, irregularly shaped bodies, of many sizes but much smaller than planets, called asteroids or minor planets. This asteroid belt is also called the main asteroid belt or main belt to distinguish it from other asteroid populations in the Solar System such as near-Earth asteroids and trojan asteroids.</p>
+            <br/>
+            <p>Total Operations in the Asteroid Belt: {!v.totalCountsList[0]}</p>
+            <br/>
+			<p style="font-size:18px;">Potential Hazards</p>
+			<ul>
+              <li>Low Gravity</li>
+              <li>Low Temperatures</li>
+              <li>High Radiation</li>
+			</ul>
+        </lightning:accordionSection>
+    </lightning:accordion>
+</aura:component>
+<!-- 
+Earth
+Moon
+Mars
+Titan
+Io
+Europa
+Enceledus
+-->
