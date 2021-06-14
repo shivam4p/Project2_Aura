@@ -1,0 +1,29 @@
+<aura:component controller="displayFreightList" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="columns" type="List"/>
+    
+    <aura:registerEvent name="freightListEvent" type="c:freightEvent"/>
+    
+    <aura:handler name="init" value="{!this }" action="{!c.fetchList }"/>
+    
+        <h1>
+            Freight Movement Search
+        </h1>
+    
+    <br/>
+    
+    <lightning:button variant="brand" label="See Ongoing Freight Movement" title="Brand action" onclick="{! c.handleClick }" />
+    
+    <br/>
+    <br/>
+    
+    <lightning:datatable
+        aura:id="miningTableIds"       
+        data="{!v.data }"
+        columns="{!v.columns }"
+        keyField="Id"
+        hideCheckboxColumn="false"/>
+    <br/><br/>
+    
+    <lightning:button variant="brand" label="See Ongoing Freight Movement" title="Brand action" onclick="{! c.handleClick }" />
+</aura:component>

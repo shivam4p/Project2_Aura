@@ -1,0 +1,25 @@
+<aura:component controller="displayFreightList" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+    <aura:attribute name="listOfMiningIds" type="String[]" />
+    <aura:attribute name="tripDetails" type="Object" />
+    <aura:attribute name="columns" type="List"/>
+    
+    <aura:registerEvent name="goBackEvent" type="c:goBack"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInIt}" />
+    
+    <lightning:button variant="brand" label="New Search" title="Brand action" onclick="{! c.click }" />
+    
+    <br/>
+    <br/>
+    
+    <lightning:datatable      
+        data="{!v.tripDetails }"
+        columns="{!v.columns }"
+        keyField="Id"
+        hideCheckboxColumn="true"/>
+    
+    <br/>
+    <br/>
+    
+    <lightning:button variant="brand" label="New Search" title="Brand action" onclick="{! c.click }" />
+</aura:component>
