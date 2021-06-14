@@ -52,8 +52,8 @@
   }, {
     "components" : [ {
       "componentAttributes" : {
+        "customHeadTags" : "",
         "description" : "",
-        "metaTags" : "",
         "title" : "Freight"
       },
       "componentName" : "forceCommunity:seoAssistant",

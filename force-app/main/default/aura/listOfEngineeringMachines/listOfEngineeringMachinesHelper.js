@@ -6,7 +6,7 @@
                 {label: 'Machine Name', fieldName: 'Machine_Name__c', type: 'text'},
                 {label: 'Status', fieldName: 'available_status__c', type: 'text', sortable: true},
                 {label: 'Model', fieldName: 'model__c', type: 'text ', sortable: true},
-            {label: 'Mining Project ID', fieldName: 'Mining_Project_Id__c', type: 'text'}
+            {label: 'Mining Project ID', fieldName: 'Project_Name', type: 'text'}
             ]);
         var action = component.get("c.fetchEMs");
         action.setParams({
@@ -14,6 +14,12 @@
         action.setCallback(this, function(response){
             var state = response.getState();
             if (state === "SUCCESS") {
+                for ( var iterator of response.getReturnValue()){
+                    if (iterator.Mining_Project_Id__r != null) {
+                        iterator.Project_Name = iterator.Mining_Project_Id__r.Name;
+                    }
+                }
+                
                 component.set("v.data", response.getReturnValue());
             }
         });

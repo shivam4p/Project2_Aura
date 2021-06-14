@@ -34,8 +34,8 @@
   }, {
     "components" : [ {
       "componentAttributes" : {
+        "customHeadTags" : "",
         "description" : "",
-        "metaTags" : "",
         "title" : "Engineering Machine"
       },
       "componentName" : "forceCommunity:seoAssistant",

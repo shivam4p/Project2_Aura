@@ -6,7 +6,8 @@
   "label" : "Ember",
   "layouts" : {
     "Inner" : "dd8a6672-58df-4e79-9f4d-c38c9985ca50",
-    "Login" : "79e1176f-0839-4f8e-8d69-556086af9ae2"
+    "Login" : "79e1176f-0839-4f8e-8d69-556086af9ae2",
+    "ServiceNotAvailable" : "bd5daffc-5f50-4c27-b286-0dd9041a375a"
   },
   "type" : "theme",
   "views" : [ {
@@ -245,6 +246,29 @@
         "type" : "component"
       } ],
       "id" : "50c90eb3-2cbe-4395-baec-a0bc09fb6686",
+      "regionName" : "themeFooter",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : {
+      "fixedPageWidth" : 1170,
+      "headerBgColor" : "rgba(0, 0, 0, 0)",
+      "isHeaderPinned" : false,
+      "isHeroUnderHeader" : false,
+      "isPageWidthFixed" : true,
+      "showHeader" : true,
+      "showHero" : true
+    },
+    "componentName" : "siteforce:themeLayoutStarter",
+    "id" : "bd5daffc-5f50-4c27-b286-0dd9041a375a",
+    "label" : "ServiceNotAvailable",
+    "regions" : [ {
+      "id" : "4a073aeb-9a3e-476a-b846-0bb7bf219ffb",
+      "regionName" : "themeHeader",
+      "type" : "region"
+    }, {
+      "id" : "5220df56-b900-42f7-80a2-884b31025f14",
       "regionName" : "themeFooter",
       "type" : "region"
     } ],

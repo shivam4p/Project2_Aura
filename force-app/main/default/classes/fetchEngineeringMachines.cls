@@ -16,7 +16,7 @@ public with sharing class fetchEngineeringMachines {
         }
                 
         List<Engineering_Machine__c> results = Database.query(
-            'SELECT Id, Name, Machine_Name__c, available_status__c, model__c, Mining_Project_Id__c ' +
+            'SELECT Id, Name, Machine_Name__c, available_status__c, model__c, Mining_Project_Id__c,  Mining_Project_Id__r.name ' +
             'FROM Engineering_Machine__c ' +
             'ORDER BY ' + sortOrder + ' ASC ' +
             'LIMIT 10'
