@@ -1,0 +1,11 @@
+<aura:component controller="OperationsController" >
+    <aura:attribute name="mydata" type="Object"/>
+    <aura:attribute name="mycolumns" type="List"/>
+    
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    <lightning:datatable data="{! v.mydata }"
+                         columns="{! v.mycolumns }"
+                         keyField="id"
+                         maxRowSelection="1"
+                         onrowselection="{!c.itemSelected}" />
+</aura:component>

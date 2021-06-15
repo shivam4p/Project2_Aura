@@ -119,6 +119,11 @@
                 <componentName>flexipage:fieldSection</componentName>
             </componentInstance>
         </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>force:detailPanel</componentName>
+            </componentInstance>
+        </itemInstances>
         <name>Facet-fdd8672d-7c42-4bbf-a741-c8478fe55e1e</name>
         <type>Facet</type>
     </flexiPageRegions>

@@ -1,4 +1,5 @@
 public class Operations_CC {
+    
     public Id operationId {get; set;}
     public Id goalId {get; set;}
     public Operations_Goal__c goal {get; set;}
@@ -46,7 +47,7 @@ public class Operations_CC {
                 operationGoal = new Operations_Goal__c();
                 String theId = (String)operationId;
                 String whereClause = 'WHERE Operations__c = \'' + theId + '\' LIMIT 1';
-                List<String> fieldsToSanitize = new List<String>{'Name', 'Cost_of_Operation__c', 'Extraction_Techique__c', 'Number_of_Digging_Sites__c', 'Operation_Location__c' , 'Stage__c'};
+                List<String> fieldsToSanitize = new List<String>{'Name', 'Cost_of_Operation__c', 'Extraction_Technique__c', 'Number_of_Digging_Sites__c', 'Operation_Location__c' , 'Stage__c'};
                 operationGoal = sanitizeQuery(fieldsToSanitize, 'Operations_Goal__c', whereClause)[0];
             }
             return operationGoal;
@@ -58,7 +59,7 @@ public class Operations_CC {
         get {
             // if (goalList == null) {
                 goalList = new List<Operations_Goal__c>();
-                for(Operations_Goal__c og : [SELECT Name, Operation_Location__c, Number_of_Digging_Sites__c,Extraction_Techique__c,Cost_of_Operation__c,Stage__c
+                for(Operations_Goal__c og : [SELECT Name, Operation_Location__c, Number_of_Digging_Sites__c,Extraction_Technique__c,Cost_of_Operation__c,Stage__c
                 FROM Operations_Goal__c WHERE Operations__c = :operationId]) {
                     goalList.add(og);
                 }
@@ -104,7 +105,7 @@ public class Operations_CC {
     }
 
     public PageReference displayDetail() {
-        goal = [SELECT Name, Operation_Location__c, Number_of_Digging_Sites__c,Extraction_Techique__c,Cost_of_Operation__c,Stage__c
+        goal = [SELECT Name, Operation_Location__c, Number_of_Digging_Sites__c,Extraction_Technique__c,Cost_of_Operation__c,Stage__c
         FROM Operations_Goal__c WHERE Id = :goalId LIMIT 1];
         System.debug(goal);
         goalId = goal.Id;
@@ -172,5 +173,5 @@ public class Operations_CC {
             }
         }
         return accessibleFields;
-    } 
+    }
 }
