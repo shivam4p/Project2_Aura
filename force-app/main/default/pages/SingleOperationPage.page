@@ -60,7 +60,7 @@
         <apex:outputField value="{!goal.Number_of_Digging_Sites__c}" Label="# of Digging sites">
           <apex:inlineEditSupport showOnEdit="saveButton, cancelButton" event="ondblclick" resetFunction="resetInlineEdit"/>
         </apex:outputField>
-        <apex:outputField value="{!goal.Extraction_Techique__c}" Label="Extraction Type">
+        <apex:outputField value="{!goal.Extraction_Technique__c}" Label="Extraction Type">
           <apex:inlineEditSupport showOnEdit="saveButton, cancelButton" event="ondblclick" resetFunction="resetInlineEdit"/>
         </apex:outputField>
         <apex:outputField value="{!goal.Cost_of_Operation__c}" Label="Cost of Operation">
@@ -83,7 +83,7 @@
       <apex:pageBlockSection columns="1">
       <apex:inputField value="{!newGoal.Operation_Location__c}" />
       <apex:inputField value="{!newGoal.Number_of_Digging_Sites__c}" />
-      <apex:inputField value="{!newGoal.Extraction_Techique__c}" />
+      <apex:inputField value="{!newGoal.Extraction_Technique__c}" />
       <apex:inputField value="{!newGoal.Cost_of_Operation__c}" />
       <apex:inputField value="{!newGoal.Stage__c}" />
     </apex:pageBlockSection>

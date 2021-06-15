@@ -29,7 +29,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>TestViewHereSeeMee__c</field>
+                <field>Site_Manager__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Engineering_Machine__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>

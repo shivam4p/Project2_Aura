@@ -1,0 +1,79 @@
+<aura:component controller="OperationsController" >
+    <!-- Attributes for determining what to display -->
+    <aura:attribute name="showOpDetail" type="Boolean" default="false" />
+    <aura:attribute name="showCreateGoal" type="Boolean" default="false" />
+    <aura:attribute name="showGoalDetail" type="Boolean" default="false" />
+    
+    <!-- Attributes for Operations List -->
+    <aura:attribute name="mydata" type="Object"/>
+    <aura:attribute name="mycolumns" type="List"/>
+    
+    <!-- Attributes for Operation Goals List -->
+    <aura:attribute name="opGoals" type="Object"/>
+    <aura:attribute name="opGoalsColumns" type="List"/>
+    
+    <!-- Attributes for Operation Details -->
+    <aura:attribute name="OpName" type="String" />
+    <aura:attribute name="ManagerName" type="String" />
+    <aura:attribute name="ProjectName" type="String" />
+    <aura:attribute name="MachineName" type="String" />
+    
+    <!-- Attribute for Operation Goal Id, used to retrieve Operation Goal Details -->
+    <aura:attribute name="GoalDetail" type="String" />
+    
+    <!-- Handler to initialize component parts -->
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    
+    <!-- Display Operations List -->
+    <aura:if isTrue="{!!v.showOpDetail}">
+        My Operations
+        <lightning:datatable data="{! v.mydata }"
+                             columns="{! v.mycolumns }"
+                             keyField="id"
+                             maxRowSelection="1"
+                             onrowselection="{!c.itemSelected}" />
+    </aura:if>
+    
+    <!-- Display Operation Details and Related Operation Goals -->
+    <aura:if isTrue="{!v.showOpDetail}">
+        My Operation
+        <table>
+            <tr>
+                <td>Operation Name: {!v.OpName}</td>
+                <td>Manager Name: {!v.ManagerName}</td>
+            </tr>
+            <tr>
+                <td>Mining Project Name: {!v.ProjectName}</td>
+                <td>Engineering Machine Name: {!v.MachineName}</td>
+            </tr>
+        </table>
+        Operation Goals
+        <lightning:button variant="brand" label="Create Goal" title="CreateGoalButton" onclick="{! c.createGoalClick }" />
+        <lightning:datatable data="{! v.opGoals }"
+                             columns="{! v.opGoalsColumns }"
+                             keyField="id"
+                             maxRowSelection="1"
+                             onrowselection="{!c.goalSelected}" />
+        <!-- Display Create Operation Goal Form -->
+        <aura:if isTrue="{!v.showCreateGoal}">
+            Create Goal
+            <lightning:recordForm objectApiName="Operations_Goal__c" layoutType="Full" oncancel="{! c.cancelCreateClick }" onsuccess="{! c.submitCreateClick }" >
+            </lightning:recordForm>
+        </aura:if>
+        <!-- Display Operation Goal Details and Edit Form -->
+        <aura:if isTrue="{!v.showGoalDetail}">
+            Goal Detail
+            <lightning:recordEditForm recordId="{!v.GoalDetail}" objectApiName="Operations_Goal__c" onsuccess="{! c.updateClick }" >
+                <lightning:outputField fieldName="Name" />
+                <lightning:inputField fieldName="Operation_Location__c" />
+                <lightning:inputField fieldName="Number_of_Digging_Sites__c" />
+                <lightning:inputField fieldName="Extraction_Technique__c" />
+                <lightning:inputField fieldName="Cost_of_Operation__c" />
+                <lightning:inputField fieldName="Stage__c" />
+                <lightning:button variant="Neutral" label="Cancel" title="CancelUpdateButton" onclick="{! c.cancelUpdateClick }" />
+                <lightning:button variant="brand" label="Update" title="UpdateButton" type="submit" />
+                <lightning:button variant="destructive" label="Delete" title="DeleteButton" onclick="{! c.deleteClick }" />
+            </lightning:recordEditForm>
+        </aura:if>
+    </aura:if>
+</aura:component>

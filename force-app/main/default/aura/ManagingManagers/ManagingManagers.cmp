@@ -1,0 +1,28 @@
+<aura:component controller="ManagingManagersController">
+    
+    <aura:attribute name="creatingManager" type="Boolean" default="false" />
+    
+    <aura:attribute name="mydata" type="Object"/>
+    <aura:attribute name="mycolumns" type="List"/>
+    
+    <aura:attribute name="fields" type="String[]" default="['First_Name__c','Last_Name__c','Email__c','Agrees_with_the_dangers_of_the_project__c','The_Project_will_Last_years__c','Emergency_Contact__c','Job_Start_Date__c']" />
+    
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    
+    <aura:if isTrue="{!!v.creatingManager}" >
+        <lightning:datatable data="{! v.mydata }"
+                             columns="{! v.mycolumns }"
+                             keyField="id"
+                             hideCheckboxColumn="true" />
+        <br/>
+        <br/>
+        <lightning:button variant="brand" label="Create Manager" title="Create Manager" onclick="{! c.createClick }" />
+    </aura:if>
+    
+    
+    <aura:if isTrue="{!v.creatingManager}" >
+        <h2>Creating Manager</h2>
+        <lightning:recordForm objectApiName="Site_Manager__c" layoutType="Full" oncancel="{! c.cancelCreateClick }" onsuccess="{! c.submitClick }" >
+        </lightning:recordForm>
+    </aura:if>
+</aura:component>

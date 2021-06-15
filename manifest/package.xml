@@ -7,7 +7,11 @@
 		<members>CommunitiesSelfRegController</members>
 		<members>EMController</members>
 		<members>EMEntryPageController</members>
+		<members>ManagingManagersController</members>
+		<members>ManagingManagersControllerTest</members>
 		<members>MiningProjectTestFactory</members>
+		<members>OperationsController</members>
+		<members>OperationsControllerTest</members>
 		<members>Operations_CC</members>
 		<members>RiskLevelSearchController</members>
 		<members>Search_Freight_MP_Test</members>
@@ -16,12 +20,8 @@
 		<members>Update_Project_Mining_Subject_Test</members>
 		<members>ValidateStartDate_Test</members>
 		<members>ValidateStartHandler</members>
-		<members>fetchEngineeringMachines</members>
-		<members>fetchEngineeringMachines_Test</members>
 		<members>newTaskHandler</members>
 		<members>newTaskHandler_Test</members>
-		<members>planetaryGuideApexController</members>
-		<members>planetaryGuideApexController_Test</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -47,15 +47,8 @@
 		<name>ApexTrigger</name>
 	</types>
 	<types>
-		<members>EngineeringMachineSingleRecord</members>
-		<members>eachEngineeringMachine</members>
-		<members>engineeringMachineIdEvent</members>
-		<members>listOfEngineeringMachines</members>
-		<members>mainListOfEngineeringMachines</members>
-		<members>main_LOEM_Event</members>
-		<members>planetaryGuide</members>
-		<members>returnMainMachineEvent</members>
-		<members>transferMachineDown</members>
+		<members>ManagingManagers</members>
+		<members>Operations</members>
 		<name>AuraDefinitionBundle</name>
 	</types>
 	<types>

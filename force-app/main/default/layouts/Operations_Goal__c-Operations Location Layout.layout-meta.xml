@@ -21,7 +21,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Extraction_Techique__c</field>
+                <field>Extraction_Technique__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
