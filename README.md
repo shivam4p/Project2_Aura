@@ -21,7 +21,7 @@ Tasked with creating a compelling experience from a business previously explored
 10. Check `Enable Experience Workspaces`.  
 11. Go back to Visual Studio, search entire project with `Ctrl`/`Command` + `Shift` + `F`.  
 ![instruction1](https://imgur.com/OZUMX07.png)
-12. Copy `shivam200710@empathetic-koala-37qxy4.com` and paste it in.
+12. Copy `chance1997@brave-raccoon-uzrj7p.com` and paste it in.
 11. Go back to browser, navigate to `Setup` > `Users` > `Users`.
 12. Copy your own system admin username.   
 ![instruction1](https://imgur.com/ILgD8yh.png)
