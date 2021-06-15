@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+    <aura:registerEvent name="ReverseDisplayEvent" type="c:RobotListEvent"/>    
+    <lightning:recordEditForm aura:id="recordEditForm" objectApiName="Robot__c" onsuccess="{!c.reverse}">
+        <lightning:messages/>
+        <lightning:inputField fieldName="Name"/>
+        <lightning:inputField fieldName="Space_Travel__c"/>
+        <lightning:button class="slds-m-top_small" type="submit" label="Create new"/>
+    </lightning:recordEditForm>
+</aura:component>

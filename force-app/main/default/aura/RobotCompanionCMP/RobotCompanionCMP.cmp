@@ -1,0 +1,11 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+    <aura:handler name="PageDisplayEvent" event="c:RobotCreateEvent" action="{!c.click}"/>
+    <aura:handler name="ReverseDisplayEvent" event="c:RobotListEvent" action="{!c.reverse}"/>
+    <aura:attribute name="PageDisplay" type="Boolean" default="true"/>
+    <aura:if isTrue="{!v.PageDisplay}">
+        <c:DisplayRobotCompanionCMP/>
+    </aura:if>
+    <aura:if isTrue="{!!v.PageDisplay}">
+        <c:CreateRobotCompanionCMP/>
+    </aura:if>
+</aura:component>
