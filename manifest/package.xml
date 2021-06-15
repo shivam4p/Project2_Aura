@@ -5,13 +5,10 @@
 		<members>CommunitiesLoginController</members>
 		<members>CommunitiesSelfRegConfirmController</members>
 		<members>CommunitiesSelfRegController</members>
-		<members>DemandStatusPageController</members>
 		<members>EMController</members>
 		<members>EMEntryPageController</members>
 		<members>MiningProjectTestFactory</members>
 		<members>Operations_CC</members>
-		<members>RiskLevelPageSCTest</members>
-		<members>RiskLevelPageSearchController</members>
 		<members>RiskLevelSearchController</members>
 		<members>Search_Freight_MP_Test</members>
 		<members>Search_Freights_MP</members>
@@ -19,6 +16,9 @@
 		<members>Update_Project_Mining_Subject_Test</members>
 		<members>ValidateStartDate_Test</members>
 		<members>ValidateStartHandler</members>
+		<members>displayFreightList</members>
+		<members>freightApexTest</members>
+		<members>freightDetailList</members>
 		<members>newTaskHandler</members>
 		<members>newTaskHandler_Test</members>
 		<name>ApexClass</name>
@@ -46,10 +46,13 @@
 		<name>ApexTrigger</name>
 	</types>
 	<types>
-		<members>DemandStatusPage</members>
-		<members>DemandStatusPageHarness</members>
-		<members>RiskLevelPage</members>
-		<members>RiskLevelPageHarness</members>
+		<members>FreightList</members>
+		<members>freightDetails</members>
+		<members>freightDetailsList</members>
+		<members>freightEvent</members>
+		<members>freightEventList</members>
+		<members>freightTripDetail</members>
+		<members>goBack</members>
 		<name>AuraDefinitionBundle</name>
 	</types>
 	<types>
@@ -189,11 +192,10 @@
 		<name>SharingRules</name>
 	</types>
 	<types>
-		<members>RiskSignGreen</members>
-		<members>RiskSignRed</members>
-		<members>RiskSignYellow</members>
 		<members>RiskSigns</members>
+		<members>delayed</members>
 		<members>images</members>
+		<members>onTime</members>
 		<name>StaticResource</name>
 	</types>
 	<types>

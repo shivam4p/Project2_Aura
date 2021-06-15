@@ -1,0 +1,16 @@
+.THIS {
+}
+
+.THIS .delay { 
+   background-image: url(/resource/delayed);
+   background-position: center;
+   background-size: 30px;
+   background-repeat: no-repeat;
+}
+.THIS .onTime {
+   background-image: url(/resource/onTime);
+   background-position: center;
+   background-size: 30px;
+   background-repeat: no-repeat;
+   
+}

@@ -31,11 +31,4 @@
         <target>/risk-level</target>
         <type>InternalLink</type>
     </navigationMenuItem>
-    <navigationMenuItem>
-        <label>Demand Status</label>
-        <position>5</position>
-        <publiclyAvailable>false</publiclyAvailable>
-        <target>/demand-status</target>
-        <type>InternalLink</type>
-    </navigationMenuItem>
 </NavigationMenu>

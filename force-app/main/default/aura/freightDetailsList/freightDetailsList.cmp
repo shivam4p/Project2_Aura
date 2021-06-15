@@ -1,0 +1,14 @@
+<aura:component controller="freightDetailList"  implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+    <aura:attribute name="details" type="Object" />
+    <aura:attribute name="columns" type="List"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.getList}" />
+    
+    <div style="height: 300px">
+        <lightning:datatable
+               data="{!v.details }"
+        	   columns="{!v.columns }"
+        	   keyField="Id"
+        	   hideCheckboxColumn="true"/>>
+    </div>
+</aura:component>

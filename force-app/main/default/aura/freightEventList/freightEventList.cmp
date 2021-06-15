@@ -1,0 +1,12 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+    <aura:handler name="freightListEvent" event="c:freightEvent" action="{!c.handleClick}" />
+    <aura:handler name="goBackEvent" event="c:goBack" action="{!c.click}" />
+    <aura:attribute name="ShowFreightTrip" type="Boolean" default="true"/>
+    <aura:attribute name="miningIds" type="String[]" />
+    <aura:if isTrue="{!v.ShowFreightTrip}">
+        <c:FreightList />
+    </aura:if>
+    <aura:if isTrue="{!!v.ShowFreightTrip}">
+        <c:freightTripDetail listOfMiningIds="{!v.miningIds}"/>
+    </aura:if>
+</aura:component>

@@ -155,20 +155,13 @@
     <externalSharingModel>Private</externalSharingModel>
     <label>Mining Project Id</label>
     <nameField>
-        <displayFormat>MPI-{0000}</displayFormat>
+        <displayFormat>MPI-{000000}</displayFormat>
         <label>Mining Project Id</label>
         <trackHistory>false</trackHistory>
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Mining Project Ids</pluralLabel>
-    <profileSearchLayouts>
-        <fields>NAME</fields>
-        <fields>Project_Name__c</fields>
-        <profileName>System Administrator</profileName>
-    </profileSearchLayouts>
-    <searchLayouts>
-        <searchResultsAdditionalFields>Project_Name__c</searchResultsAdditionalFields>
-    </searchLayouts>
+    <searchLayouts></searchLayouts>
     <sharingModel>Read</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

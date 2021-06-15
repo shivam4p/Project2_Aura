@@ -30,8 +30,8 @@
   }, {
     "components" : [ {
       "componentAttributes" : {
+        "customHeadTags" : "",
         "description" : "",
-        "metaTags" : "",
         "title" : "Operations"
       },
       "componentName" : "forceCommunity:seoAssistant",

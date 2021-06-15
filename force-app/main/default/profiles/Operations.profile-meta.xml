@@ -22,10 +22,6 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>DemandStatusPageController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>EMController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -39,14 +35,6 @@
     </classAccesses>
     <classAccesses>
         <apexClass>Operations_CC</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>RiskLevelPageSCTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>RiskLevelPageSearchController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -75,6 +63,18 @@
     </classAccesses>
     <classAccesses>
         <apexClass>ValidateStartHandler</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>displayFreightList</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>freightApexTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>freightDetailList</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>

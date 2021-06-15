@@ -80,8 +80,8 @@
   }, {
     "components" : [ {
       "componentAttributes" : {
+        "customHeadTags" : "",
         "description" : "",
-        "metaTags" : "",
         "title" : "Risk Level"
       },
       "componentName" : "forceCommunity:seoAssistant",
