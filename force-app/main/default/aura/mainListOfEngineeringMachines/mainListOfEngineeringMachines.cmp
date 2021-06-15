@@ -1,0 +1,17 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:registerEvent name="cmpTransferMachine" type="c:transferMachineDown"/>
+    
+    <aura:attribute name="ShowMachineList" type ="Boolean" default="true"/>
+    <aura:attribute name="MachineId" type ="String" />
+    
+    <aura:handler name="cmpEvent" event="c:engineeringMachineIdEvent" action="{!c.handleComponentEvent}" />
+    <aura:handler name="cmpReturnEvent" event="c:returnMainMachineEvent" action="{!c.handleReturnComponentEvent}" />
+    
+    <aura:if isTrue="{!v.ShowMachineList}">
+    	<c:listOfEngineeringMachines />
+    </aura:if>
+    <aura:if isTrue="{!!v.ShowMachineList}">
+        <c:EngineeringMachineSingleRecord childMachineId="{!v.MachineId}"/>
+    </aura:if>
+    
+</aura:component>

@@ -1,0 +1,35 @@
+<aura:component >
+    <aura:attribute name="machineName" type="String" />    
+    <aura:attribute name="modelName" type="String" />
+    <aura:attribute name="status" type="String" />
+    <aura:attribute name="id" type="String" />
+    <aura:attribute name="project" type="String" />
+    
+    <div class="demo-only" style="width: 30rem;">       
+        <article class="slds-tile">          
+            <h3 class="slds-tile__title slds-truncate" title="Machine"><a href="javascript:void(0);">{!v.id}</a></h3>          
+            <div class="slds-tile__detail">
+                
+                <dl class="slds-list_horizontal slds-wrap">
+                    
+                    <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">Machine Name:</dt>
+                    
+                    <dd class="slds-item_detail slds-truncate" title="Description for first label">{!v.machineName}</dd>                    
+                                     
+                    <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Second Label">Model Name:</dt>
+                    
+                    <dd class="slds-item_detail slds-truncate" title="Description for second label">{!v.modelName}</dd>
+                    
+                    <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Third Label">Status:</dt>                                     
+                    
+                    <dd class="slds-item_detail slds-truncate" title="Description for Third label">{!v.status}</dd>           
+                    
+                    <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Fourth Label">Project:</dt>                                     
+                    
+                    <dd class="slds-item_detail slds-truncate" title="Description for Fourth label">{!v.project}</dd>  
+                    
+                </dl>               
+            </div>           
+        </article>        
+    </div>
+</aura:component>

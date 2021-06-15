@@ -46,8 +46,6 @@
     <tabs>standard-report</tabs>
     <tabs>Freight__c</tabs>
     <tabs>Engineering_Machine__c</tabs>
-    <tabs>Space_Travel__c</tabs>
-    <tabs>Robot__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Diego_Mining_Company_UtilityBar</utilityBar>
 </CustomApplication>
