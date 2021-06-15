@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Distance__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( Planet_Destination__c , 
+       &quot;Mercury&quot;, 52023000,
+       &quot;Venus&quot;, 1, 
+       &quot;Mars&quot;, 2,
+       &quot;Jupiter&quot;, 3,
+       &quot;Saturn&quot;, 4,
+       &quot;Uranus&quot;, 5,
+       &quot;Neptune&quot;, 6,
+        null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Distance</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

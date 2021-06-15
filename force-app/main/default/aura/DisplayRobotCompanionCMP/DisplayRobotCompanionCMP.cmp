@@ -1,0 +1,11 @@
+<aura:component controller="RobotCompanionController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+    <aura:attribute name="mydata" type="Object"/>
+    <aura:attribute name="mycolumns" type="List"/>
+    <aura:registerEvent name="PageDisplayEvent" type="c:RobotCreateEvent"/>
+    <aura:handler name="init" value="{!this}" action="{!c.display}"/>               
+    <lightning:datatable data="{!v.mydata}"
+                         columns="{!v.mycolumns}"
+                         keyField="id"
+                         hideCheckboxColumn="true"/>
+    <lightning:button variant="Brand" title="Create" label="Create" onclick="{!c.click}"/>
+</aura:component>

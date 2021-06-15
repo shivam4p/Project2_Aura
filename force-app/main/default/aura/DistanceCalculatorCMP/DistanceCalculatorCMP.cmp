@@ -1,0 +1,41 @@
+<aura:component
+                controller="DistanceCalculatorController"
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+                access="global"
+                >
+    <aura:attribute name="cDist" type="Double"/>
+    <aura:handler name="init" value="{!this}" action="{!c.fetchDist}" />
+    
+    <br />
+    
+    <lightning:select
+                      aura:id="cDist"
+                      label="Select the planet you want to travel to"
+                      required="true"
+                      value="{!v.Distance}"
+                      >
+        <option value="">--None--</option>
+        <option value="1">Mercury</option>
+        <option value="2">Venus</option>
+        <option value="3">Mars</option>
+        <option value="4">Jupiter</option>
+        <option value="5">Saturn</option>
+        <option value="6">Uranus</option>
+        <option value="7">Neptune</option>
+        <option value="8">Moon</option>
+        <option value="9">IO</option>
+        <option value="10">Enceladus</option>
+        <option value="11">Europa</option>
+        <option value="12">Titan</option>
+        <option value="13">Ceres</option>
+        <option value="14">Asteroid Belt</option>
+    </lightning:select>
+    
+    <br />
+    <lightning:datatable
+                         data="{!v.distaList}"
+                         columns="{!v.mycolumns}"
+                         keyField="id"
+                         hideCheckboxColumn="true"
+                         />
+</aura:component>

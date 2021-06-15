@@ -6,7 +6,8 @@
   "label" : "Partner Central",
   "layouts" : {
     "Inner" : "66b4e76b-a70b-4d8b-ad64-03e651996764",
-    "Login" : "625b7f4b-74ed-473f-9c3e-02c3ba09e36e"
+    "Login" : "625b7f4b-74ed-473f-9c3e-02c3ba09e36e",
+    "ServiceNotAvailable" : "a0376733-a33b-4edf-8265-31490d75cee9"
   },
   "type" : "theme",
   "views" : [ {
@@ -120,6 +121,29 @@
     }, {
       "id" : "c9fcd563-179c-4c93-8e28-862b90aa1786",
       "regionName" : "footer",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : {
+      "fixedPageWidth" : 1170,
+      "headerBgColor" : "rgba(0, 0, 0, 0)",
+      "isHeaderPinned" : false,
+      "isHeroUnderHeader" : false,
+      "isPageWidthFixed" : true,
+      "showHeader" : true,
+      "showHero" : true
+    },
+    "componentName" : "siteforce:themeLayoutStarter",
+    "id" : "a0376733-a33b-4edf-8265-31490d75cee9",
+    "label" : "ServiceNotAvailable",
+    "regions" : [ {
+      "id" : "534530cd-0267-43a1-8084-40eba67a4aaf",
+      "regionName" : "themeHeader",
+      "type" : "region"
+    }, {
+      "id" : "280426b2-c7f0-45ea-8763-151a3ea846e6",
+      "regionName" : "themeFooter",
       "type" : "region"
     } ],
     "type" : "view"
