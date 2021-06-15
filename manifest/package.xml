@@ -22,6 +22,20 @@
 		<members>ValidateStartHandler</members>
 		<members>newTaskHandler</members>
 		<members>newTaskHandler_Test</members>
+		<members>RiskLevelPageSCTest</members>
+		<members>RiskLevelPageSearchController</members>
+		<members>DemandStatusPageController</members>
+		<members>planetaryGuideApexController</members>
+		<members>planetaryGuideApexController_Test</members>
+		<members>fetchEngineeringMachines</members>
+		<members>fetchEngineeringMachines_Test</members>
+		<members>displayFreightList</members>
+		<members>freightApexTest</members>
+		<members>freightDetailList</members>
+		<members>DisplayListofSpaceTravels</members>
+		<members>DisplayListofSpaceTravelsTest</members>
+		<members>RobotCompanionController</members>
+		<members>RobotCompanionTest</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
@@ -49,6 +63,36 @@
 	<types>
 		<members>ManagingManagers</members>
 		<members>Operations</members>
+		
+		<members>DemandStatusPage</members>
+		<members>DemandStatusPageHarness</members>
+		<members>RiskLevelPage</members>
+		<members>RiskLevelPageHarness</members>
+		<members>EngineeringMachineSingleRecord</members>
+		<members>TestApp_EngineeringMachine</members>
+		<members>eachEngineeringMachine</members>
+		<members>engineeringMachineIdEvent</members>
+		<members>listOfEngineeringMachines</members>
+		<members>mainListOfEngineeringMachines</members>
+		<members>main_LOEM_Event</members>
+		<members>planetaryGuide</members>
+		<members>planetaryGuideHarness</members>
+		<members>returnMainMachineEvent</members>
+		<members>transferMachineDown</members>
+		<members>FreightList</members>
+		<members>freightDetails</members>
+		<members>freightDetailsList</members>
+		<members>freightEvent</members>
+		<members>freightEventList</members>
+		<members>freightListApp</members>
+		<members>freightTripDetail</members>
+		<members>CreateRobotCompanionCMP</members>
+		<members>DisplayRobotCompanionCMP</members>
+		<members>DistanceCalculatorCMP</members>
+		<members>RobotCompanionCMP</members>
+		<members>RobotCreateEvent</members>
+		<members>RobotListEvent</members>
+		<members>SpaceTravelList</members>
 		<name>AuraDefinitionBundle</name>
 	</types>
 	<types>
@@ -71,6 +115,8 @@
 		<members>Sales__c</members>
 		<members>Site_Manager__c</members>
 		<members>Space_Travel__c</members>
+		<members>Freight__c</members>
+		<members>Engineering_Machine__c</members>
 		<name>CustomObject</name>
 	</types>
 	<types>
@@ -192,6 +238,9 @@
 		<name>SharingRules</name>
 	</types>
 	<types>
+		<members>RiskSignGreen</members>
+		<members>RiskSignRed</members>
+		<members>RiskSignYellow</members>
 		<members>RiskSigns</members>
 		<members>delayed</members>
 		<members>images</members>
