@@ -155,7 +155,7 @@
     <externalSharingModel>Private</externalSharingModel>
     <label>Mining Project Id</label>
     <nameField>
-        <displayFormat>MPI-{000000}</displayFormat>
+        <displayFormat>MPI-{0000}</displayFormat>
         <label>Mining Project Id</label>
         <trackHistory>false</trackHistory>
         <type>AutoNumber</type>

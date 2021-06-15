@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
-    <actionOverrides>
-        <actionName>Tab</actionName>
-        <content>Home_Page</content>
-        <formFactor>Large</formFactor>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Flexipage</type>
-        <pageOrSobjectType>standard-home</pageOrSobjectType>
-    </actionOverrides>
     <brand>
         <headerColor>#FCFCFD</headerColor>
         <logo>asteroid_miningoC9bE1Mllmx</logo>
@@ -54,6 +46,8 @@
     <tabs>standard-report</tabs>
     <tabs>Freight__c</tabs>
     <tabs>Engineering_Machine__c</tabs>
+    <tabs>Space_Travel__c</tabs>
+    <tabs>Robot__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Diego_Mining_Company_UtilityBar</utilityBar>
 </CustomApplication>
