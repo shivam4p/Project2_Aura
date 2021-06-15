@@ -93,6 +93,7 @@
 		<members>RobotCreateEvent</members>
 		<members>RobotListEvent</members>
 		<members>SpaceTravelList</members>
+		<members>goBack</members>
 		<name>AuraDefinitionBundle</name>
 	</types>
 	<types>
